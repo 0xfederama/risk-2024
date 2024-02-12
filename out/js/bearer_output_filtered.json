@@ -1,0 +1,415 @@
+[
+    {
+        "cwe": "798",
+        "path": "../juice-shop/lib/insecurity.ts",
+        "line": 56,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "73",
+        "path": "../juice-shop/routes/dataErasure.ts",
+        "line": 69,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "73",
+        "path": "../juice-shop/routes/keyServer.ts",
+        "line": 14,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "73",
+        "path": "../juice-shop/routes/logfileServer.ts",
+        "line": 14,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "73",
+        "path": "../juice-shop/routes/quarantineServer.ts",
+        "line": 14,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "79",
+        "path": "../juice-shop/frontend/src/hacking-instructor/index.ts",
+        "line": 107,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "95",
+        "path": "../juice-shop/routes/b2bOrder.ts",
+        "line": 21,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "95",
+        "path": "../juice-shop/routes/b2bOrder.ts",
+        "line": 22,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "798",
+        "path": "../juice-shop/lib/insecurity.ts",
+        "line": 44,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "798",
+        "path": "../juice-shop/lib/insecurity.ts",
+        "line": 54,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "798",
+        "path": "../juice-shop/lib/insecurity.ts",
+        "line": 158,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "918",
+        "path": "../juice-shop/routes/profileImageUrlUpload.ts",
+        "line": 22,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "798",
+        "path": "../juice-shop/lib/insecurity.ts",
+        "line": 56,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "532",
+        "path": "../juice-shop/frontend/src/app/faucet/faucet.component.ts",
+        "line": 108,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "532",
+        "path": "../juice-shop/frontend/src/app/faucet/faucet.component.ts",
+        "line": 213,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "312",
+        "path": "../juice-shop/frontend/src/app/login/login.component.ts",
+        "line": 101,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/dbSchemaChallenge_1.ts",
+        "line": 5,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/dbSchemaChallenge_3.ts",
+        "line": 11,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/loginAdminChallenge_1.ts",
+        "line": 20,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/loginBenderChallenge_1.ts",
+        "line": 20,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/loginBenderChallenge_4.ts",
+        "line": 17,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/loginJimChallenge_2.ts",
+        "line": 17,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/loginJimChallenge_4.ts",
+        "line": 20,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/unionSqlInjectionChallenge_1.ts",
+        "line": 6,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/data/static/codefixes/unionSqlInjectionChallenge_3.ts",
+        "line": 10,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/routes/login.ts",
+        "line": 36,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "89",
+        "path": "../juice-shop/routes/search.ts",
+        "line": 23,
+        "confidence": "",
+        "impact": "high"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_1_correct.ts",
+        "line": 2,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_1_correct.ts",
+        "line": 7,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_2.ts",
+        "line": 2,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_2.ts",
+        "line": 7,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_2.ts",
+        "line": 11,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_3.ts",
+        "line": 2,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_3.ts",
+        "line": 7,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_3.ts",
+        "line": 11,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_4.ts",
+        "line": 2,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/accessLogDisclosureChallenge_4.ts",
+        "line": 7,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_1_correct.ts",
+        "line": 2,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_1_correct.ts",
+        "line": 6,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_2.ts",
+        "line": 6,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_2.ts",
+        "line": 10,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_3.ts",
+        "line": 2,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_3.ts",
+        "line": 5,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_3.ts",
+        "line": 9,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_4.ts",
+        "line": 2,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_4.ts",
+        "line": 7,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/data/static/codefixes/directoryListingChallenge_4.ts",
+        "line": 11,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/server.ts",
+        "line": 249,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/server.ts",
+        "line": 254,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "548",
+        "path": "../juice-shop/server.ts",
+        "line": 258,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "73",
+        "path": "../juice-shop/routes/keyServer.ts",
+        "line": 14,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "73",
+        "path": "../juice-shop/routes/logfileServer.ts",
+        "line": 14,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "73",
+        "path": "../juice-shop/routes/quarantineServer.ts",
+        "line": 14,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "693",
+        "path": "../juice-shop/lib/insecurity.ts",
+        "line": 54,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "693",
+        "path": "../juice-shop/lib/insecurity.ts",
+        "line": 55,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "79",
+        "path": "../juice-shop/data/static/codefixes/redirectChallenge_3.ts",
+        "line": 21,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "79",
+        "path": "../juice-shop/data/static/codefixes/restfulXssChallenge_2.ts",
+        "line": 59,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "328",
+        "path": "../juice-shop/Gruntfile.js",
+        "line": 77,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "328",
+        "path": "../juice-shop/lib/insecurity.ts",
+        "line": 43,
+        "confidence": "",
+        "impact": "low"
+    }
+]

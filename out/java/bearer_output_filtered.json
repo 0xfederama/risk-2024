@@ -1,0 +1,79 @@
+[
+    {
+        "cwe": "89",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/CWE89_SQL_Injection__getParameter_Servlet_executeUpdate_01.java",
+        "line": 46,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "89",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/CWE89_SQL_Injection__getParameter_Servlet_executeUpdate_16.java",
+        "line": 50,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "89",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/CWE89_SQL_Injection__getParameter_Servlet_executeUpdate_17.java",
+        "line": 51,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "89",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/CWE89_SQL_Injection__getParameter_Servlet_executeUpdate_31.java",
+        "line": 53,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "89",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/CWE89_SQL_Injection__getParameter_Servlet_execute_01.java",
+        "line": 46,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "89",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/CWE89_SQL_Injection__getParameter_Servlet_execute_16.java",
+        "line": 50,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "89",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/CWE89_SQL_Injection__getParameter_Servlet_execute_17.java",
+        "line": 51,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "89",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/CWE89_SQL_Injection__getParameter_Servlet_execute_31.java",
+        "line": 53,
+        "confidence": "",
+        "impact": "low"
+    },
+    {
+        "cwe": "209",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/Main.java",
+        "line": 47,
+        "confidence": "",
+        "impact": "warning"
+    },
+    {
+        "cwe": "209",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/antbuild/testcases/CWE89_SQL_Injection/Main.java",
+        "line": 47,
+        "confidence": "",
+        "impact": "warning"
+    },
+    {
+        "cwe": "209",
+        "path": "../Juliet/src/testcases/CWE89_SQL_Injection/s03/antbuild/testcases/CWE89_SQL_Injection/s03/Main.java",
+        "line": 47,
+        "confidence": "",
+        "impact": "warning"
+    }
+]
