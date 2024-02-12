@@ -8,8 +8,7 @@ import output_parser as parser
 def main():
 
     # Read cmd line args
-    args_len = len(sys.argv)
-    if args_len < 2:
+    if len(sys.argv) < 2:
         print("You have to specify either -java or -js")
         exit()
     match (sys.argv[1]):
