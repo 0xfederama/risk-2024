@@ -1,17 +1,6 @@
 import json
 
 
-def show_dict_structure(data, spaces):
-    if type(data) == dict:
-        newspaces = spaces + "\t"
-        for key, value in data.items():
-            print(f"{spaces}Key: {key} type={type(value)}")
-            if type(value) == dict:
-                show_dict_structure(value, newspaces)
-            elif type(value) == list and len(value) > 0:
-                show_dict_structure(value[0], newspaces)
-
-
 def filter_semgrep_data(filename):
     with open(filename, "r") as f:
         data = json.load(f)
@@ -32,7 +21,7 @@ def filter_semgrep_data(filename):
                     "path": path,
                     "line": line,
                     "confidence": confidence,
-                    "impact": impact,
+                    "severity": impact,
                 }
             )
         return filtered_results
@@ -57,9 +46,34 @@ def filter_bearer_data(filename):
                         "path": path,
                         "line": line,
                         "confidence": confidence,
-                        "impact": impact,
+                        "severity": impact,
                     }
                 )
+        return filtered_results
+
+
+def filter_horusec_data(filename):
+    with open(filename, "r") as f:
+        data = json.load(f)
+
+        filtered_results = []
+        for vuln in data["analysisVulnerabilities"]:
+            vuln = vuln["vulnerabilities"]
+            line = vuln["line"]
+            path = vuln["file"]
+            confidence = vuln["confidence"]
+            impact = vuln["severity"]
+            cwe_str = "TO BE DONE ASAP!!!!!!!!!!!!!!"
+            filtered_results.append(
+                {
+                    "cwe": cwe_str,
+                    "path": path,
+                    "line": line,
+                    "confidence": confidence,
+                    "severity": impact,
+                }
+            )
+
         return filtered_results
 
 
