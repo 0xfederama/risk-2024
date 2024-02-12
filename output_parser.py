@@ -10,10 +10,14 @@ def filter_semgrep_data(filename):
             path = res["path"]
             line = res["start"]["line"]
             cwe_titles = res["extra"]["metadata"]["cwe"]
-            cwe_codes = [cwe.split(":")[0] for cwe in cwe_titles]
-            cwe_str = " | ".join(cwe_codes)
+            if type(cwe_titles) == list:
+                cwe_codes = [cwe.split(":")[0] for cwe in cwe_titles]
+                cwe_str = " | ".join(cwe_codes)
+            else:
+                cwe_codes = cwe_titles.split(":")[0]
+                cwe_str = cwe_codes
             confidence = res["extra"]["metadata"]["confidence"]
-            impact = res["extra"]["metadata"]["impact"]
+            severity = res["extra"]["metadata"]["impact"]
 
             filtered_results.append(
                 {
@@ -21,7 +25,7 @@ def filter_semgrep_data(filename):
                     "path": path,
                     "line": line,
                     "confidence": confidence,
-                    "severity": impact,
+                    "severity": severity,
                 }
             )
         return filtered_results
@@ -38,7 +42,7 @@ def filter_bearer_data(filename):
                 cwe_titles = elem["cwe_ids"]
                 cwe_str = " | ".join(cwe_titles)
                 confidence = ""
-                impact = key
+                severity = key
 
                 filtered_results.append(
                     {
@@ -46,33 +50,38 @@ def filter_bearer_data(filename):
                         "path": path,
                         "line": line,
                         "confidence": confidence,
-                        "severity": impact,
+                        "severity": severity,
                     }
                 )
         return filtered_results
 
 
 def filter_horusec_data(filename):
+    rules = dict()
+    with open("./util/horusec_rules.json", "r") as f:
+        rules = json.load(f)
+
     with open(filename, "r") as f:
         data = json.load(f)
-
         filtered_results = []
         for vuln in data["analysisVulnerabilities"]:
             vuln = vuln["vulnerabilities"]
             line = vuln["line"]
             path = vuln["file"]
             confidence = vuln["confidence"]
-            impact = vuln["severity"]
-            cwe_str = "TO BE DONE ASAP!!!!!!!!!!!!!!"
-            filtered_results.append(
-                {
-                    "cwe": cwe_str,
-                    "path": path,
-                    "line": line,
-                    "confidence": confidence,
-                    "severity": impact,
-                }
-            )
+            severity = vuln["severity"]
+            cwe_list = rules.get(vuln["rule_id"], [])
+            for cwe in cwe_list:
+                cwe_str = str(cwe)
+                filtered_results.append(
+                    {
+                        "cwe": cwe_str,
+                        "path": path,
+                        "line": line,
+                        "confidence": confidence,
+                        "severity": severity,
+                    }
+                )
 
         return filtered_results
 
@@ -85,16 +94,21 @@ def aggregate_cwe(data):
         "path": path,
         "line": line,
         "confidence": confidence,
-        "impact": impact,
+        "severity": severity,
     }
     """
     res = dict()
+    total_vulns = 0
     for elem in data:
         cwe = str(elem["cwe"])
         cwe = cwe if cwe.startswith("CWE-") else f"CWE-{cwe}"
+        total_vulns += 1
         if cwe not in res:
             res[cwe] = 0
 
         res[cwe] += 1
 
-    return res
+    return {
+        "vulns": res,
+        "total": total_vulns
+    }
