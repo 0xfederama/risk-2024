@@ -15,7 +15,7 @@ def extract_cwe_number(filename):
 def search_potential_flaw(juliet_directory):
     """Search the string 'POTENTIAL FLAW' in Juliet's testcases files"""
     results = []
-    juliet_directory = os.path.join(juliet_directory, "src/testcases")
+    #juliet_directory = os.path.join(juliet_directory, "src/testcases")
     # Iterate through all files in juliet's directory
     for root, _, files in os.walk(juliet_directory):
         for file in files:
@@ -31,14 +31,20 @@ def search_potential_flaw(juliet_directory):
                     # Read lines from the file
                     lines = f.readlines()
                     # Iterate through each line to find the string "POTENTIAL FLAW"
+                    isInsideGoodMethod = None
                     for line_num, line in enumerate(lines, start=1):
                         if "POTENTIAL FLAW" in line:
                             # Store the result in a dictionary
                             results.append({
-                                'file_path': os.path.join("src/testcases", file),
+                                'file_path': file, #os.path.join("src/testcases", file),
                                 'line': line_num + 1,
-                                'cwe': cwe_number
+                                'cwe': cwe_number,
+                                'category': "negative" if isInsideGoodMethod else "positive"
                             })
+                        elif "good" in line:
+                            isInsideGoodMethod = True
+                        elif "bad" in line:
+                            isInsideGoodMethod = False
 
     return results
 
