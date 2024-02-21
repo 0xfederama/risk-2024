@@ -1,4 +1,7 @@
 .DS_Store
+config.json
+todo.md
+out.bak
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

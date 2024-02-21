@@ -1,0 +1,1332 @@
+[
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_03.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_66b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_67b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_52c.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_01.cs",
+        "line": "65",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_16.cs",
+        "line": "67",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_04.cs",
+        "line": "83",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_05.cs",
+        "line": "86",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_09.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_08.cs",
+        "line": "89",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_52c.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_51b.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_67b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_66b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_81_bad.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_81_bad.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_54e.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_61a.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_41.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_73b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_81_bad.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_51b.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_54e.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_51b.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_71b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_75b.cs",
+        "line": "53",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_04.cs",
+        "line": "87",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_17.cs",
+        "line": "71",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_81_goodG2B.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_13.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_15.cs",
+        "line": "82",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_22b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_17.cs",
+        "line": "58",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_75b.cs",
+        "line": "53",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_16.cs",
+        "line": "88",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_22b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_05.cs",
+        "line": "78",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_68b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_12.cs",
+        "line": "75",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_01.cs",
+        "line": "61",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_08.cs",
+        "line": "106",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_66b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_03.cs",
+        "line": "63",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_05.cs",
+        "line": "69",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_04.cs",
+        "line": "70",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_22b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_67b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_74b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_68b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_73b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_09.cs",
+        "line": "72",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_01.cs",
+        "line": "69",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_08.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_11.cs",
+        "line": "63",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_81_goodG2B.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_08.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_15.cs",
+        "line": "95",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_11.cs",
+        "line": "72",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_15.cs",
+        "line": "65",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_31.cs",
+        "line": "75",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_17.cs",
+        "line": "75",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_21.cs",
+        "line": "80",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_72b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_42.cs",
+        "line": "75",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_10.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_31.cs",
+        "line": "67",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_61a.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_81_goodG2B.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_45.cs",
+        "line": "46",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_61a.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_74b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_61a.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_22b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_66b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_07.cs",
+        "line": "81",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_54e.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_71b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_14.cs",
+        "line": "63",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_52c.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_14.cs",
+        "line": "80",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_03.cs",
+        "line": "72",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_14.cs",
+        "line": "72",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_61a.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_06.cs",
+        "line": "85",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_16.cs",
+        "line": "71",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_12.cs",
+        "line": "92",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_31.cs",
+        "line": "71",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_75b.cs",
+        "line": "53",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_10.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_11.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_53d.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_16.cs",
+        "line": "58",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_74b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_45.cs",
+        "line": "46",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_67b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_66b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_41.cs",
+        "line": "44",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_53d.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_42.cs",
+        "line": "88",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_05.cs",
+        "line": "99",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_07.cs",
+        "line": "68",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_02.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_02.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_45.cs",
+        "line": "48",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_52c.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_15.cs",
+        "line": "78",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_51b.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_74b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_10.cs",
+        "line": "63",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_21.cs",
+        "line": "63",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_75b.cs",
+        "line": "53",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_72b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_13.cs",
+        "line": "63",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_09.cs",
+        "line": "63",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_45.cs",
+        "line": "47",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_17.cs",
+        "line": "67",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_71b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_73b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_81_bad.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_71b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_12.cs",
+        "line": "62",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_81_bad.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_14.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_81_goodG2B.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_72b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_68b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_09.cs",
+        "line": "80",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_04.cs",
+        "line": "100",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_31.cs",
+        "line": "88",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_41.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_06.cs",
+        "line": "81",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_75b.cs",
+        "line": "53",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_54e.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_52c.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_51b.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_68b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_07.cs",
+        "line": "98",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_02.cs",
+        "line": "63",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_17.cs",
+        "line": "88",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_09.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_21.cs",
+        "line": "72",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_03.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_05.cs",
+        "line": "82",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_01.cs",
+        "line": "82",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_11.cs",
+        "line": "80",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_22b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_06.cs",
+        "line": "68",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_07.cs",
+        "line": "77",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_21.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_13.cs",
+        "line": "80",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_71b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_14.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_11.cs",
+        "line": "76",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_31.cs",
+        "line": "58",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_01.cs",
+        "line": "52",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_53d.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_03.cs",
+        "line": "80",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_73b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_06.cs",
+        "line": "77",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_53d.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_72b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_41.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_68b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_72b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_42.cs",
+        "line": "58",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_02.cs",
+        "line": "72",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_13.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_41.cs",
+        "line": "43",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_08.cs",
+        "line": "85",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_07.cs",
+        "line": "85",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_10.cs",
+        "line": "80",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_06.cs",
+        "line": "98",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Connect_tcp_ExecuteScalar_42.cs",
+        "line": "71",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_16.cs",
+        "line": "75",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_42.cs",
+        "line": "67",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_45.cs",
+        "line": "49",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_15.cs",
+        "line": "74",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_53d.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_73b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Get_Cookies_Web_ExecuteScalar_67b.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_12.cs",
+        "line": "71",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_81_goodG2B.cs",
+        "line": "41",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_54e.cs",
+        "line": "40",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_04.cs",
+        "line": "79",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_21.cs",
+        "line": "93",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Listen_tcp_ExecuteScalar_74b.cs",
+        "line": "42",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_13.cs",
+        "line": "72",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_File_ExecuteScalar_10.cs",
+        "line": "72",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_12.cs",
+        "line": "79",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    },
+    {
+        "cwe": "CWE-89",
+        "path": "CWE89_SQL_Injection__Web_Database_ExecuteScalar_02.cs",
+        "line": "80",
+        "confidence": "LOW",
+        "severity": "HIGH"
+    }
+]

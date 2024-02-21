@@ -64,7 +64,11 @@ def filter_horusec_data(filename):
     with open(filename, "r") as f:
         data = json.load(f)
         filtered_results = []
-        for vuln in data["analysisVulnerabilities"]:
+        analysisVulnerabilities = data["analysisVulnerabilities"]
+        if analysisVulnerabilities is None or analysisVulnerabilities == "null":
+            analysisVulnerabilities = []
+
+        for vuln in analysisVulnerabilities:
             vuln = vuln["vulnerabilities"]
             line = vuln["line"]
             path = vuln["file"]
@@ -108,7 +112,17 @@ def aggregate_cwe(data):
 
         res[cwe] += 1
 
-    return {
-        "vulns": res,
-        "total": total_vulns
-    }
+    return {"vulns": res, "total": total_vulns}
+
+
+def filter_data(tool, data):
+    match tool:
+        case "semgrep":
+            return filter_semgrep_data(data)
+        case "horusec":
+            return filter_horusec_data(data)
+        case "bearer":
+            return filter_bearer_data(data)
+        case _:
+            print("Tool not supported")
+            exit()
