@@ -27,23 +27,24 @@ def filter_semgrep_data(filename):
         for res in results:
             path = res["path"]
             line = res["start"]["line"]
-            cwe_titles = res["extra"]["metadata"]["cwe"]
-            if type(cwe_titles) == list:
-                cwe_codes = [cwe.split(":")[0] for cwe in cwe_titles]
-                cwe_str = " | ".join(cwe_codes)
-            else:
-                cwe_codes = cwe_titles.split(":")[0]
-                cwe_str = cwe_codes
             confidence = res["extra"]["metadata"]["confidence"]
             severity = res["extra"]["metadata"]["impact"]
+            cwe_titles = res["extra"]["metadata"]["cwe"]
+            cwe_list = []
+            if type(cwe_titles) == list:
+                cwe_list = cwe_titles
+            else:
+                cwe_list = [cwe_titles]
 
-            filtered_results.add(
-                path=path,
-                cwe=cwe_str,
-                line=line,
-                confidence=confidence,
-                severity=severity,
-            )
+            for cwe in cwe_list:
+                cwe_code = (cwe.split(":")[0]).split("-")[1]
+                filtered_results.add(
+                    path=path,
+                    cwe=cwe_code,
+                    line=line,
+                    confidence=confidence,
+                    severity=severity,
+                )
         return filtered_results.data
 
 
@@ -55,18 +56,17 @@ def filter_bearer_data(filename):
             for elem in value:
                 path = elem["full_filename"]
                 line = elem["line_number"]
-                cwe_titles = elem["cwe_ids"]
-                cwe_str = " | ".join(cwe_titles)
                 confidence = ""
                 severity = key
-
-                filtered_results.add(
-                    path=path,
-                    cwe=cwe_str,
-                    line=line,
-                    confidence=confidence,
-                    severity=severity,
-                )
+                cwe_titles = elem["cwe_ids"]
+                for cwe in cwe_titles:
+                    filtered_results.add(
+                        path=path,
+                        cwe=cwe,
+                        line=line,
+                        confidence=confidence,
+                        severity=severity,
+                    )
         return filtered_results.data
 
 
@@ -94,7 +94,7 @@ def filter_horusec_data(filename):
 
                 filtered_results.add(
                     path=path,
-                    cwe=cwe_str,
+                    cwe=cwe_str.split("-")[1],
                     line=line,
                     confidence=confidence,
                     severity=severity,

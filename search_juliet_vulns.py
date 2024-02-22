@@ -62,7 +62,7 @@ if __name__ == "__main__":
     if "java" in juliet_directory:
         lang = "java"
     elif "csh" in juliet_directory:
-        lang = "csh"
+        lang = "csharp"
     elif "cpp" in juliet_directory:
         lang = "cpp"
     else:

@@ -94,6 +94,19 @@ def run(outdir, tool, codedir, set_debug=False):
         return run_tool(outdir=outdir, tool=tool, codedir=codedir)
 
 
+def find_flaw(filename, found_elem, flaws):
+    if filename not in flaws:  # case 2
+        return None
+
+    for found_in_flaw in flaws[filename]:
+        print(filename, found_in_flaw["line"], found_elem["line"])
+        if found_in_flaw["line"] == found_elem["line"]:
+            return found_in_flaw
+
+
+    return None
+
+
 def confusion_matrix(flaws, filtered_data):
     """
     flaws: positive (method bad), negative (method good)
@@ -120,13 +133,52 @@ def confusion_matrix(flaws, filtered_data):
         1) found in filtered:
             skip
         3) not found in filtered:
-            if flaw positive -> FN++
             if flaw negative -> TN++
+            if flaw positive -> FN++
     """
     fp = 0
     tp = 0
     fn = 0
     tn = 0
 
-    for tool_found in filtered_data:
-        pass
+    for filename, found_list in filtered_data.items():
+        for found_from_tool in found_list:
+            # search if the vuln found by the tool is in the flaws
+            flaws_found = find_flaw(filename, found_from_tool, flaws)
+            # case 2, not found filename or not same line
+            if flaws_found is None:
+                fp += 1
+                continue
+            # case 1, same filename and same line
+            if f"CWE-{flaws_found['cwe']}" != found_from_tool["cwe"]:  # different CWE
+                fp += 1
+                continue
+
+            # case 1, same filename, same line, same CWE
+            if flaws_found["category"] == "negative":
+                fp += 1
+            else:
+                tp += 1
+
+    for filename, flaw_list in flaws.items():
+        if "CWE89" not in filename:  # FIXME: specific case for testing
+            continue
+        for fl in flaw_list:
+            found_from_tool = find_flaw(filename, fl, filtered_data)
+            # case 1, found in filtered_data
+            if found_from_tool is not None:
+                continue
+            # case 3, not found in filtered_data
+            if fl["category"] == "negative":
+                tn += 1
+            else:
+                fn += 1
+
+    retdict = {
+        "false positive": fp,
+        "true positive": tp,
+        "false negative": fn,
+        "true negative": tn,
+    }
+
+    return retdict
