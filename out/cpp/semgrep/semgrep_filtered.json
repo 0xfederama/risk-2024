@@ -1,142 +1,142 @@
-[
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_33.cpp",
-        "line": 43,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_33.cpp",
-        "line": 43,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_43.cpp",
-        "line": 45,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_43.cpp",
-        "line": 45,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_62a.cpp",
-        "line": 39,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_62a.cpp",
-        "line": 39,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_72b.cpp",
-        "line": 38,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_72b.cpp",
-        "line": 38,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_73b.cpp",
-        "line": 38,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_73b.cpp",
-        "line": 38,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_74b.cpp",
-        "line": 38,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_74b.cpp",
-        "line": 38,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_81_bad.cpp",
-        "line": 31,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_81_bad.cpp",
-        "line": 31,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_82_bad.cpp",
-        "line": 31,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_82_bad.cpp",
-        "line": 31,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_83_bad.cpp",
-        "line": 40,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_83_bad.cpp",
-        "line": 40,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_84_bad.cpp",
-        "line": 40,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    },
-    {
-        "cwe": "CWE-125",
-        "path": "/Users/federico/Developer/Juliet/cpp-1.3/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE135_84_bad.cpp",
-        "line": 40,
-        "confidence": "HIGH",
-        "severity": "HIGH"
-    }
-]
+{
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_33.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 43,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 43,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_43.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 45,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 45,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_62a.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 39,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 39,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_72b.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 38,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 38,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_73b.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 38,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 38,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_74b.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 38,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 38,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_81_bad.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 31,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 31,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_82_bad.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 31,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 31,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_83_bad.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 40,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 40,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ],
+    "CWE121_Stack_Based_Buffer_Overflow__CWE135_84_bad.cpp": [
+        {
+            "cwe": "CWE-125",
+            "line": 40,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        },
+        {
+            "cwe": "CWE-125",
+            "line": 40,
+            "confidence": "HIGH",
+            "severity": "HIGH"
+        }
+    ]
+}

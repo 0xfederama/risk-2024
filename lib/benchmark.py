@@ -92,3 +92,41 @@ def run(outdir, tool, codedir, set_debug=False):
         )
     else:
         return run_tool(outdir=outdir, tool=tool, codedir=codedir)
+
+
+def confusion_matrix(flaws, filtered_data):
+    """
+    flaws: positive (method bad), negative (method good)
+    1) found in tool, found in flaws:
+        if cwe tool != cwe flaws -> FP
+        if flaws negative -> FP
+        if flaws positive -> TP
+    2) found in tool, not found in flaws:
+        FP
+    3) not found in tool, found in flaws:
+        if flaws positive -> FN
+        if flaws negative -> TN
+
+
+    foreach vuln in tool_filtered:
+        1) found in flaws:
+            if cwe tool != cwe flaws -> FP++
+            if flaws negative -> FP++
+            if flaws positive -> TP++
+        2) not found in flaws:
+            FP++
+
+    foreach flaw in flaws:
+        1) found in filtered:
+            skip
+        3) not found in filtered:
+            if flaw positive -> FN++
+            if flaw negative -> TN++
+    """
+    fp = 0
+    tp = 0
+    fn = 0
+    tn = 0
+
+    for tool_found in filtered_data:
+        pass

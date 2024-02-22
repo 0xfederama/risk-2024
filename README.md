@@ -24,7 +24,7 @@ Before running, you need to create a file `config.json` to specify the directori
 
 Usage:
 ```
-usage: run.py [-h] [--tool {semgrep,bearer,horusec}] [--lang {java,cpp,csharp}]
+usage: run.py [-h] [--tool {semgrep,bearer,horusec}] [--lang {java,cpp,csharp}] [--skip-cm] [--skip-tests]
 
 options:
   -h, --help            show this help message and exit
@@ -32,6 +32,8 @@ options:
                         The tool to use
   --lang {java,cpp,csharp}, -l {java,cpp,csharp}
                         The language of the Juliet test suite
+  --skip-cm             Skip confusion matrix creation
+  --skip-tests          Skip tests run
 ```
 
 Without specifying any option, the command runs every tool on every possible test suite.

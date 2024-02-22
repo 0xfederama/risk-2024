@@ -8,6 +8,8 @@ class Config:
     config = {}
     tool = None
     lang = None
+    skip_cm = False
+    skip_tests = False
 
     def __init__(self):
         # initialize argument parser and add options
@@ -24,9 +26,17 @@ class Config:
             help="The language of the Juliet test suite",
             choices=["java", "cpp", "csharp"],
         )
+        parser.add_argument(
+            "--skip-cm", help="Skip confusion matrix creation", action="store_true"
+        )
+        parser.add_argument(
+            "--skip-tests", help="Skip tests run", action="store_true"
+        )
         args = parser.parse_args()
         self.tool = args.tool
         self.lang = args.lang
+        self.skip_cm = args.skip_cm
+        self.skip_tests = args.skip_tests
 
         with open(self.CONFIG_FILE, "r") as f:
             self.config = json.load(f)

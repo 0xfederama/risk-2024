@@ -1,11 +1,29 @@
 import json
+import os
+
+
+class FilteredData:
+    def __init__(self):
+        self.data = {}
+
+    def add(self, path, cwe, line, confidence, severity):
+        filename = os.path.basename(path)
+        self.data[filename] = self.data.get(filename, [])
+        self.data[filename].append(
+            {
+                "cwe": cwe,
+                "line": line,
+                "confidence": confidence,
+                "severity": severity,
+            }
+        )
 
 
 def filter_semgrep_data(filename):
     with open(filename, "r") as f:
         data = json.load(f)
         results = data["results"]
-        filtered_results = []
+        filtered_results = FilteredData()
         for res in results:
             path = res["path"]
             line = res["start"]["line"]
@@ -19,22 +37,20 @@ def filter_semgrep_data(filename):
             confidence = res["extra"]["metadata"]["confidence"]
             severity = res["extra"]["metadata"]["impact"]
 
-            filtered_results.append(
-                {
-                    "cwe": cwe_str,
-                    "path": path,
-                    "line": line,
-                    "confidence": confidence,
-                    "severity": severity,
-                }
+            filtered_results.add(
+                path=path,
+                cwe=cwe_str,
+                line=line,
+                confidence=confidence,
+                severity=severity,
             )
-        return filtered_results
+        return filtered_results.data
 
 
 def filter_bearer_data(filename):
     with open(filename, "r") as f:
         data = json.load(f)
-        filtered_results = []
+        filtered_results = FilteredData()
         for key, value in data.items():
             for elem in value:
                 path = elem["full_filename"]
@@ -44,26 +60,24 @@ def filter_bearer_data(filename):
                 confidence = ""
                 severity = key
 
-                filtered_results.append(
-                    {
-                        "cwe": cwe_str,
-                        "path": path,
-                        "line": line,
-                        "confidence": confidence,
-                        "severity": severity,
-                    }
+                filtered_results.add(
+                    path=path,
+                    cwe=cwe_str,
+                    line=line,
+                    confidence=confidence,
+                    severity=severity,
                 )
-        return filtered_results
+        return filtered_results.data
 
 
 def filter_horusec_data(filename):
-    rules = dict()
+    rules = {}
     with open("./util/horusec_rules.json", "r") as f:
         rules = json.load(f)
 
     with open(filename, "r") as f:
         data = json.load(f)
-        filtered_results = []
+        filtered_results = FilteredData()
         analysisVulnerabilities = data["analysisVulnerabilities"]
         if analysisVulnerabilities is None or analysisVulnerabilities == "null":
             analysisVulnerabilities = []
@@ -77,40 +91,44 @@ def filter_horusec_data(filename):
             cwe_list = rules.get(vuln["rule_id"], [])
             for cwe in cwe_list:
                 cwe_str = str(cwe)
-                filtered_results.append(
-                    {
-                        "cwe": cwe_str,
-                        "path": path,
-                        "line": line,
-                        "confidence": confidence,
-                        "severity": severity,
-                    }
+
+                filtered_results.add(
+                    path=path,
+                    cwe=cwe_str,
+                    line=line,
+                    confidence=confidence,
+                    severity=severity,
                 )
 
-        return filtered_results
+        return filtered_results.data
 
 
-def aggregate_cwe(data):
+def aggregate_cwe(data_to_aggregate):
     """
     example format of the input data
     {
-        "cwe": cwe_str,
-        "path": path,
-        "line": line,
-        "confidence": confidence,
-        "severity": severity,
+        "filename": [
+            {
+                "cwe": cwe_str,
+                "line": line,
+                "confidence": confidence,
+                "severity": severity
+            },
+            ...
+        ]
     }
     """
-    res = dict()
+    res = {}
     total_vulns = 0
-    for elem in data:
-        cwe = str(elem["cwe"])
-        cwe = cwe if cwe.startswith("CWE-") else f"CWE-{cwe}"
-        total_vulns += 1
-        if cwe not in res:
-            res[cwe] = 0
+    for _, data in data_to_aggregate.items():
+        for elem in data:
+            cwe = str(elem["cwe"])
+            cwe = cwe if cwe.startswith("CWE-") else f"CWE-{cwe}"
+            total_vulns += 1
+            if cwe not in res:
+                res[cwe] = 0
 
-        res[cwe] += 1
+            res[cwe] += 1
 
     return {"vulns": res, "total": total_vulns}
 
