@@ -14,6 +14,9 @@
     "HS-JAVA-5": [
         "CWE-611"
     ],
+    "HS-JAVA-6": [
+        "CWE-611"
+    ],
     "HS-JAVA-7": [
         "CWE-611"
     ],
@@ -559,8 +562,20 @@
     "HS-CSHARP-1": [
         "CWE-78"
     ],
+    "HS-CSHARP-2": [
+        "CWE-643"
+    ],
+    "HS-CSHARP-3": [
+        "CWE-611"
+    ],
+    "HS-CSHARP-4": [
+        "CWE-22"
+    ],
     "HS-CSHARP-5": [
         "CWE-89"
+    ],
+    "HS-CSHARP-6": [
+        "CWE-327"
     ],
     "HS-CSHARP-7": [
         "CWE-598"
@@ -629,6 +644,15 @@
     "HS-CSHARP-28": [
         "CWE-90"
     ],
+    "HS-CSHARP-29": [
+        "CWE-89"
+    ],
+    "HS-CSHARP-30": [
+        "CWE-502"
+    ],
+    "HS-CSHARP-33": [
+        "CWE-601"
+    ],
     "HS-CSHARP-34": [
         "CWE-614"
     ],
@@ -644,8 +668,26 @@
     "HS-CSHARP-38": [
         "CWE-532"
     ],
+    "HS-CSHARP-39": [
+        "CWE-524"
+    ],
+    "HS-CSHARP-40": [
+        "CWE-601"
+    ],
+    "HS-CSHARP-41": [
+        "CWE-544"
+    ],
+    "HS-CSHARP-42": [
+        "CWE-89"
+    ],
     "HS-CSHARP-43": [
         "CWE-20"
+    ],
+    "HS-CSHARP-44": [
+        "CWE-89"
+    ],
+    "HS-CSHARP-45": [
+        "CWE-554"
     ],
     "HS-CSHARP-46": [
         "CWE-89"
@@ -653,8 +695,20 @@
     "HS-CSHARP-47": [
         "CWE-200"
     ],
+    "HS-CSHARP-48": [
+        "CWE-89"
+    ],
     "HS-CSHARP-49": [
         "CWE-807"
+    ],
+    "HS-CSHARP-50": [
+        "CWE-89"
+    ],
+    "HS-CSHARP-51": [
+        "CWE-295"
+    ],
+    "HS-CSHARP-52": [
+        "CWE-327"
     ],
     "HS-CSHARP-53": [
         "CWE-79"
