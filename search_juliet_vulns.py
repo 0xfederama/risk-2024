@@ -14,10 +14,9 @@ def extract_cwe_number(filename):
     return None
 
 
-def search_potential_flaw(juliet_directory):
+def search_potential_flaws(juliet_directory):
     """Search the string 'POTENTIAL FLAW' in Juliet's testcases files"""
-    results = []
-    # juliet_directory = os.path.join(juliet_directory, "src/testcases")
+    results = {}
     # Iterate through all files in juliet's directory
     for root, _, files in os.walk(juliet_directory):
         for file in files:
@@ -34,9 +33,9 @@ def search_potential_flaw(juliet_directory):
                 for line_num, line in enumerate(lines, start=1):
                     if "POTENTIAL FLAW" in line:
                         # Store the result in a dictionary
-                        results.append(
+                        results[file] = results.get(file, [])
+                        results[file].append(
                             {
-                                "file_path": file,  # os.path.join("src/testcases", file),
                                 "line": line_num + 1,
                                 "cwe": cwe_number,
                                 "category": (
@@ -59,9 +58,20 @@ if __name__ == "__main__":
         sys.exit(1)
 
     juliet_directory = sys.argv[1]
+    lang = ""
+    if "java" in juliet_directory:
+        lang = "java"
+    elif "csh" in juliet_directory:
+        lang = "csh"
+    elif "cpp" in juliet_directory:
+        lang = "cpp"
+    else:
+        print("Error")
+        exit(1)
 
     # Search for potential flaws
-    results = search_potential_flaw(juliet_directory)
+    results = search_potential_flaws(juliet_directory)
 
     # Print results in JSON format
-    print(json.dumps(results, indent=4))
+    with open(f"util/juliet_{lang}_flaws.json", "w", encoding="UTF-8") as f:
+        f.write(json.dumps(results, indent=4, sort_keys=True))
