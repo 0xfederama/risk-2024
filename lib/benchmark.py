@@ -99,15 +99,13 @@ def find_flaw(filename, found_elem, flaws):
         return None
 
     for found_in_flaw in flaws[filename]:
-        print(filename, found_in_flaw["line"], found_elem["line"])
-        if found_in_flaw["line"] == found_elem["line"]:
+        if int(found_in_flaw["line"]) == int(found_elem["line"]): 
             return found_in_flaw
-
 
     return None
 
 
-def confusion_matrix(flaws, filtered_data):
+def confusion_matrix(flaws, filtered_data, cwe=None):
     """
     flaws: positive (method bad), negative (method good)
     1) found in tool, found in flaws:
@@ -150,7 +148,7 @@ def confusion_matrix(flaws, filtered_data):
                 fp += 1
                 continue
             # case 1, same filename and same line
-            if f"CWE-{flaws_found['cwe']}" != found_from_tool["cwe"]:  # different CWE
+            if flaws_found['cwe'] != found_from_tool["cwe"]:  # different CWE
                 fp += 1
                 continue
 
@@ -159,9 +157,9 @@ def confusion_matrix(flaws, filtered_data):
                 fp += 1
             else:
                 tp += 1
-
+    
     for filename, flaw_list in flaws.items():
-        if "CWE89" not in filename:  # FIXME: specific case for testing
+        if cwe is not None and f"CWE{cwe}" not in filename:
             continue
         for fl in flaw_list:
             found_from_tool = find_flaw(filename, fl, filtered_data)
@@ -174,11 +172,17 @@ def confusion_matrix(flaws, filtered_data):
             else:
                 fn += 1
 
+    p = tp + fp
+    n = tn + fn
+
     retdict = {
         "false positive": fp,
         "true positive": tp,
         "false negative": fn,
         "true negative": tn,
+        "accuracy": (tp + tn) / (p + n),
+        "precision": tp / p,
+        "recall": tp / (fp + fn),
     }
 
     return retdict

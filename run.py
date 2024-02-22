@@ -47,7 +47,7 @@ def run_tests(config, tools, langs):
         print(f"{tool.capitalize()} on {lang} took {t:.3f} seconds")
 
 
-def create_confusion_matrix(tools, langs):
+def create_confusion_matrix(tools, langs, cwe=None):
     for lang_dir in os.listdir("out"):
         if lang_dir not in langs:
             continue
@@ -70,7 +70,7 @@ def create_confusion_matrix(tools, langs):
 
                     # Compute confusion matrix and write to file in out dir
                     print(f"Creating confusion matrix on {tool_dir} and {lang_dir}")
-                    confmat = benchmark.confusion_matrix(flaws, filtered_data)
+                    confmat = benchmark.confusion_matrix(flaws, filtered_data, cwe=cwe)
                     with open(f"out/{lang_dir}/{tool_dir}/conf_mat.json", "w") as f:
                         f.write(json.dumps(confmat, indent=4))
 
@@ -94,7 +94,7 @@ def main():
         print("Skipping tests")
 
     if not config.skip_cm:
-        create_confusion_matrix(tools, langs)
+        create_confusion_matrix(tools, langs, cwe=89)
     else:
         print("\nSkipping confusion matrix creation")
 
