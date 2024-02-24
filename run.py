@@ -88,13 +88,17 @@ def main():
     tools = all_tools if config.tool is None else [config.tool]
     langs = all_langs if config.lang is None else [config.lang]
 
+    print(f"Running on tools {str(tools)} with languages {str(langs)}")
+
     if not config.skip_tests:
         run_tests(config, tools, langs)
+        print()
     else:
-        print("Skipping tests")
+        print("\nSkipping tests")
 
     if not config.skip_cm:
         create_confusion_matrix(tools, langs, cwe=89)
+        print()
     else:
         print("\nSkipping confusion matrix creation")
 

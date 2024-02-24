@@ -12,6 +12,11 @@ Test suites:
 - [nist juliet](https://samate.nist.gov/SARD/test-suites/110) for c#
 - [nist juliet](https://samate.nist.gov/SARD/test-suites/112) for c/c++
 
+Metrics:
+- accuracy: $\frac{TP+TN}{TP+TN+FP+FN}$
+- precision: $\frac{TP}{TP+FP}$
+- recall: $\frac{TP}{FP+FN}$
+
 ## Run
 Before running, you need to create a file `config.json` to specify the directories of the test suites:
 ```
