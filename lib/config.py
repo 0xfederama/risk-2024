@@ -18,7 +18,7 @@ class Config:
             "--tool",
             "-t",
             help="The tool to use",
-            choices=["semgrep", "bearer", "horusec"],
+            choices=["semgrep", "bearer", "horusec", "snyk"],
         )
         parser.add_argument(
             "--lang",
@@ -29,9 +29,7 @@ class Config:
         parser.add_argument(
             "--skip-cm", help="Skip confusion matrix creation", action="store_true"
         )
-        parser.add_argument(
-            "--skip-tests", help="Skip tests run", action="store_true"
-        )
+        parser.add_argument("--skip-tests", help="Skip tests run", action="store_true")
         args = parser.parse_args()
         self.tool = args.tool
         self.lang = args.lang

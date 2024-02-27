@@ -3,16 +3,17 @@ import json
 import time
 import lib.config as configs
 import lib.benchmark as benchmark
+import lib.output_parser as outprs
 
 debug = True
 
 tool_support = {
-    "java": ["semgrep", "horusec", "bearer"],
-    "cpp": ["semgrep"],
-    "csharp": ["semgrep", "horusec"],
+    "java": ["semgrep", "horusec", "bearer", "snyk"],
+    "cpp": ["semgrep", "snyk"],
+    "csharp": ["semgrep", "horusec", "snyk"],
 }
 
-all_tools = ["semgrep", "bearer", "horusec"]
+all_tools = ["semgrep", "bearer", "horusec", "snyk"]
 all_langs = ["java", "cpp", "csharp"]
 
 
@@ -71,7 +72,9 @@ def create_confusion_matrix(tools, langs, cwe=None):
                     # Compute confusion matrix and write to file in out dir
                     print(f"Creating confusion matrix on {tool_dir} and {lang_dir}")
                     confmat = benchmark.confusion_matrix(flaws, filtered_data, cwe=cwe)
-                    with open(f"out/{lang_dir}/{tool_dir}/conf_mat.json", "w") as f:
+                    with open(
+                        f"out/{lang_dir}/{tool_dir}/{tool_dir}_conf_mat.json", "w"
+                    ) as f:
                         f.write(json.dumps(confmat, indent=4))
 
 

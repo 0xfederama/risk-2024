@@ -70,6 +70,38 @@ def filter_bearer_data(filename):
         return filtered_results.data
 
 
+def filter_snyk_data(filename):
+    with open(filename, "r") as f:
+        data = json.load(f)
+        filtered_results = FilteredData()
+        run = data["runs"][0]
+        rules = run["tool"]["driver"]["rules"]
+        results = run["results"]
+        for res in results:
+            rule_index = res["ruleIndex"]
+            cwes_for_rule = rules[rule_index]["properties"]["cwe"]
+            severity = res["level"]
+            confidence = ""
+            lines = set()
+            locations = res["codeFlows"][0]["threadFlows"][0]["locations"]
+            for loc in locations:
+                physicalLoc = loc["location"]["physicalLocation"]
+                path = physicalLoc["artifactLocation"]["uri"]
+                line = physicalLoc["region"]["startLine"]
+                if line not in lines:
+                    lines.add(line)
+                    for cwe in cwes_for_rule:
+                        cwe_num = cwe.split("-")[1]
+                        filtered_results.add(
+                            path=path,
+                            cwe=cwe_num,
+                            line=line,
+                            confidence=confidence,
+                            severity=severity,
+                        )
+        return filtered_results.data
+
+
 def filter_horusec_data(filename):
     rules = {}
     with open("./util/horusec_rules.json", "r") as f:
@@ -133,14 +165,16 @@ def aggregate_cwe(data_to_aggregate):
     return {"vulns": res, "total": total_vulns}
 
 
-def filter_data(tool, data):
+def filter_data(tool, filename):
     match tool:
         case "semgrep":
-            return filter_semgrep_data(data)
+            return filter_semgrep_data(filename)
         case "horusec":
-            return filter_horusec_data(data)
+            return filter_horusec_data(filename)
         case "bearer":
-            return filter_bearer_data(data)
+            return filter_bearer_data(filename)
+        case "snyk":
+            return filter_snyk_data(filename)
         case _:
             print("Tool not supported")
             exit()

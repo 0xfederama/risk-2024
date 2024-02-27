@@ -10,7 +10,7 @@ def get_cmd(tool, codedir, outdir):
     outfile = f"{outdir}/{tool}.json"
     # Get the command to run with the correct tool and test suite
     redirect = ""
-    if not debug:
+    if not debug or tool == "snyk":
         redirect = f" &> /tmp/{tool}_run_{int(time.time())}.log"
     command = ""
     match tool:
@@ -20,6 +20,8 @@ def get_cmd(tool, codedir, outdir):
             command = f"bearer scan {codedir} --force --format=json --output={outfile}"
         case "horusec":
             command = f"horusec start -p {codedir} -D -O {outfile} -o json"
+        case "snyk":
+            command = f"snyk code test {codedir} --json-file-output={outfile}"
     return command + redirect, outfile
 
 
@@ -27,7 +29,21 @@ def run_tool(outdir, tool, codedir):
     command, outfile = get_cmd(tool, codedir, outdir)
     # Execute tool
     time_start = time.perf_counter()
-    os.system(command)
+    ret = os.system(command)
+    if debug and tool == "snyk":
+        output = f"Snyk returned {ret}: "
+        match (ret):
+            case 0:
+                output += "success (scan completed), no vulnerabilities found"
+            case 1:
+                output += "action_needed (scan completed), vulnerabilities found"
+            case 2:
+                output += "failure, try to re-run the command. Use -d for debug logs"
+            case 3:
+                output += "failure, no supported projects detected"
+            case _:
+                output += "return code not found"
+        print(output)
     time_end = time.perf_counter()
     elapsed_time = time_end - time_start
 
@@ -99,7 +115,9 @@ def find_flaw(filename, found_elem, flaws):
         return None
 
     for found_in_flaw in flaws[filename]:
-        if int(found_in_flaw["line"]) == int(found_elem["line"]): 
+        if abs(int(found_in_flaw["line"]) - int(found_elem["line"])) <= 3:
+            # 3 lines of interval: offset from the actual flaw
+            # used to consider flaws spun on multiple lines
             return found_in_flaw
 
     return None
@@ -148,7 +166,7 @@ def confusion_matrix(flaws, filtered_data, cwe=None):
                 fp += 1
                 continue
             # case 1, same filename and same line
-            if flaws_found['cwe'] != found_from_tool["cwe"]:  # different CWE
+            if flaws_found["cwe"] != found_from_tool["cwe"]:  # different CWE
                 fp += 1
                 continue
 
@@ -157,7 +175,7 @@ def confusion_matrix(flaws, filtered_data, cwe=None):
                 fp += 1
             else:
                 tp += 1
-    
+
     for filename, flaw_list in flaws.items():
         if cwe is not None and f"CWE{cwe}" not in filename:
             continue
