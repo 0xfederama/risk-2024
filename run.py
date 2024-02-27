@@ -3,7 +3,6 @@ import json
 import time
 import lib.config as configs
 import lib.benchmark as benchmark
-import lib.output_parser as outprs
 
 debug = True
 
