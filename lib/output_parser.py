@@ -102,6 +102,44 @@ def filter_snyk_data(filename):
         return filtered_results.data
 
 
+def filter_flawfinder_data(filename):
+    with open(filename, "r") as f:
+        data = json.load(f)
+        filtered_results = FilteredData()
+        run = data["runs"][0]
+        rules = run["tool"]["driver"]["rules"]
+        rules_cwes = {}  # map rule to list of CWEs
+        for r in rules:
+            rules_cwes[r["id"]] = []
+            for relation in r["relationships"]:
+                cwe = relation["target"]["id"]
+                rules_cwes[r["id"]].append(cwe)
+        results = run["results"]
+        for res in results:
+            rule_id = res["ruleId"]
+            cwes_for_rule = rules_cwes[rule_id]
+            severity = res["level"]
+            confidence = ""
+            lines = set()
+            locations = res["locations"]
+            for loc in locations:
+                physicalLoc = loc["physicalLocation"]
+                path = physicalLoc["artifactLocation"]["uri"]
+                line = physicalLoc["region"]["startLine"]
+                if line not in lines:
+                    lines.add(line)
+                    for cwe in cwes_for_rule:
+                        cwe_num = cwe.split("-")[1]
+                        filtered_results.add(
+                            path=path,
+                            cwe=cwe_num,
+                            line=line,
+                            confidence=confidence,
+                            severity=severity,
+                        )
+        return filtered_results.data
+
+
 def filter_horusec_data(filename):
     rules = {}
     with open("./util/horusec_rules.json", "r") as f:
@@ -171,10 +209,12 @@ def filter_data(tool, filename):
             return filter_semgrep_data(filename)
         case "horusec":
             return filter_horusec_data(filename)
-        case "bearer":
-            return filter_bearer_data(filename)
+        # case "bearer":
+        #     return filter_bearer_data(filename)
         case "snyk":
             return filter_snyk_data(filename)
+        case "flawfinder":
+            return filter_flawfinder_data(filename)
         case _:
             print("Tool not supported")
             exit()

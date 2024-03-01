@@ -9,20 +9,22 @@ debug = False
 def get_cmd(tool, codedir, outdir):
     outfile = f"{outdir}/{tool}.json"
     # Get the command to run with the correct tool and test suite
-    redirect = ""
+    redir = ""
     if not debug or tool == "snyk":
-        redirect = f" &> /tmp/{tool}_run_{int(time.time())}.log"
+        redir = f" &> /tmp/{tool}_run_{int(time.time())}.log"
     command = ""
     match tool:
         case "semgrep":
-            command = f"semgrep scan {codedir} --json -o {outfile}"
-        case "bearer":
-            command = f"bearer scan {codedir} --force --format=json --output={outfile}"
+            command = f"semgrep scan {codedir} --json -o {outfile}" + redir
+        # case "bearer":
+        #     command = f"bearer scan {codedir} --force --format=json --output={outfile}"
         case "horusec":
-            command = f"horusec start -p {codedir} -D -O {outfile} -o json"
+            command = f"horusec start -p {codedir} -D -O {outfile} -o json" + redir
         case "snyk":
-            command = f"snyk code test {codedir} --json-file-output={outfile}"
-    return command + redirect, outfile
+            command = f"snyk code test {codedir} --json-file-output={outfile}" + redir
+        case "flawfinder":
+            command = f"flawfinder --sarif {codedir} > {outfile}"
+    return command, outfile
 
 
 def run_tool(outdir, tool, codedir):
@@ -198,9 +200,9 @@ def confusion_matrix(flaws, filtered_data, cwe=None):
         "true positive": tp,
         "false negative": fn,
         "true negative": tn,
-        "accuracy": (tp + tn) / (p + n),
-        "precision": tp / p,
-        "recall": tp / (fp + fn),
+        "accuracy": (tp + tn) / (p + n) if p + n > 0 else 0,
+        "precision": tp / p if p > 0 else 0,
+        "recall": tp / (fp + fn) if fp + fn > 0 else 0,
     }
 
     return retdict

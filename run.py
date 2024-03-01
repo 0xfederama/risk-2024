@@ -4,16 +4,16 @@ import time
 import lib.config as configs
 import lib.benchmark as benchmark
 
-debug = True
+debug = False
 
 tool_support = {
-    "java": ["semgrep", "horusec", "bearer", "snyk"],
-    "cpp": ["semgrep", "snyk"],
-    "csharp": ["semgrep", "horusec", "snyk"],
+    "java": ["semgrep", "snyk", "horusec"],
+    "csharp": ["semgrep", "snyk", "horusec"],
+    "cpp": ["semgrep", "snyk", "flawfinder"],
 }
 
-all_tools = ["semgrep", "bearer", "horusec", "snyk"]
-all_langs = ["java", "cpp", "csharp"]
+all_tools = ["semgrep", "snyk", "horusec", "flawfinder"]
+all_langs = ["java", "csharp", "cpp"]
 
 
 def run_tests(config, tools, langs):

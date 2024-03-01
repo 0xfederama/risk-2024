@@ -4,14 +4,23 @@ This repo contains the code we used to test various SASTs on different test suit
 
 SASTs tested:
 - [semgrep](https://github.com/semgrep/semgrep)
-- [bearer](https://github.com/bearer/bearer)
 - [horusec](https://github.com/ZupIT/horusec), using `-D` (`--disable-docker`) to use the proprietary SAST on java and c#
 - [snyk](https://snyk.io/product/snyk-code/)
+- [flawfinder](https://github.com/david-a-wheeler/flawfinder)
 
 Test suites:
 - [nist juliet](https://samate.nist.gov/SARD/test-suites/111) for java
 - [nist juliet](https://samate.nist.gov/SARD/test-suites/110) for c#
 - [nist juliet](https://samate.nist.gov/SARD/test-suites/112) for c/c++
+
+Tools and suites:
+Tools | Java | C# | C/C++ |
+--- | --- | --- | --- |
+Semgrep | ✅ | ✅ | ✅ |
+Snyk | ✅ | ✅ | ✅ |
+Horusec | ✅ | ✅ | ⛔️ |
+Flawfinder | ⛔️ | ⛔️ | ✅ |
+Cppcheck | ⛔️ | ⛔️ | ✅ |
 
 Metrics:
 - accuracy: $\frac{TP+TN}{TP+TN+FP+FN}$
@@ -30,12 +39,12 @@ Before running, you need to create a file `config.json` to specify the directori
 
 Usage:
 ```
-usage: run.py [-h] [--tool {semgrep,bearer,horusec,snyk}]
-              [--lang {java,cpp,csharp}] [--skip-cm] [--skip-tests]
+usage: run.py [-h] [--tool {semgrep,horusec,snyk,flawfinder}] [--lang {java,cpp,csharp}] [--skip-cm]
+              [--skip-tests]
 
 options:
   -h, --help            show this help message and exit
-  --tool {semgrep,bearer,horusec,snyk}, -t {semgrep,bearer,horusec,snyk}
+  --tool {semgrep,horusec,snyk,flawfinder}, -t {semgrep,horusec,snyk,flawfinder}
                         The tool to use
   --lang {java,cpp,csharp}, -l {java,cpp,csharp}
                         The language of the Juliet test suite

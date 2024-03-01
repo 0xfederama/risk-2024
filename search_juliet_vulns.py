@@ -31,7 +31,7 @@ def search_potential_flaws(juliet_directory):
                 # Iterate through each line to find the string "POTENTIAL FLAW"
                 isInsideGoodMethod = None
                 for line_num, line in enumerate(lines, start=1):
-                    if "POTENTIAL FLAW" in line:
+                    if "FLAW" in line:
                         # Store the result in a dictionary
                         results[file] = results.get(file, [])
                         results[file].append(

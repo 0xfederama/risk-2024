@@ -1,6 +1,4 @@
 {
-    "total": 20,
-    "vulns": {
-        "CWE-125": 20
-    }
+    "total": 0,
+    "vulns": {}
 }

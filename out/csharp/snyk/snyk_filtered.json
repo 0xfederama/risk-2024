@@ -1,5 +1,45 @@
 {
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_81a.cs": [
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_05.cs": [
+        {
+            "cwe": "89",
+            "line": 59,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 87,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_45.cs": [
+        {
+            "cwe": "89",
+            "line": 81,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 91,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 37,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 46,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_71a.cs": [
         {
             "cwe": "89",
             "line": 51,
@@ -8,12 +48,176 @@
         },
         {
             "cwe": "89",
-            "line": 62,
+            "line": 61,
             "confidence": "",
             "severity": "warning"
         }
     ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_81_bad.cs": [
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_71b.cs": [
+        {
+            "cwe": "89",
+            "line": 31,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 33,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 42,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_41.cs": [
+        {
+            "cwe": "89",
+            "line": 81,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 91,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 31,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 42,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_05.cs": [
+        {
+            "cwe": "89",
+            "line": 59,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 86,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_08.cs": [
+        {
+            "cwe": "89",
+            "line": 66,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 93,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_71a.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_71b.cs": [
+        {
+            "cwe": "89",
+            "line": 31,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 33,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 43,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_02.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 80,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_04.cs": [
+        {
+            "cwe": "89",
+            "line": 60,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 87,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 70,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_53a.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_53b.cs": [
         {
             "cwe": "89",
             "line": 30,
@@ -22,7 +226,327 @@
         },
         {
             "cwe": "89",
+            "line": 32,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_53d.cs": [
+        {
+            "cwe": "89",
             "line": 40,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_14.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 81,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_31.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 63,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 66,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 75,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_10.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 81,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_01.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 69,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_22a.cs": [
+        {
+            "cwe": "89",
+            "line": 54,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 65,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_22b.cs": [
+        {
+            "cwe": "89",
+            "line": 30,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 42,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_04.cs": [
+        {
+            "cwe": "89",
+            "line": 60,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 88,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_51a.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_51b.cs": [
+        {
+            "cwe": "89",
+            "line": 30,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 41,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_12.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 80,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_72a.cs": [
+        {
+            "cwe": "89",
+            "line": 52,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 65,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 66,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_72b.cs": [
+        {
+            "cwe": "89",
+            "line": 31,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 33,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 42,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_12.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 79,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 76,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_45.cs": [
+        {
+            "cwe": "89",
+            "line": 86,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 96,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 37,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 47,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_31.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 63,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 66,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 76,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_13.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 80,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_42.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 66,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 76,
             "confidence": "",
             "severity": "warning"
         }
@@ -63,7 +587,21 @@
             "severity": "warning"
         }
     ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_12.cs": [
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_06.cs": [
+        {
+            "cwe": "89",
+            "line": 58,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 86,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_16.cs": [
         {
             "cwe": "89",
             "line": 53,
@@ -72,7 +610,7 @@
         },
         {
             "cwe": "89",
-            "line": 80,
+            "line": 75,
             "confidence": "",
             "severity": "warning"
         }
@@ -87,6 +625,216 @@
         {
             "cwe": "89",
             "line": 80,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 81,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_72a.cs": [
+        {
+            "cwe": "89",
+            "line": 52,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 65,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 66,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_72b.cs": [
+        {
+            "cwe": "89",
+            "line": 31,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 33,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 43,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_17.cs": [
+        {
+            "cwe": "89",
+            "line": 55,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 76,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 81,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_53a.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_53b.cs": [
+        {
+            "cwe": "89",
+            "line": 30,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 32,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_53d.cs": [
+        {
+            "cwe": "89",
+            "line": 41,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_22a.cs": [
+        {
+            "cwe": "89",
+            "line": 54,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 65,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_22b.cs": [
+        {
+            "cwe": "89",
+            "line": 30,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 43,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_54a.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_54b.cs": [
+        {
+            "cwe": "89",
+            "line": 30,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 32,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_54e.cs": [
+        {
+            "cwe": "89",
+            "line": 41,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_81a.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 62,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_81_bad.cs": [
+        {
+            "cwe": "89",
+            "line": 30,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 40,
             "confidence": "",
             "severity": "warning"
         }
@@ -120,6 +868,310 @@
         }
     ],
     "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_52c.cs": [
+        {
+            "cwe": "89",
+            "line": 41,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_10.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 80,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_21.cs": [
+        {
+            "cwe": "89",
+            "line": 54,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 65,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 68,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 81,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_08.cs": [
+        {
+            "cwe": "89",
+            "line": 66,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 94,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_15.cs": [
+        {
+            "cwe": "89",
+            "line": 54,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 83,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_14.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 80,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_15.cs": [
+        {
+            "cwe": "89",
+            "line": 54,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 82,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_09.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 80,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_81a.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 62,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_81_bad.cs": [
+        {
+            "cwe": "89",
+            "line": 30,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 41,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07.cs": [
+        {
+            "cwe": "89",
+            "line": 58,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 86,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_41.cs": [
+        {
+            "cwe": "89",
+            "line": 76,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 86,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 31,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 41,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_61b.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_61a.cs": [
+        {
+            "cwe": "89",
+            "line": 32,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 42,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_06.cs": [
+        {
+            "cwe": "89",
+            "line": 58,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 85,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_17.cs": [
+        {
+            "cwe": "89",
+            "line": 55,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 75,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_51a.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_51b.cs": [
+        {
+            "cwe": "89",
+            "line": 30,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 40,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_13.cs": [
+        {
+            "cwe": "89",
+            "line": 53,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 81,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_61b.cs": [
+        {
+            "cwe": "89",
+            "line": 51,
+            "confidence": "",
+            "severity": "warning"
+        },
+        {
+            "cwe": "89",
+            "line": 61,
+            "confidence": "",
+            "severity": "warning"
+        }
+    ],
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_61a.cs": [
+        {
+            "cwe": "89",
+            "line": 32,
+            "confidence": "",
+            "severity": "warning"
+        },
         {
             "cwe": "89",
             "line": 41,
@@ -167,156 +1219,6 @@
             "severity": "warning"
         }
     ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_45.cs": [
-        {
-            "cwe": "89",
-            "line": 86,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 96,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 37,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 47,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_11.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 80,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_04.cs": [
-        {
-            "cwe": "89",
-            "line": 60,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 87,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_13.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 81,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_16.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 76,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_51a.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_51b.cs": [
-        {
-            "cwe": "89",
-            "line": 30,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 40,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_21.cs": [
-        {
-            "cwe": "89",
-            "line": 54,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 65,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 68,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 81,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_09.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 80,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
     "CWE89_SQL_Injection__Web_Database_ExecuteScalar_52a.cs": [
         {
             "cwe": "89",
@@ -353,33 +1255,7 @@
             "severity": "warning"
         }
     ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_45.cs": [
-        {
-            "cwe": "89",
-            "line": 81,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 91,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 37,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 46,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_14.cs": [
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_11.cs": [
         {
             "cwe": "89",
             "line": 53,
@@ -388,61 +1264,7 @@
         },
         {
             "cwe": "89",
-            "line": 81,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_15.cs": [
-        {
-            "cwe": "89",
-            "line": 54,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 83,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_41.cs": [
-        {
-            "cwe": "89",
-            "line": 81,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 91,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 31,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 42,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_06.cs": [
-        {
-            "cwe": "89",
-            "line": 58,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 86,
+            "line": 80,
             "confidence": "",
             "severity": "warning"
         }
@@ -461,89 +1283,7 @@
             "severity": "warning"
         }
     ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_01.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 69,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_05.cs": [
-        {
-            "cwe": "89",
-            "line": 59,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 87,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_72a.cs": [
-        {
-            "cwe": "89",
-            "line": 52,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 65,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 66,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_72b.cs": [
-        {
-            "cwe": "89",
-            "line": 31,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 33,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 42,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_17.cs": [
-        {
-            "cwe": "89",
-            "line": 55,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 76,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_42.cs": [
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_42.cs": [
         {
             "cwe": "89",
             "line": 51,
@@ -564,12 +1304,12 @@
         },
         {
             "cwe": "89",
-            "line": 76,
+            "line": 75,
             "confidence": "",
             "severity": "warning"
         }
     ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_13.cs": [
+    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_02.cs": [
         {
             "cwe": "89",
             "line": 53,
@@ -578,75 +1318,7 @@
         },
         {
             "cwe": "89",
-            "line": 80,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_71a.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_71b.cs": [
-        {
-            "cwe": "89",
-            "line": 31,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 33,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 42,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_71a.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_71b.cs": [
-        {
-            "cwe": "89",
-            "line": 31,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 33,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 43,
+            "line": 81,
             "confidence": "",
             "severity": "warning"
         }
@@ -691,132 +1363,16 @@
             "severity": "warning"
         }
     ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_10.cs": [
+    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_07.cs": [
         {
             "cwe": "89",
-            "line": 53,
+            "line": 58,
             "confidence": "",
             "severity": "warning"
         },
         {
             "cwe": "89",
-            "line": 80,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_17.cs": [
-        {
-            "cwe": "89",
-            "line": 55,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 75,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_72a.cs": [
-        {
-            "cwe": "89",
-            "line": 52,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 65,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 66,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_72b.cs": [
-        {
-            "cwe": "89",
-            "line": 31,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 33,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 43,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_41.cs": [
-        {
-            "cwe": "89",
-            "line": 76,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 86,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 31,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 41,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_53a.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_53b.cs": [
-        {
-            "cwe": "89",
-            "line": 30,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 32,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_53d.cs": [
-        {
-            "cwe": "89",
-            "line": 41,
+            "line": 85,
             "confidence": "",
             "severity": "warning"
         }
@@ -843,562 +1399,6 @@
         {
             "cwe": "89",
             "line": 80,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_61b.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_61a.cs": [
-        {
-            "cwe": "89",
-            "line": 32,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 42,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_02.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 80,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_07.cs": [
-        {
-            "cwe": "89",
-            "line": 58,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 86,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_08.cs": [
-        {
-            "cwe": "89",
-            "line": 66,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 93,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_51a.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_51b.cs": [
-        {
-            "cwe": "89",
-            "line": 30,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 41,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_81a.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 62,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_81_bad.cs": [
-        {
-            "cwe": "89",
-            "line": 30,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 41,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_61b.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_61a.cs": [
-        {
-            "cwe": "89",
-            "line": 32,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 41,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_02.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 81,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_31.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 63,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 66,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 76,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_53a.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_53b.cs": [
-        {
-            "cwe": "89",
-            "line": 30,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 32,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_53d.cs": [
-        {
-            "cwe": "89",
-            "line": 40,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_07.cs": [
-        {
-            "cwe": "89",
-            "line": 58,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 85,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_16.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 75,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_22a.cs": [
-        {
-            "cwe": "89",
-            "line": 54,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 65,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_22b.cs": [
-        {
-            "cwe": "89",
-            "line": 30,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 42,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_06.cs": [
-        {
-            "cwe": "89",
-            "line": 58,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 85,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_03.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 81,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_01.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 70,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_04.cs": [
-        {
-            "cwe": "89",
-            "line": 60,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 88,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_12.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 79,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_22a.cs": [
-        {
-            "cwe": "89",
-            "line": 54,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 65,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_22b.cs": [
-        {
-            "cwe": "89",
-            "line": 30,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 43,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_31.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 63,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 66,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 75,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_54a.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_54b.cs": [
-        {
-            "cwe": "89",
-            "line": 30,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 32,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_54e.cs": [
-        {
-            "cwe": "89",
-            "line": 41,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_14.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 80,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_08.cs": [
-        {
-            "cwe": "89",
-            "line": 66,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 94,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_15.cs": [
-        {
-            "cwe": "89",
-            "line": 54,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 82,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_05.cs": [
-        {
-            "cwe": "89",
-            "line": 59,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 86,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_11.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 81,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteScalar_42.cs": [
-        {
-            "cwe": "89",
-            "line": 51,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 61,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 66,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 75,
-            "confidence": "",
-            "severity": "warning"
-        }
-    ],
-    "CWE89_SQL_Injection__Web_Database_ExecuteNonQuery_10.cs": [
-        {
-            "cwe": "89",
-            "line": 53,
-            "confidence": "",
-            "severity": "warning"
-        },
-        {
-            "cwe": "89",
-            "line": 81,
             "confidence": "",
             "severity": "warning"
         }
