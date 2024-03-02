@@ -1,28 +1,28 @@
 {
-    "CWE126_Buffer_Overread__CWE129_fscanf_43.cpp": [
+    "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp": [
         {
             "cwe": "122",
-            "line": 1,
+            "line": 28,
             "confidence": "",
             "severity": "warning"
         },
         {
             "cwe": "122",
-            "line": 1,
+            "line": 47,
             "confidence": "",
             "severity": "warning"
         }
     ],
-    "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp": [
+    "CWE126_Buffer_Overread__CWE129_fscanf_43.cpp": [
         {
             "cwe": "122",
-            "line": 1,
+            "line": 28,
             "confidence": "",
             "severity": "warning"
         },
         {
             "cwe": "122",
-            "line": 1,
+            "line": 89,
             "confidence": "",
             "severity": "warning"
         }

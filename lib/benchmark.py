@@ -7,23 +7,27 @@ debug = False
 
 
 def get_cmd(tool, codedir, outdir):
-    outfile = f"{outdir}/{tool}.json"
+    if tool != "cppcheck":
+        outfile = f"{outdir}/{tool}.json"
+    else:
+        outfile = f"{outdir}/{tool}.txt"
     # Get the command to run with the correct tool and test suite
     redir = ""
     if not debug or tool == "snyk":
-        redir = f" &> /tmp/{tool}_run_{int(time.time())}.log"
+        redir = " &> /dev/null"
     command = ""
     match tool:
         case "semgrep":
             command = f"semgrep scan {codedir} --json -o {outfile}" + redir
-        # case "bearer":
-        #     command = f"bearer scan {codedir} --force --format=json --output={outfile}"
         case "horusec":
             command = f"horusec start -p {codedir} -D -O {outfile} -o json" + redir
         case "snyk":
             command = f"snyk code test {codedir} --json-file-output={outfile}" + redir
         case "flawfinder":
             command = f"flawfinder --sarif {codedir} > {outfile}"
+        case "cppcheck":
+            command = f"cppcheck --template='{{cwe}}:{{file}}:{{line}}:{{severity}}' -q {codedir} --output-file={outfile}"
+
     return command, outfile
 
 
@@ -31,21 +35,7 @@ def run_tool(outdir, tool, codedir):
     command, outfile = get_cmd(tool, codedir, outdir)
     # Execute tool
     time_start = time.perf_counter()
-    ret = os.system(command)
-    if debug and tool == "snyk":
-        output = f"Snyk returned {ret}: "
-        match (ret):
-            case 0:
-                output += "success (scan completed), no vulnerabilities found"
-            case 1:
-                output += "action_needed (scan completed), vulnerabilities found"
-            case 2:
-                output += "failure, try to re-run the command. Use -d for debug logs"
-            case 3:
-                output += "failure, no supported projects detected"
-            case _:
-                output += "return code not found"
-        print(output)
+    os.system(command)
     time_end = time.perf_counter()
     elapsed_time = time_end - time_start
 
@@ -117,7 +107,7 @@ def find_flaw(filename, found_elem, flaws):
         return None
 
     for found_in_flaw in flaws[filename]:
-        if abs(int(found_in_flaw["line"]) - int(found_elem["line"])) <= 3:
+        if abs(int(found_in_flaw["line"]) - int(found_elem["line"])) <= 4:
             # 3 lines of interval: offset from the actual flaw
             # used to consider flaws spun on multiple lines
             return found_in_flaw
@@ -125,7 +115,7 @@ def find_flaw(filename, found_elem, flaws):
     return None
 
 
-def confusion_matrix(flaws, filtered_data, cwe=None):
+def confusion_matrix(flaws, filtered_data, cwe):
     """
     flaws: positive (method bad), negative (method good)
     1) found in tool, found in flaws:
@@ -206,3 +196,42 @@ def confusion_matrix(flaws, filtered_data, cwe=None):
     }
 
     return retdict
+
+
+"""
+A partire dal SAST
+Se la troviamo in manifest:
+    true positive
+Else
+    Se la troviamo nel file delle flaws:
+        Se in metodo bad:
+            ignorato
+        Else:
+            false positive
+    Else
+        false positive
+
+A partire dal manifest
+Se la troviamo nel SAST:
+    true positive (ignora, lo abbiamo contato prima)
+Else:
+    false negative
+
+FLAWS NOSTRE:
+cwe diverso -> skip
+metodo good, sast trova -> FP
+metodo bad, sast trova -> ignorati + TP
+metodo good, sast non trova -> ? TN ?
+metodo bad, sast non trova -> FN
+TN = tutti (cwe giusto) - (FP + TP + ignorati + FN)
+
+# A partire dalle flaws nostre
+# Se e' in bad:
+#     ignora
+# Else:
+#     Se l'ha trovato il SAST:
+#         ignora
+#     Else:
+#         true negative
+
+"""

@@ -18,7 +18,7 @@ class Config:
             "--tool",
             "-t",
             help="The tool to use",
-            choices=["semgrep", "horusec", "snyk", "flawfinder"],
+            choices=["semgrep", "horusec", "snyk", "flawfinder", "cppcheck"],
         )
         parser.add_argument(
             "--lang",

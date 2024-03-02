@@ -1,9 +1,9 @@
 {
     "false positive": 5499,
     "true positive": 240,
-    "false negative": 0,
-    "true negative": 0,
-    "accuracy": 0.04181913225300575,
+    "false negative": 2342,
+    "true negative": 1702,
+    "accuracy": 0.1985076152509455,
     "precision": 0.04181913225300575,
-    "recall": 0.0436442989634479
+    "recall": 0.030608340772860603
 }

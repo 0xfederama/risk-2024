@@ -48,28 +48,6 @@ def filter_semgrep_data(filename):
         return filtered_results.data
 
 
-def filter_bearer_data(filename):
-    with open(filename, "r") as f:
-        data = json.load(f)
-        filtered_results = FilteredData()
-        for key, value in data.items():
-            for elem in value:
-                path = elem["full_filename"]
-                line = elem["line_number"]
-                confidence = ""
-                severity = key
-                cwe_titles = elem["cwe_ids"]
-                for cwe in cwe_titles:
-                    filtered_results.add(
-                        path=path,
-                        cwe=cwe,
-                        line=line,
-                        confidence=confidence,
-                        severity=severity,
-                    )
-        return filtered_results.data
-
-
 def filter_snyk_data(filename):
     with open(filename, "r") as f:
         data = json.load(f)
@@ -173,6 +151,23 @@ def filter_horusec_data(filename):
         return filtered_results.data
 
 
+def filter_cppcheck_data(filename):
+    with open(filename, "r") as f:
+        filtered_results = FilteredData()
+        for line in f.readlines():
+            [cwe, file, line, severity] = line.split(":")
+            confidence = ""
+            filtered_results.add(
+                path=file,
+                cwe=cwe,
+                line=line,
+                confidence=confidence,
+                severity=severity[:-1],
+            )
+
+        return filtered_results.data
+
+
 def aggregate_cwe(data_to_aggregate):
     """
     example format of the input data
@@ -209,12 +204,12 @@ def filter_data(tool, filename):
             return filter_semgrep_data(filename)
         case "horusec":
             return filter_horusec_data(filename)
-        # case "bearer":
-        #     return filter_bearer_data(filename)
         case "snyk":
             return filter_snyk_data(filename)
         case "flawfinder":
             return filter_flawfinder_data(filename)
+        case "cppcheck":
+            return filter_cppcheck_data(filename)
         case _:
             print("Tool not supported")
             exit()

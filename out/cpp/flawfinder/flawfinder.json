@@ -48138,10 +48138,10 @@
                 },
                 "region": {
                   "startLine": 28,
-                  "startColumn": 5,
-                  "endColumn": 32,
+                  "startColumn": 4,
+                  "endColumn": 31,
                   "snippet": {
-                    "text": "    fscanf(stdin, \"%d\", &data);"
+                    "text": "   fscanf(stdin, \"%d\", &data);"
                   }
                 }
               }

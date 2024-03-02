@@ -190,20 +190,280 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "CWE126_Buffer_Overread__CWE129_fscanf_43.cpp",
+                  "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 1,
-                  "endLine": 1,
-                  "startColumn": 857,
-                  "endColumn": 863
+                  "startLine": 28,
+                  "endLine": 28,
+                  "startColumn": 5,
+                  "endColumn": 11
                 }
               }
             }
           ],
           "fingerprints": {
-            "0": "12f840aa95ef0e1d90846c6bc91e1c52cdd33324536d6ece4320c95afa056dfe",
+            "0": "b83ce0820deebcfc7d1142d3a0ada015de943d0a8456334bb7c27d150fa9cc2b",
+            "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.bf8d7c43.fbee80e3.8f47a30e.30ad82ea.348c8065"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 25,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 5,
+                            "endColumn": 11
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "cpp/BufferOverflow",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a file flows into fscanf, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
+            "arguments": [
+              "[a file](0)",
+              "[flows](1),(2)",
+              "[fscanf](3)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 47,
+                  "endLine": 47,
+                  "startColumn": 5,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "0d9737e2cded0840a9184c2740d58d0aba0aa1a160a519ff2199357848170625",
+            "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.bf8d7c43.fbee80e3.8f47a30e.30ad82ea.348c8065"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 25,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 5,
+                            "endColumn": 11
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "cpp/BufferOverflow",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a file flows into fscanf, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
+            "arguments": [
+              "[a file](0)",
+              "[flows](1),(2)",
+              "[fscanf](3)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "CWE126_Buffer_Overread__CWE129_fscanf_43.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 28,
+                  "endLine": 28,
+                  "startColumn": 4,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "8ced3d419da2f78bd2a2f76de6b52275bd1ed2cbbc374fd069264bedcc3b8e13",
             "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.cc899355.fbee80e3.8f47a30e.30ad82ea.348c8065"
           },
           "codeFlows": [
@@ -220,10 +480,10 @@
                             "uriBaseId": "%SRCROOT%"
                           },
                           "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 878,
-                            "endColumn": 882
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 25,
+                            "endColumn": 29
                           }
                         }
                       }
@@ -237,10 +497,10 @@
                             "uriBaseId": "%SRCROOT%"
                           },
                           "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 878,
-                            "endColumn": 882
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 25,
+                            "endColumn": 29
                           }
                         }
                       }
@@ -254,10 +514,10 @@
                             "uriBaseId": "%SRCROOT%"
                           },
                           "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 877,
-                            "endColumn": 882
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 24,
+                            "endColumn": 29
                           }
                         }
                       }
@@ -271,10 +531,10 @@
                             "uriBaseId": "%SRCROOT%"
                           },
                           "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 857,
-                            "endColumn": 863
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 4,
+                            "endColumn": 10
                           }
                         }
                       }
@@ -324,16 +584,16 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 1,
-                  "endLine": 1,
-                  "startColumn": 2394,
-                  "endColumn": 2400
+                  "startLine": 89,
+                  "endLine": 89,
+                  "startColumn": 5,
+                  "endColumn": 11
                 }
               }
             }
           ],
           "fingerprints": {
-            "0": "12f840aa95ef0e1d90846c6bc91e1c52cdd33324536d6ece4320c95afa056dfe",
+            "0": "457dea71ede3f891ba88f4e848698001c71bef3e9f0714767ccfbe545cf47fee",
             "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.3b4b9534.277c621c.7be03776.cc899355.fbee80e3.8f47a30e.9957b03c.348c8065"
           },
           "codeFlows": [
@@ -350,10 +610,10 @@
                             "uriBaseId": "%SRCROOT%"
                           },
                           "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 2415,
-                            "endColumn": 2419
+                            "startLine": 89,
+                            "endLine": 89,
+                            "startColumn": 26,
+                            "endColumn": 30
                           }
                         }
                       }
@@ -367,10 +627,10 @@
                             "uriBaseId": "%SRCROOT%"
                           },
                           "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 2415,
-                            "endColumn": 2419
+                            "startLine": 89,
+                            "endLine": 89,
+                            "startColumn": 26,
+                            "endColumn": 30
                           }
                         }
                       }
@@ -384,10 +644,10 @@
                             "uriBaseId": "%SRCROOT%"
                           },
                           "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 2414,
-                            "endColumn": 2419
+                            "startLine": 89,
+                            "endLine": 89,
+                            "startColumn": 25,
+                            "endColumn": 30
                           }
                         }
                       }
@@ -401,270 +661,10 @@
                             "uriBaseId": "%SRCROOT%"
                           },
                           "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 2394,
-                            "endColumn": 2400
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "priorityScore": 650,
-            "priorityScoreFactors": [
-              {
-                "label": true,
-                "type": "multipleOccurrence"
-              },
-              {
-                "label": true,
-                "type": "hotFileSource"
-              },
-              {
-                "label": true,
-                "type": "fixExamples"
-              }
-            ],
-            "isAutofixable": false
-          }
-        },
-        {
-          "ruleId": "cpp/BufferOverflow",
-          "ruleIndex": 0,
-          "level": "warning",
-          "message": {
-            "text": "Unsanitized input from a file flows into fscanf, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
-            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
-            "arguments": [
-              "[a file](0)",
-              "[flows](1),(2)",
-              "[fscanf](3)"
-            ]
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1,
-                  "endLine": 1,
-                  "startColumn": 854,
-                  "endColumn": 860
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "0": "8815722ae19e08c023ac5115f80966b355d89d176b87b83d70388ba0eb662c4d",
-            "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.bf8d7c43.fbee80e3.8f47a30e.30ad82ea.348c8065"
-          },
-          "codeFlows": [
-            {
-              "threadFlows": [
-                {
-                  "locations": [
-                    {
-                      "location": {
-                        "id": 0,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 875,
-                            "endColumn": 879
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 1,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 875,
-                            "endColumn": 879
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 2,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 874,
-                            "endColumn": 879
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 3,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 854,
-                            "endColumn": 860
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "priorityScore": 650,
-            "priorityScoreFactors": [
-              {
-                "label": true,
-                "type": "multipleOccurrence"
-              },
-              {
-                "label": true,
-                "type": "hotFileSource"
-              },
-              {
-                "label": true,
-                "type": "fixExamples"
-              }
-            ],
-            "isAutofixable": false
-          }
-        },
-        {
-          "ruleId": "cpp/BufferOverflow",
-          "ruleIndex": 0,
-          "level": "warning",
-          "message": {
-            "text": "Unsanitized input from a file flows into fscanf, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
-            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
-            "arguments": [
-              "[a file](0)",
-              "[flows](1),(2)",
-              "[fscanf](3)"
-            ]
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 1,
-                  "endLine": 1,
-                  "startColumn": 1356,
-                  "endColumn": 1362
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "0": "8815722ae19e08c023ac5115f80966b355d89d176b87b83d70388ba0eb662c4d",
-            "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.bf8d7c43.fbee80e3.8f47a30e.30ad82ea.348c8065"
-          },
-          "codeFlows": [
-            {
-              "threadFlows": [
-                {
-                  "locations": [
-                    {
-                      "location": {
-                        "id": 0,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 1377,
-                            "endColumn": 1381
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 1,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 1377,
-                            "endColumn": 1381
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 2,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 1376,
-                            "endColumn": 1381
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 3,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 1,
-                            "endLine": 1,
-                            "startColumn": 1356,
-                            "endColumn": 1362
+                            "startLine": 89,
+                            "endLine": 89,
+                            "startColumn": 5,
+                            "endColumn": 11
                           }
                         }
                       }
@@ -705,7 +705,7 @@
           {
             "isSupported": true,
             "lang": "C",
-            "files": 726,
+            "files": 727,
             "type": "SUPPORTED"
           }
         ]

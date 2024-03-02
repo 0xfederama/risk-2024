@@ -9,10 +9,10 @@ debug = False
 tool_support = {
     "java": ["semgrep", "snyk", "horusec"],
     "csharp": ["semgrep", "snyk", "horusec"],
-    "cpp": ["semgrep", "snyk", "flawfinder"],
+    "cpp": ["semgrep", "snyk", "flawfinder", "cppcheck"],
 }
 
-all_tools = ["semgrep", "snyk", "horusec", "flawfinder"]
+all_tools = ["semgrep", "snyk", "horusec", "flawfinder", "cppcheck"]
 all_langs = ["java", "csharp", "cpp"]
 
 
@@ -47,7 +47,7 @@ def run_tests(config, tools, langs):
         print(f"{tool.capitalize()} on {lang} took {t:.3f} seconds")
 
 
-def create_confusion_matrix(tools, langs, cwe=None):
+def create_confusion_matrix(config, tools, langs):
     for lang_dir in os.listdir("out"):
         if lang_dir not in langs:
             continue
@@ -56,6 +56,12 @@ def create_confusion_matrix(tools, langs, cwe=None):
         flaws = {}
         with open(f"util/juliet_{lang_dir}_flaws.json", "r") as f:
             flaws = json.load(f)
+
+        juliet_path = config.get_juliet_path(lang_dir)
+        if "CWE" in juliet_path:
+            cwe = juliet_path.split("_")[0].split("/")[-1][3:]
+        else:
+            cwe = None
 
         for tool_dir in os.listdir(f"out/{lang_dir}"):
             if tool_dir not in tools:
@@ -90,7 +96,7 @@ def main():
     tools = all_tools if config.tool is None else [config.tool]
     langs = all_langs if config.lang is None else [config.lang]
 
-    print(f"Running on tools {str(tools)} with languages {str(langs)}")
+    print(f"Running tools {str(tools)} on languages {str(langs)}")
 
     if not config.skip_tests:
         run_tests(config, tools, langs)
@@ -99,7 +105,7 @@ def main():
         print("\nSkipping tests")
 
     if not config.skip_cm:
-        create_confusion_matrix(tools, langs, cwe=89)
+        create_confusion_matrix(config, tools, langs)
         print()
     else:
         print("\nSkipping confusion matrix creation")
