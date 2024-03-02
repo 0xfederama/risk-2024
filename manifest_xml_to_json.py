@@ -21,7 +21,9 @@ def main():
                 linenum = int(spl[1])
                 cwe = spl[3]
                 cwenum = str(int(cwe.split(":")[0].split("-")[1]))
-                result[last_filename] = {"line": linenum, "cwe": cwenum}
+                if result.get(last_filename) is None:
+                    result[last_filename] = []
+                result[last_filename].append({"line": linenum, "cwe": cwenum})
 
     # print the json result to stdout
     print(json.dumps(result, indent=4))
