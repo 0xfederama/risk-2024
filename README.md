@@ -54,5 +54,6 @@ options:
 
 Without specifying any option, the command runs every tool on every possible test suite.
 
-## Requirements
-In order to run snyk on cpp, the tool wants LF as the end of file in the files, so you need to modify the entire Juliet suite in C/C++ in order to replace CRLF with LF. To that, we used [https://github.com/t-regx/crlf](https://github.com/t-regx/crlf).
+## Considerations
+- In order to run snyk on cpp, the tool wants LF as the end of file in the files, so you need to modify the entire Juliet suite in C/C++ in order to replace CRLF with LF. To that, we used [https://github.com/t-regx/crlf](https://github.com/t-regx/crlf).
+- In order to create the confusion matrix, we read if a specific CWE directory is specified. But if also the internal `s` directory is specified (like `CWE89_SQL_Injection/s01`), the tool creates the confusion matrix in a wrong way. Thus, don't put the `s` directory in the juliet path and test the tool only on the full Juliet path or on the CWE directories at most.

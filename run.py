@@ -50,7 +50,7 @@ def run_tests(config, tools, langs):
 def create_confusion_matrix(config, tools, langs):
     # Read the cwe tree from file
     cwe_tree = {}
-    with open("util/cwe_tree.json", "r") as f:
+    with open("util/cwe_tree_full.json", "r") as f:
         cwe_tree = json.load(f)
 
     for lang_dir in os.listdir("out"):
@@ -59,7 +59,7 @@ def create_confusion_matrix(config, tools, langs):
 
         # Open Juliet potential flaws file for current language
         pot_flaws = {}
-        with open(f"util/juliet_{lang_dir}_flaws.json", "r") as f:
+        with open(f"util/pot_flaws_{lang_dir}.json", "r") as f:
             pot_flaws = json.load(f)
 
         # Open Juliet manifest flaws file for current language
@@ -91,8 +91,8 @@ def create_confusion_matrix(config, tools, langs):
                     print(f"Creating confusion matrix on {tool_dir} and {lang_dir}")
                     confmat = benchmark.confusion_matrix(
                         pot_flaws=pot_flaws,
-                        flaws=flaws,
-                        sast_data=filtered_data,
+                        manifest_flaws=flaws,
+                        sast_flaws=filtered_data,
                         cwe=cwe,
                         cwe_tree=cwe_tree,
                     )

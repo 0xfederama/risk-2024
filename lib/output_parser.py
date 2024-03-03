@@ -49,34 +49,38 @@ def filter_semgrep_data(filename):
 
 
 def filter_snyk_data(filename):
+    # if snyk didnt find vulns, return empty filtered data
+    if not os.path.isfile(filename):
+        return FilteredData().data
+
     with open(filename, "r") as f:
         data = json.load(f)
         filtered_results = FilteredData()
         run = data["runs"][0]
         rules = run["tool"]["driver"]["rules"]
         results = run["results"]
+        path_and_lines = {}
         for res in results:
             rule_index = res["ruleIndex"]
-            cwes_for_rule = rules[rule_index]["properties"]["cwe"]
+            cwe = rules[rule_index]["properties"]["cwe"][0]
             severity = res["level"]
             confidence = ""
-            lines = set()
             locations = res["codeFlows"][0]["threadFlows"][0]["locations"]
             for loc in locations:
                 physicalLoc = loc["location"]["physicalLocation"]
                 path = physicalLoc["artifactLocation"]["uri"]
                 line = physicalLoc["region"]["startLine"]
-                if line not in lines:
-                    lines.add(line)
-                    for cwe in cwes_for_rule:
-                        cwe_num = cwe.split("-")[1]
-                        filtered_results.add(
-                            path=path,
-                            cwe=cwe_num,
-                            line=line,
-                            confidence=confidence,
-                            severity=severity,
-                        )
+                path_and_lines[path] = path_and_lines.get(path, [])
+                if line not in path_and_lines[path]:
+                    path_and_lines[path].append(line)
+                    cwe_num = cwe.split("-")[1]
+                    filtered_results.add(
+                        path=path,
+                        cwe=cwe_num,
+                        line=line,
+                        confidence=confidence,
+                        severity=severity,
+                    )
         return filtered_results.data
 
 
@@ -93,28 +97,28 @@ def filter_flawfinder_data(filename):
                 cwe = relation["target"]["id"]
                 rules_cwes[r["id"]].append(cwe)
         results = run["results"]
+        path_and_lines = {}
         for res in results:
             rule_id = res["ruleId"]
-            cwes_for_rule = rules_cwes[rule_id]
+            cwe = rules_cwes[rule_id][0]
             severity = res["level"]
             confidence = ""
-            lines = set()
             locations = res["locations"]
             for loc in locations:
                 physicalLoc = loc["physicalLocation"]
                 path = physicalLoc["artifactLocation"]["uri"]
                 line = physicalLoc["region"]["startLine"]
-                if line not in lines:
-                    lines.add(line)
-                    for cwe in cwes_for_rule:
-                        cwe_num = cwe.split("-")[1]
-                        filtered_results.add(
-                            path=path,
-                            cwe=cwe_num,
-                            line=line,
-                            confidence=confidence,
-                            severity=severity,
-                        )
+                path_and_lines[path] = path_and_lines.get(path, [])
+                if line not in path_and_lines[path]:
+                    path_and_lines[path].append(line)
+                    cwe_num = cwe.split("-")[1]
+                    filtered_results.add(
+                        path=path,
+                        cwe=cwe_num,
+                        line=line,
+                        confidence=confidence,
+                        severity=severity,
+                    )
         return filtered_results.data
 
 
@@ -143,7 +147,7 @@ def filter_horusec_data(filename):
                 filtered_results.add(
                     path=path,
                     cwe=cwe_str.split("-")[1],
-                    line=line,
+                    line=int(line),
                     confidence=confidence,
                     severity=severity,
                 )
@@ -160,7 +164,7 @@ def filter_cppcheck_data(filename):
             filtered_results.add(
                 path=file,
                 cwe=cwe,
-                line=line,
+                line=int(line),
                 confidence=confidence,
                 severity=severity[:-1],
             )
