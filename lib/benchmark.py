@@ -122,6 +122,7 @@ def find_vuln_in_manifest_list(vuln, list, cwe_tree):
             if is_cwe_ancestor(vuln_cwe, el_cwe, cwe_tree) or is_cwe_ancestor(
                 el_cwe, vuln_cwe, cwe_tree
             ):
+                # FIXME: funziona? togliere print
                 if vuln_cwe != el_cwe:
                     print(f"CWE {vuln_cwe} and {el_cwe} related")
                 return True
