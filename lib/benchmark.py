@@ -102,85 +102,107 @@ def run(outdir, tool, codedir, set_debug=False):
         return run_tool(outdir=outdir, tool=tool, codedir=codedir)
 
 
-def find_flaw(filename, found_elem, flaws):
-    if filename not in flaws:  # case 2
-        return None
+def are_cwe_related(cwe1, cwe2, cwe_tree):
+    # TODO: check this
+    if cwe1 in cwe_tree[cwe2] or cwe2 in cwe_tree[cwe1]:
+        return True
+    return False
 
-    for found_in_flaw in flaws[filename]:
-        if abs(int(found_in_flaw["line"]) - int(found_elem["line"])) <= 4:
-            # 3 lines of interval: offset from the actual flaw
-            # used to consider flaws spun on multiple lines
-            return found_in_flaw
 
+def find_vuln_in_list(vuln, list, cwe_tree):
+    for el in list:
+        if vuln["line"] == el["line"]:
+            if are_cwe_related(vuln["cwe"], el["cwe"], cwe_tree):
+                return el
     return None
 
 
-def confusion_matrix(flaws, filtered_data, cwe):
+def confusion_matrix(pot_flaws, flaws, sast_data, cwe, cwe_tree):
     """
-    flaws: positive (method bad), negative (method good)
-    1) found in tool, found in flaws:
-        if cwe tool != cwe flaws -> FP
-        if flaws negative -> FP
-        if flaws positive -> TP
-    2) found in tool, not found in flaws:
-        FP
-    3) not found in tool, found in flaws:
-        if flaws positive -> FN
-        if flaws negative -> TN
+    For each vuln found by the SAST:
+        If found in manifest:
+            True positive
+        Else:
+            If found in our flaws file:
+                If in method bad:
+                    Ignore it
+                Else:
+                    False positive
+            Else:
+                False positive
 
+    For each vuln found in manifest:
+        If found in SAST:
+            Ignore it (false positive, but we have already count it)
+        Else:
+            False negative
 
-    foreach vuln in tool_filtered:
-        1) found in flaws:
-            if cwe tool != cwe flaws -> FP++
-            if flaws negative -> FP++
-            if flaws positive -> TP++
-        2) not found in flaws:
-            FP++
-
-    foreach flaw in flaws:
-        1) found in filtered:
-            skip
-        3) not found in filtered:
-            if flaw negative -> TN++
-            if flaw positive -> FN++
+    Potential Flaws:
+        cwe different -> skip
+        cwe correct -> total++
+        method good, sast found -> FP
+        method bad, sast found -> ignored + TP
+        method good, sast not found -> skip
+        method bad, sast not found -> FN
+        TN = total - (FP + TP + FN + ignored)
     """
-    fp = 0
+    # FIXME: check count of positive and negative
     tp = 0
-    fn = 0
+    fp = 0
     tn = 0
+    fn = 0
+    total = 0
+    ignored = 0
 
-    for filename, found_list in filtered_data.items():
+    for filename, found_list in sast_data.items():
         for found_from_tool in found_list:
-            # search if the vuln found by the tool is in the flaws
-            flaws_found = find_flaw(filename, found_from_tool, flaws)
-            # case 2, not found filename or not same line
-            if flaws_found is None:
-                fp += 1
-                continue
-            # case 1, same filename and same line
-            if flaws_found["cwe"] != found_from_tool["cwe"]:  # different CWE
-                fp += 1
-                continue
-
-            # case 1, same filename, same line, same CWE
-            if flaws_found["category"] == "negative":
+            flaws_in_file = flaws.get(filename)
+            if flaws_in_file is None:
                 fp += 1
             else:
-                tp += 1
+                found_in_flaws = find_vuln_in_list(
+                    found_from_tool, flaws_in_file, cwe_tree
+                )
+                if found_in_flaws is not None:
+                    tp += 1
+                else:
+                    pot_flaws_in_file = pot_flaws.get(filename)
+                    if pot_flaws_in_file is None:
+                        continue
+                    found_in_pot_flaws = find_vuln_in_list(
+                        found_from_tool, pot_flaws_in_file, cwe_tree
+                    )
+                    if found_in_pot_flaws is not None:
+                        if found_in_pot_flaws["category"] == "positive":
+                            ignored += 1
+                        else:
+                            fp += 1
+                    else:
+                        fp += 1
 
-    for filename, flaw_list in flaws.items():
-        if cwe is not None and f"CWE{cwe}" not in filename:
+    for filename, flaws_list in flaws.items():
+        if cwe is not None:
+            curr_cwe = filename.split("_")[0][3:]
+            if curr_cwe != cwe:
+                continue
+        total += 1
+        sast_vulns_in_file = sast_data.get(filename)
+        if sast_vulns_in_file is None:
+            fn += len(flaws_list)  # TODO: check this
             continue
-        for fl in flaw_list:
-            found_from_tool = find_flaw(filename, fl, filtered_data)
-            # case 1, found in filtered_data
-            if found_from_tool is not None:
-                continue
-            # case 3, not found in filtered_data
-            if fl["category"] == "negative":
-                tn += 1
-            else:
+        for flaw in flaws_list:
+            # if found it we already considered it
+            if not find_vuln_in_list(flaw, sast_vulns_in_file, cwe_tree):
                 fn += 1
+
+    for filename, pot_found_list in pot_flaws.items():
+        if cwe is not None:
+            curr_cwe = filename.split("_")[0][3:]
+            if curr_cwe != cwe:
+                continue
+        total += len(pot_found_list)
+
+    tn = total - (fp + tp + fn + ignored)
 
     p = tp + fp
     n = tn + fn
@@ -196,42 +218,3 @@ def confusion_matrix(flaws, filtered_data, cwe):
     }
 
     return retdict
-
-
-"""
-A partire dal SAST
-Se la troviamo in manifest:
-    true positive
-Else
-    Se la troviamo nel file delle flaws:
-        Se in metodo bad:
-            ignorato
-        Else:
-            false positive
-    Else
-        false positive
-
-A partire dal manifest
-Se la troviamo nel SAST:
-    true positive (ignora, lo abbiamo contato prima)
-Else:
-    false negative
-
-FLAWS NOSTRE:
-cwe diverso -> skip
-metodo good, sast trova -> FP
-metodo bad, sast trova -> ignorati + TP
-metodo good, sast non trova -> ? TN ?
-metodo bad, sast non trova -> FN
-TN = tutti (cwe giusto) - (FP + TP + ignorati + FN)
-
-# A partire dalle flaws nostre
-# Se e' in bad:
-#     ignora
-# Else:
-#     Se l'ha trovato il SAST:
-#         ignora
-#     Else:
-#         true negative
-
-"""

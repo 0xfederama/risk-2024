@@ -48,21 +48,34 @@ def run_tests(config, tools, langs):
 
 
 def create_confusion_matrix(config, tools, langs):
+    # Read the cwe tree from file
+    cwe_tree = {}
+    with open("util/cwe_tree.json", "r") as f:
+        cwe_tree = json.load(f)
+
     for lang_dir in os.listdir("out"):
         if lang_dir not in langs:
             continue
 
-        # Open Juliet flaws files for current language
-        flaws = {}
+        # Open Juliet potential flaws file for current language
+        pot_flaws = {}
         with open(f"util/juliet_{lang_dir}_flaws.json", "r") as f:
+            pot_flaws = json.load(f)
+
+        # Open Juliet manifest flaws file for current language
+        # FIXME: this does not work for csharp
+        flaws = {}
+        with open(f"util/manifest_{lang_dir}.json", "r") as f:
             flaws = json.load(f)
 
+        # Get if we specified the CWE in the config.json file
         juliet_path = config.get_juliet_path(lang_dir)
         if "CWE" in juliet_path:
             cwe = juliet_path.split("_")[0].split("/")[-1][3:]
         else:
             cwe = None
 
+        # For each tool build the confusion matrix
         for tool_dir in os.listdir(f"out/{lang_dir}"):
             if tool_dir not in tools:
                 continue
@@ -76,7 +89,13 @@ def create_confusion_matrix(config, tools, langs):
 
                     # Compute confusion matrix and write to file in out dir
                     print(f"Creating confusion matrix on {tool_dir} and {lang_dir}")
-                    confmat = benchmark.confusion_matrix(flaws, filtered_data, cwe=cwe)
+                    confmat = benchmark.confusion_matrix(
+                        pot_flaws=pot_flaws,
+                        flaws=flaws,
+                        sast_data=filtered_data,
+                        cwe=cwe,
+                        cwe_tree=cwe_tree,
+                    )
                     with open(
                         f"out/{lang_dir}/{tool_dir}/{tool_dir}_conf_mat.json", "w"
                     ) as f:
@@ -96,7 +115,7 @@ def main():
     tools = all_tools if config.tool is None else [config.tool]
     langs = all_langs if config.lang is None else [config.lang]
 
-    print(f"Running tools {str(tools)} on languages {str(langs)}")
+    print(f"Specified tools {str(tools)} on languages {str(langs)}")
 
     if not config.skip_tests:
         run_tests(config, tools, langs)

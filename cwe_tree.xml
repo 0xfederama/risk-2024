@@ -1,0 +1,2360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Weakness_Catalog xmlns="http://cwe.mitre.org/cwe-7" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="VIEW LIST: CWE-699: Software Development" Version="4.14" Date="2024-02-29" xsi:schemaLocation="http://cwe.mitre.org/cwe-7 http://cwe.mitre.org/data/xsd/cwe_schema_v7.1.xsd">
+   <Weaknesses>
+      <Weakness ID="1007" Name="Insufficient Visual Distinction of Homoglyphs Presented to User" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="451" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1021" Name="Improper Restriction of Rendered UI Layers or Frames" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="441" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="451" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1024" Name="Comparison of Incompatible Types" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="697" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1025" Name="Comparison Using Wrong Factors" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="697" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1037" Name="Processor Optimization Removal or Modification of Security-critical Code" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1038" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1041" Name="Use of Redundant Code" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1043" Name="Data Element Aggregating an Excessively Large Number of Non-Primitive Elements" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1093" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1044" Name="Architecture with Number of Horizontal Layers Outside of Expected Range" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1045" Name="Parent Class with a Virtual Destructor and a Child Class without a Virtual Destructor" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1046" Name="Creation of Immutable Text Using String Concatenation" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1176" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1047" Name="Modules with Circular Dependencies" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1048" Name="Invokable Control Element with Large Number of Outward Calls" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1049" Name="Excessive Data Query Operations in a Large Data Table" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1176" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1050" Name="Excessive Platform Resource Consumption within a Loop" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1051" Name="Initialization with Hard-Coded Network Resource Configuration Data" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1419" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1052" Name="Excessive Use of Hard-Coded Literals in Initialization" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1419" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1053" Name="Missing Documentation for Design" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+           <Related_Weakness Nature="ChildOf" CWE_ID="1059" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1054" Name="Invocation of a Control Element at an Unnecessarily Deep Horizontal Layer" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1061" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1055" Name="Multiple Inheritance from Concrete Classes" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1093" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1056" Name="Invokable Control Element with Variadic Parameters" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1057" Name="Data Access Operations Outside of Expected Data Manager Component" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1061" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1058" Name="Invokable Control Element in Multi-Thread Context with non-Final Static Storable or Member Element" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1060" Name="Excessive Number of Inefficient Server-Side Data Accesses" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1062" Name="Parent Class with References to Child Class" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1061" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1063" Name="Creation of Class Instance within a Static Code Block" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1176" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1064" Name="Invokable Control Element with Signature Containing an Excessive Number of Parameters" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1065" Name="Runtime Resource Management Control Element in a Component Built to Run on Application Servers" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1066" Name="Missing Serialization Control Element" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1067" Name="Excessive Execution of Sequential Searches of Data Resource" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1176" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1068" Name="Inconsistency Between Implementation and Documented Design" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1070" Name="Serializable Data Element Containing non-Serializable Item Elements" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1071" Name="Empty Code Block" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1164" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1072" Name="Data Resource Access without Use of Connection Pooling" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1073" Name="Non-SQL Invokable Control Element with Excessive Number of Data Resource Accesses" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1074" Name="Class with Excessively Deep Inheritance" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1093" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1075" Name="Unconditional Control Flow Transfer outside of Switch Block" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1079" Name="Parent Class without Virtual Destructor Method" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1080" Name="Source Code File with Excessive Number of Lines of Code" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1082" Name="Class Instance Self Destruction Control Element" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1083" Name="Data Access from Outside Expected Data Manager Component" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1061" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1084" Name="Invokable Control Element with Excessive File or Data Access Operations" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1085" Name="Invokable Control Element with Excessive Volume of Commented-out Code" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1086" Name="Class with Excessive Number of Child Classes" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1093" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1087" Name="Class with Virtual Method without a Virtual Destructor" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1089" Name="Large Data Table with Excessive Number of Indices" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1090" Name="Method Containing Access of a Member Element from Another Class" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1061" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1092" Name="Use of Same Invokable Control Element in Multiple Architectural Layers" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1094" Name="Excessive Index Range Scan for a Data Resource" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1095" Name="Loop Condition Value Update within the Loop" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1097" Name="Persistent Storable Data Element without Associated Comparison Control Element" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="595" View_ID="1305" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1098" Name="Data Element containing Pointer Item without Proper Copy Control Element" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1099" Name="Inconsistent Naming Conventions for Identifiers" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1100" Name="Insufficient Isolation of System-Dependent Functions" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1061" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1101" Name="Reliance on Runtime Component in Generated Code" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1102" Name="Reliance on Machine-Dependent Data Representation" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="758" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="1105" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1103" Name="Use of Platform-Dependent Third Party Components" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="758" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1104" Name="Use of Unmaintained Third Party Components" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1357" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1105" Name="Insufficient Encapsulation of Machine-Dependent Functionality" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="758" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1061" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1106" Name="Insufficient Use of Symbolic Constants" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1107" Name="Insufficient Isolation of Symbolic Constant Definitions" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1108" Name="Excessive Reliance on Global Variables" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1109" Name="Use of Same Variable for Multiple Purposes" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1110" Name="Incomplete Design Documentation" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1059" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1111" Name="Incomplete I/O Documentation" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1059" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1112" Name="Incomplete Documentation of Program Execution" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1059" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1113" Name="Inappropriate Comment Style" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1114" Name="Inappropriate Whitespace Style" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1115" Name="Source Code Element without Standard Prologue" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1116" Name="Inaccurate Comments" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1117" Name="Callable with Insufficient Behavioral Summary" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1118" Name="Insufficient Documentation of Error Handling Techniques" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1059" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1119" Name="Excessive Use of Unconditional Branching" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="112" Name="Missing XML Validation" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1286" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1121" Name="Excessive McCabe Cyclomatic Complexity" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1122" Name="Excessive Halstead Complexity" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1123" Name="Excessive Use of Self-Modifying Code" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1124" Name="Excessively Deep Nesting" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1125" Name="Excessive Attack Surface" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1120" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1126" Name="Declaration of Variable with Unnecessarily Wide Scope" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1127" Name="Compilation with Insufficient Warnings or Errors" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="115" Name="Misinterpretation of Input" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="436" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="117" Name="Improper Output Neutralization for Logs" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="116" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1173" Name="Improper Use of Validation Framework" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1188" Name="Initialization of a Resource with an Insecure Default" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1419" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="665" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="120" Name="Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="123" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1204" Name="Generation of Weak Initialization Vector (IV)" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+			  <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1220" Name="Insufficient Granularity of Access Control" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="284" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+        </Weakness>
+      <Weakness ID="1230" Name="Exposure of Sensitive Information Through Metadata" Abstraction="Base" Structure="Simple" Status="Incomplete">
+            <Related_Weaknesses>
+              <Related_Weakness Nature="ChildOf" CWE_ID="285" View_ID="1000" Ordinal="Primary"/>
+            </Related_Weaknesses>
+        </Weakness>
+      <Weakness ID="1235" Name="Incorrect Use of Autoboxing and Unboxing for Performance Critical Operations" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1236" Name="Improper Neutralization of Formula Elements in a CSV File" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1000" Ordinal="Primary"/>
+				<Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1003" Ordinal="Primary"/>
+			</Related_Weaknesses>
+        </Weakness>
+      <Weakness ID="124" Name="Buffer Underwrite ('Buffer Underflow')" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="786" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="787" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1240" Name="Use of a Cryptographic Primitive with a Risky Implementation" Abstraction="Base" Structure="Simple" Status="Draft">
+            <Related_Weaknesses>
+              <Related_Weakness Nature="ChildOf" CWE_ID="327" View_ID="1000" Ordinal="Primary"/>
+            </Related_Weaknesses>
+        </Weakness>
+      <Weakness ID="1241" Name="Use of Predictable Algorithm in Random Number Generator" Abstraction="Base" Structure="Simple" Status="Draft">
+            <Related_Weaknesses>
+              <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1000" Ordinal="Primary"/>
+            </Related_Weaknesses>
+        </Weakness>
+      <Weakness ID="125" Name="Out-of-bounds Read" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1265" Name="Unintended Reentrant Invocation of Non-reentrant Code Via Nested Calls" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="691" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="663" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="416" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="128" Name="Wrap-around Error" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="119" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="190" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1284" Name="Improper Validation of Specified Quantity in Input" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1000" Ordinal="Primary"/>
+				<Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="789" View_ID="1000"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1285" Name="Improper Validation of Specified Index, Position, or Offset in Input" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1286" Name="Improper Validation of Syntactic Correctness of Input" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1287" Name="Improper Validation of Specified Type of Input" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1000" Ordinal="Primary"/>
+				<Related_Weakness Nature="PeerOf" CWE_ID="843" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1288" Name="Improper Validation of Consistency within Input" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1289" Name="Improper Validation of Unsafe Equivalence in Input" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1000" Ordinal="Primary"/>
+				<Related_Weakness Nature="PeerOf" CWE_ID="41" View_ID="1000"/>
+				<Related_Weakness Nature="PeerOf" CWE_ID="178" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="130" Name="Improper Handling of Length Parameter Inconsistency" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="240" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="805" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="131" Name="Incorrect Calculation of Buffer Size" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1340" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="119" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1322" Name="Use of Blocking Code in Single-threaded, Non-blocking Context" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="834" View_ID="1000" Ordinal="Primary"/>
+				<Related_Weakness Nature="CanPrecede" CWE_ID="835" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1327" Name="Binding to an Unrestricted IP Address" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+			  <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1333" Name="Inefficient Regular Expression Complexity" Abstraction="Base" Structure="Simple" Status="Draft">
+            <Related_Weaknesses>
+                <Related_Weakness Nature="ChildOf" CWE_ID="407" View_ID="1000" Ordinal="Primary"/>
+                <Related_Weakness Nature="ChildOf" CWE_ID="407" View_ID="1003" Ordinal="Primary"/>
+            </Related_Weaknesses>
+        </Weakness>
+      <Weakness ID="1335" Name="Incorrect Bitwise Shift of Integer" Abstraction="Base" Structure="Simple" Status="Draft">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1339" Name="Insufficient Precision or Accuracy of a Real Number" Abstraction="Base" Structure="Simple" Status="Draft">
+            <Related_Weaknesses>
+                <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+                <Related_Weakness Nature="PeerOf" CWE_ID="190" View_ID="1000" Ordinal="Primary"/>
+                <Related_Weakness Nature="CanPrecede" CWE_ID="834" View_ID="1000" Ordinal="Primary"/>
+                <Related_Weakness Nature="CanPrecede" CWE_ID="119" View_ID="1000"/>
+            </Related_Weaknesses>
+                </Weakness>
+      <Weakness ID="134" Name="Use of Externally-Controlled Format String" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="123" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1341" Name="Multiple Releases of Same Resource or Handle" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="675" View_ID="1000" Ordinal="Primary"/>
+				<Related_Weakness Nature="CanPrecede" CWE_ID="672" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="135" Name="Incorrect Calculation of Multi-Byte String Length" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="1389" Name="Incorrect Parsing of Numbers with Different Radices" Abstraction="Base" Structure="Simple" Status="Incomplete">
+			<Related_Weaknesses>
+				<Related_Weakness Nature="ChildOf" CWE_ID="704" View_ID="1000" Ordinal="Primary"/>
+			</Related_Weaknesses>
+		</Weakness>
+      <Weakness ID="1392" Name="Use of Default Credentials" Abstraction="Base" Structure="Simple" Status="Incomplete">
+      <Related_Weaknesses>
+	<Related_Weakness Nature="ChildOf" CWE_ID="1391" View_ID="1000" Ordinal="Primary"/>
+      </Related_Weaknesses>
+    </Weakness>
+      <Weakness ID="140" Name="Improper Neutralization of Delimiters" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="138" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="15" Name="External Control of System or Configuration Setting" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="642" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="166" Name="Improper Handling of Missing Special Element" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="159" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="228" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="167" Name="Improper Handling of Additional Special Element" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="159" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="228" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="168" Name="Improper Handling of Inconsistent Special Elements" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="159" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="228" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="170" Name="Improper Null Termination" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="707" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="120" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="126" View_ID="1000"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="147" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="464" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="463" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="178" Name="Improper Handling of Case Sensitivity" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="433" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="289" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="179" Name="Incorrect Behavior Order: Early Validation" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="696" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="182" Name="Collapse of Data into Unsafe Value" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="33" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="34" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="35" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="183" Name="Permissive List of Allowed Inputs" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="697" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="434" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="184" Name="Incomplete List of Disallowed Inputs" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1023" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="79" View_ID="1000" Chain_ID="692"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="78" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="434" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="98" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="186" Name="Overly Restrictive Regular Expression" Abstraction="Base" Structure="Simple" Status="Draft">
+        <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="185" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="184" View_ID="1000"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="183" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="190" Name="Integer Overflow or Wraparound" Abstraction="Base" Structure="Simple" Status="Stable">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="119" View_ID="1000" Chain_ID="680"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="191" Name="Integer Underflow (Wrap or Wraparound)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="193" Name="Off-by-one Error" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="617" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="170" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="119" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="201" Name="Insertion of Sensitive Information Into Sent Data" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="209" View_ID="1000"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="202" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="204" Name="Observable Response Discrepancy" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="203" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="205" Name="Observable Behavioral Discrepancy" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="203" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="514" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="208" Name="Observable Timing Discrepancy" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="203" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="385" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="327" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="209" Name="Generation of Error Message Containing Sensitive Information" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="212" Name="Improper Removal of Sensitive Information Before Storage or Transfer" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="201" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="213" Name="Exposure of Sensitive Information Due to Incompatible Policies" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="214" Name="Invocation of Process Using Visible Sensitive Information" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="497" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="215" Name="Insertion of Sensitive Information Into Debugging Code" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="22" Name="Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')" Abstraction="Base" Structure="Simple" Status="Stable">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="222" Name="Truncation of Security-relevant Information" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="221" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="223" Name="Omission of Security-relevant Information" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="221" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="224" Name="Obscured Security-relevant Information by Alternate Name" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="221" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="229" Name="Improper Handling of Values" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="228" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="233" Name="Improper Handling of Parameters" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="228" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="237" Name="Improper Handling of Structural Elements" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="228" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="241" Name="Improper Handling of Unexpected Data Type" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="228" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="242" Name="Use of Inherently Dangerous Function" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1177" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="243" Name="Creation of chroot Jail Without Changing Working Directory" Abstraction="Variant" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="248" Name="Uncaught Exception" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="705" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="703" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="703" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="250" Name="Execution with Unnecessary Privileges" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="269" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="657" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="252" Name="Unchecked Return Value" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="476" View_ID="1000" Chain_ID="690"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="253" Name="Incorrect Check of Function Return Value" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="256" Name="Plaintext Storage of a Password" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="522" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="257" Name="Storing Passwords in a Recoverable Format" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="522" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="259" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="260" Name="Password in Configuration File" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="522" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="261" Name="Weak Encoding for Password" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="522" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="262" Name="Not Using Password Aging" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="309" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="324" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="263" Name="Password Aging with Long Expiration" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="266" Name="Incorrect Privilege Assignment" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="269" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="286" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="267" Name="Privilege Defined With Unsafe Actions" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="269" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="268" Name="Privilege Chaining" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="269" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="270" Name="Privilege Context Switching Error" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="269" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="272" Name="Least Privilege Violation" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="271" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="273" Name="Improper Check for Dropped Privileges" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="271" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="252" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="274" Name="Improper Handling of Insufficient Privileges" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="269" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="271" View_ID="1000"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="280" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="276" Name="Incorrect Default Permissions" Abstraction="Base" Structure="Simple" Status="Draft">
+     <Related_Weaknesses>
+      <Related_Weakness Nature="ChildOf" CWE_ID="732" View_ID="1000" Ordinal="Primary"/>
+      <Related_Weakness Nature="ChildOf" CWE_ID="732" View_ID="1003" Ordinal="Primary"/>
+     </Related_Weaknesses>
+   </Weakness>
+      <Weakness ID="277" Name="Insecure Inherited Permissions" Abstraction="Variant" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="732" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="278" Name="Insecure Preserved Inherited Permissions" Abstraction="Variant" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="732" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="279" Name="Incorrect Execution-Assigned Permissions" Abstraction="Variant" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="732" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="280" Name="Improper Handling of Insufficient Permissions or Privileges " Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="281" Name="Improper Preservation of Permissions" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="732" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="732" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="283" Name="Unverified Ownership" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="282" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="289" Name="Authentication Bypass by Alternate Name" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="290" Name="Authentication Bypass by Spoofing" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="294" Name="Authentication Bypass by Capture-replay" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="295" Name="Improper Certificate Validation" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="322" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="301" Name="Reflection Attack in an Authentication Protocol" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="327" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="303" Name="Incorrect Implementation of Authentication Algorithm" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="305" Name="Authentication Bypass by Primary Weakness" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="306" Name="Missing Authentication for Critical Function" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="307" Name="Improper Restriction of Excessive Authentication Attempts" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="799" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="308" Name="Use of Single-factor Authentication" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="654" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="309" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="309" Name="Use of Password System for Primary Authentication" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="654" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="308" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="312" Name="Cleartext Storage of Sensitive Information" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="311" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="311" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="922" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="319" Name="Cleartext Transmission of Sensitive Information" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="311" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="311" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="322" Name="Key Exchange without Entity Authentication" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="306" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="923" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="295" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="323" Name="Reusing a Nonce, Key Pair in Encryption" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="344" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="324" Name="Use of a Key Past its Expiration Date" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="672" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="298" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="325" Name="Missing Cryptographic Step" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="358" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="328" Name="Use of Weak Hash" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="326" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="327" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="331" Name="Insufficient Entropy" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="334" Name="Small Space of Random Values" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="335" Name="Incorrect Usage of Seeds in Pseudo-Random Number Generator (PRNG)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="338" Name="Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="341" Name="Predictable from Observable State" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="340" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="342" Name="Predictable Exact Value from Previous Values" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="340" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="343" Name="Predictable Value Range from Previous Values" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="340" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="344" Name="Use of Invariant Value in Dynamically Changing Context" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="330" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="346" Name="Origin Validation Error" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="284" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="347" Name="Improper Verification of Cryptographic Signature" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="348" Name="Use of Less Trusted Source" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="349" Name="Acceptance of Extraneous Untrusted Data With Trusted Data" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="351" Name="Insufficient Type Distinction" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="436" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="353" Name="Missing Support for Integrity Check" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="354" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="354" Name="Improper Validation of Integrity Check Value" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="353" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="356" Name="Product UI does not Warn User of Unsafe Actions" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="221" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="357" Name="Insufficient UI Warning of Dangerous Operations" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="358" Name="Improperly Implemented Security Check for Standard" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="345" View_ID="1000"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="290" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="359" Name="Exposure of Private Personal Information to an Unauthorized Actor" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="360" Name="Trust of System Event Data" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="364" Name="Signal Handler Race Condition" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="362" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="415" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="416" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="123" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="366" Name="Race Condition within a Thread" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="362" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="367" Name="Time-of-check Time-of-use (TOCTOU) Race Condition" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="362" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="362" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="368" Name="Context Switching Race Condition" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="362" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="364" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="369" Name="Divide By Zero" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="372" Name="Incomplete Internal State Distinction" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="664" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="374" Name="Passing Mutable Objects to an Untrusted Method" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="375" Name="Returning a Mutable Object to an Untrusted Caller" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="378" Name="Creation of Temporary File With Insecure Permissions" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="377" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="379" Name="Creation of Temporary File in Directory with Insecure Permissions" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="377" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="385" Name="Covert Timing Channel" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="514" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="386" Name="Symbolic Name not Mapping to Correct Object" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="367" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="610" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="486" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="390" Name="Detection of Error Condition Without Action" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="401" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="391" Name="Unchecked Error Condition" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="703" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="703" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="392" Name="Missing Report of Error Condition" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="684" View_ID="1000"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="703" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="703" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="393" Name="Return of Wrong Status Code" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="684" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="703" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="394" Name="Unexpected Status Code or Return Value" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="395" Name="Use of NullPointerException Catch to Detect NULL Pointer Dereference" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="705" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="396" Name="Declaration of Catch for Generic Exception" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="705" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="221" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="397" Name="Declaration of Throws for Generic Exception" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="705" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="221" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="703" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="403" Name="Exposure of File Descriptor to Unintended Control Sphere ('File Descriptor Leak')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="402" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="408" Name="Incorrect Behavior Order: Early Amplification" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="696" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="409" Name="Improper Handling of Highly Compressed Data (Data Amplification)" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="41" Name="Improper Resolution of Path Equivalence" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="410" Name="Insufficient Resource Pool" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="664" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="400" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="412" Name="Unrestricted Externally Accessible Lock" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="667" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="410" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="413" Name="Improper Resource Locking" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="667" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="414" Name="Missing Lock Check" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="667" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="419" Name="Unprotected Primary Channel" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="923" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="420" Name="Unprotected Alternate Channel" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="923" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="421" Name="Race Condition During Access to Alternate Channel" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="420" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="362" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="425" Name="Direct Request ('Forced Browsing')" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="862" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="862" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="288" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="424" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="471" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="98" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="426" Name="Untrusted Search Path" Abstraction="Base" Structure="Simple" Status="Stable">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="642" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="673" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="427" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="428" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="427" Name="Uncontrolled Search Path Element" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="428" Name="Unquoted Search Path or Element" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="430" Name="Deployment of Wrong Handler" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="691" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="433" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="434" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="431" Name="Missing Handler" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="691" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="433" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="434" Name="Unrestricted Upload of File with Dangerous Type" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="351" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="436" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="430" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="437" Name="Incomplete Model of Endpoint Features" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="436" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="439" Name="Behavioral Change in New Version or Environment" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="435" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="440" Name="Expected Behavior Violation" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="684" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="444" Name="Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="436" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="436" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="447" Name="Unimplemented or Unsupported Feature in UI" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="446" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="671" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="448" Name="Obsolete Feature in UI" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="446" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="449" Name="The UI Performs the Wrong Action" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="446" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="454" Name="External Initialization of Trusted Variables or Data Stores" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1419" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="456" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="455" Name="Non-exit on Failed Initialization" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="665" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="705" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="636" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="459" Name="Incomplete Cleanup" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="463" Name="Deletion of Data Structure Sentinel" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="707" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="464" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="464" Name="Addition of Data Structure Sentinel" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="138" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="466" Name="Return of Pointer Value Outside of Expected Range" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="468" Name="Incorrect Pointer Scaling" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="469" Name="Use of Pointer Subtraction to Determine Size" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="682" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="470" Name="Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="913" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="913" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="472" Name="External Control of Assumed-Immutable Web Parameter" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="642" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="471" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="474" Name="Use of Function with Inconsistent Implementations" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="758" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="475" Name="Undefined Behavior for Input to API" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="476" Name="NULL Pointer Dereference" Abstraction="Base" Structure="Simple" Status="Stable">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="754" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="477" Name="Use of Obsolete Function" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="478" Name="Missing Default Case in Multiple Condition Expression" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1023" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="480" Name="Use of Incorrect Operator" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="670" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="483" Name="Incorrect Block Delimitation" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="670" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="484" Name="Omitted Break Statement in Switch" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="670" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="487" Name="Reliance on Package-level Scope" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="664" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="488" Name="Exposure of Data Element to Wrong Session" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="489" Name="Active Debug Code" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="215" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="494" Name="Download of Code Without Integrity Check" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="497" Name="Exposure of Sensitive System Information to an Unauthorized Control Sphere" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="501" Name="Trust Boundary Violation" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="664" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="502" Name="Deserialization of Untrusted Data" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="913" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="913" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="915" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="515" Name="Covert Storage Channel" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="514" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="521" Name="Weak Password Requirements" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1391" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="523" Name="Unprotected Transport of Credentials" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="522" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="312" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="524" Name="Use of Cache Containing Sensitive Information" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="538" Name="Insertion of Sensitive Information into Externally-Accessible File or Directory" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="544" Name="Missing Standardized Error Handling Mechanism" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="547" Name="Use of Hard-coded, Security-relevant Constants" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1078" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="549" Name="Missing Password Field Masking" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="522" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="551" Name="Incorrect Behavior Order: Authorization Before Parsing and Canonicalization" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="863" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="696" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="552" Name="Files or Directories Accessible to External Parties" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="285" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="561" Name="Dead Code" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1164" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="562" Name="Return of Stack Variable Address" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="758" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="672" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="825" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="563" Name="Assignment to Variable without Use" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1164" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="565" Name="Reliance on Cookies without Validation and Integrity Checking" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="642" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="602" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="570" Name="Expression is Always False" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="561" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="571" Name="Expression is Always True" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="710" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="561" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="580" Name="clone() Method Without super.clone()" Abstraction="Variant" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="664" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="581" Name="Object Model Violation: Just One of Equals and Hashcode Defined" Abstraction="Variant" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="697" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="584" Name="Return Inside Finally Block" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="705" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="586" Name="Explicit Call to Finalize()" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1076" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="587" Name="Assignment of a Fixed Address to a Pointer" Abstraction="Variant" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="344" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="758" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="59" Name="Improper Link Resolution Before File Access ('Link Following')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="601" Name="URL Redirection to Untrusted Site ('Open Redirect')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="603" Name="Use of Client-Side Authentication" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="602" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="300" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="656" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="605" Name="Multiple Binds to the Same Port" Abstraction="Variant" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="675" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="666" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="606" Name="Unchecked Input for Loop Condition" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1284" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="834" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="609" Name="Double-Checked Locking" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="667" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="367" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="611" Name="Improper Restriction of XML External Entity Reference" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="441" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="613" Name="Insufficient Session Expiration" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="672" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="672" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="287" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="617" Name="Reachable Assertion" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="670" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="670" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="618" Name="Exposed Unsafe ActiveX Method" Abstraction="Variant" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="749" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="619" Name="Dangling Database Cursor ('Cursor Injection')" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="402" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="620" Name="Unverified Password Change" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="624" Name="Executable Regular Expression Error" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="625" Name="Permissive Regular Expression" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="185" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="187" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="184" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="183" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="628" Name="Function Call with Incorrectly Specified Arguments" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="639" Name="Authorization Bypass Through User-Controlled Key" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="863" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="863" View_ID="1003" Ordinal="Primary"/>
+			<Related_Weakness Nature="ChildOf" CWE_ID="284" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="640" Name="Weak Password Recovery Mechanism for Forgotten Password" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="641" Name="Improper Restriction of Names for Files and Other Resources" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="99" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="645" Name="Overly Restrictive Account Lockout Mechanism" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="648" Name="Incorrect Use of Privileged APIs" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="269" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="649" Name="Reliance on Obfuscation or Encryption of Security-Relevant Inputs without Integrity Checking" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="653" Name="Improper Isolation or Compartmentalization" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="657" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="654" Name="Reliance on a Single Factor in a Security Decision" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="657" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="656" Name="Reliance on Security Through Obscurity" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="657" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="259" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="321" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="472" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="66" Name="Improper Handling of File Names that Identify Virtual Resources" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="706" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="663" Name="Use of a Non-reentrant Function in a Concurrent Context" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="676" Name="Use of Potentially Dangerous Function" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1177" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="681" Name="Incorrect Conversion between Numeric Types" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="704" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="704" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="682" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="694" Name="Use of Multiple Resources with Duplicate Identifier" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="99" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="695" Name="Use of Low-Level Functionality" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="573" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="698" Name="Execution After Redirect (EAR)" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="705" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="670" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="708" Name="Incorrect Ownership Assignment" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="282" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanAlsoBe" CWE_ID="345" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="73" Name="External Control of File Name or Path" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="642" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="20" View_ID="700" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="22" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="41" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="98" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="434" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="59" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="733" Name="Compiler Optimization Removal or Modification of Security-critical Code" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1038" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="749" Name="Exposed Dangerous Method or Function" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="284" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="756" Name="Missing Custom Error Page" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="755" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="209" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="76" Name="Improper Neutralization of Equivalent Special Elements" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="75" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="763" Name="Release of Invalid Pointer or Reference" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1003" Ordinal="Primary"/>
+			<Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="764" Name="Multiple Locks of a Critical Resource" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="667" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="675" View_ID="1000"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="765" Name="Multiple Unlocks of a Critical Resource" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="667" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="675" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="766" Name="Critical Data Element Declared Public" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="732" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1061" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="767" Name="Access to Critical Private Variable via Public Method" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="668" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="770" Name="Allocation of Resources Without Limits or Throttling" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="665" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="771" Name="Missing Reference to Active Allocated Resource" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="772" Name="Missing Release of Resource after Effective Lifetime" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="404" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="776" Name="Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="674" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="674" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="405" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="778" Name="Insufficient Logging" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="223" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="779" Name="Logging of Excessive Data" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="78" Name="Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')" Abstraction="Base" Structure="Simple" Status="Stable">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1340" Ordinal="Primary"/>
+             <Related_Weakness Nature="CanAlsoBe" CWE_ID="88" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="783" Name="Operator Precedence Logic Error" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="670" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="786" Name="Access of Memory Location Before Start of Buffer" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="787" Name="Out-of-bounds Write" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="788" Name="Access of Memory Location After End of Buffer" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="79" Name="Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')" Abstraction="Base" Structure="Simple" Status="Stable">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="494" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="352" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="791" Name="Incomplete Filtering of Special Elements" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="790" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="798" Name="Use of Hard-coded Credentials" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1391" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="287" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="344" View_ID="1000"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="671" View_ID="1000"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="257" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="804" Name="Guessable CAPTCHA" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="863" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="805" Name="Buffer Access with Incorrect Length Value" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="807" Name="Reliance on Untrusted Inputs in a Security Decision" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="693" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="820" Name="Missing Synchronization" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="821" Name="Incorrect Synchronization" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="822" Name="Untrusted Pointer Dereference" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+             <Related_Weakness Nature="CanPrecede" CWE_ID="125" View_ID="1000"/>
+             <Related_Weakness Nature="CanPrecede" CWE_ID="787" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="823" Name="Use of Out-of-range Pointer Offset" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+             <Related_Weakness Nature="CanPrecede" CWE_ID="125" View_ID="1000"/>
+             <Related_Weakness Nature="CanPrecede" CWE_ID="787" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="824" Name="Access of Uninitialized Pointer" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+             <Related_Weakness Nature="CanPrecede" CWE_ID="125" View_ID="1000"/>
+             <Related_Weakness Nature="CanPrecede" CWE_ID="787" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="825" Name="Expired Pointer Dereference" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="119" View_ID="1340" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="672" View_ID="1000"/>
+             <Related_Weakness Nature="CanPrecede" CWE_ID="125" View_ID="1000"/>
+             <Related_Weakness Nature="CanPrecede" CWE_ID="787" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="826" Name="Premature Release of Resource During Expected Lifetime" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="666" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="672" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="829" Name="Inclusion of Functionality from Untrusted Control Sphere" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="669" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="832" Name="Unlock of a Resource that is not Locked" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="667" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="833" Name="Deadlock" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="667" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="662" View_ID="1305" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="835" Name="Loop with Unreachable Exit Condition ('Infinite Loop')" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="834" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="834" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="836" Name="Use of Password Hash Instead of Password for Authentication" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1390" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="602" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="837" Name="Improper Enforcement of a Single, Unique Action" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="799" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="838" Name="Inappropriate Encoding for Output Context" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="116" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="116" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="839" Name="Numeric Range Comparison Without Minimum Check" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="1023" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="195" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="682" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="119" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="124" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="841" Name="Improper Enforcement of Behavioral Workflow" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="691" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="842" Name="Placement of User into Incorrect Group" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="286" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="843" Name="Access of Resource Using Incompatible Type ('Type Confusion')" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="704" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="704" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="119" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="88" Name="Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="89" Name="Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')" Abstraction="Base" Structure="Simple" Status="Stable">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="943" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="90" Name="Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="943" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="908" Name="Use of Uninitialized Resource" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="665" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="665" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="909" Name="Missing Initialization of Resource" Abstraction="Class" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="665" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="665" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="908" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="91" Name="XML Injection (aka Blind XPath Injection)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="910" Name="Use of Expired File Descriptor" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="672" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="911" Name="Improper Update of Reference Count" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="664" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="672" View_ID="1000"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="772" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="914" Name="Improper Control of Dynamically-Identified Variables" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="99" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="913" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="915" Name="Improperly Controlled Modification of Dynamically-Determined Object Attributes" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="913" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="PeerOf" CWE_ID="502" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="916" Name="Use of Password Hash With Insufficient Computational Effort" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="328" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="327" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="917" Name="Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+             <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="PeerOf" CWE_ID="1336" View_ID="1000" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1003" Ordinal="Primary"/>
+             <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1305" Ordinal="Primary"/>
+			 <Related_Weakness Nature="ChildOf" CWE_ID="77" View_ID="1340" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="918" Name="Server-Side Request Forgery (SSRF)" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="441" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="610" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="920" Name="Improper Restriction of Power Consumption" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="921" Name="Storage of Sensitive Data in a Mechanism without Access Control" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="922" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="924" Name="Improper Enforcement of Message Integrity During Transmission in a Communication Channel" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="345" View_ID="1003" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="93" Name="Improper Neutralization of CRLF Sequences ('CRLF Injection')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="117" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="939" Name="Improper Authorization in Handler for Custom URL Scheme" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="862" View_ID="1000" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="94" Name="Improper Control of Generation of Code ('Code Injection')" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="74" View_ID="1003" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="913" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="940" Name="Improper Verification of Source of a Communication Channel" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="923" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="346" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="941" Name="Incorrectly Specified Destination in a Communication Channel" Abstraction="Base" Structure="Simple" Status="Incomplete">
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="923" View_ID="1000" Ordinal="Primary"/>
+            <Related_Weakness Nature="CanPrecede" CWE_ID="406" View_ID="1000"/>
+         </Related_Weaknesses>
+      </Weakness>
+   </Weaknesses>
+</Weakness_Catalog>
