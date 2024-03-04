@@ -90,9 +90,9 @@ def create_confusion_matrix(config, tools, langs):
                     # Compute confusion matrix and write to file in out dir
                     print(f"Creating confusion matrix on {tool_dir} and {lang_dir}")
                     confmat = benchmark.confusion_matrix(
-                        pot_flaws=pot_flaws,
-                        manifest_flaws=flaws,
-                        sast_flaws=filtered_data,
+                        pot_flaws_dict=pot_flaws,
+                        # manifest_flaws=flaws,
+                        sast_flaws_dict=filtered_data,
                         cwe=cwe,
                         cwe_tree=cwe_tree,
                     )

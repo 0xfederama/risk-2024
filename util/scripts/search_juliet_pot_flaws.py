@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import re
 
 
 def extract_cwe_number(filename):
@@ -15,7 +16,6 @@ def extract_cwe_number(filename):
 
 
 def search_potential_flaws(juliet_directory):
-    """Search the string 'POTENTIAL FLAW' in Juliet's testcases files"""
     results = {}
     # Iterate through all files in juliet's directory
     for root, _, files in os.walk(juliet_directory):
@@ -30,23 +30,43 @@ def search_potential_flaws(juliet_directory):
                 lines = f.readlines()
                 # Iterate through each line to find the string "POTENTIAL FLAW"
                 isInsideGoodMethod = None
+                methodline = 0
                 for line_num, line in enumerate(lines, start=1):
                     if "FLAW" in line:
                         # Store the result in a dictionary
                         results[file] = results.get(file, [])
                         results[file].append(
                             {
-                                "line": line_num + 1,
+                                "line": methodline,
                                 "cwe": cwe_number,
-                                "category": (
-                                    "negative" if isInsideGoodMethod else "positive"
-                                ),
+                                "method": ("good" if isInsideGoodMethod else "bad"),
                             }
                         )
-                    elif "good" in line:
+                    elif "good" in line and ";" not in line:
                         isInsideGoodMethod = True
-                    elif "bad" in line:
+                        methodline = line_num
+                    elif ("bad" in line or "helperBad" in line) and ";" not in line:
                         isInsideGoodMethod = False
+                        methodline = line_num
+                # for line_num, line in enumerate(lines, start=1):
+                #     record = {}
+                #     found = False
+                #     if ";" not in line:
+                #         if "bad" in line or "helperBad(" in line:
+                #             record["method"] = "bad"
+                #             record["line"] = line_num
+                #             found = True
+                #         if "good(" in line or "G2B(" in line or "B2G(" in line:
+                #             record["method"] = "good"
+                #             record["line"] = line_num
+                #             found = True
+                #         if "helperGood" in line:
+                #             record["method"] = "helper_good"
+                #             record["line"] = line_num
+                #             found = True
+                #     if found:
+                #         results[file] = results.get(file, [])
+                #         results[file].append(record)
 
     return results
 
