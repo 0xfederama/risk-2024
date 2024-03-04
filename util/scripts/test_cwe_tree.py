@@ -36,10 +36,22 @@ def test_ancestor(cwe1, cwe2, cwe_tree, value):
     else:
         print(f"[FAIL]: {ret} should have been {value}")
 
+def cwe_relationship(first_cwe, second_cwe, cwe_tree):
+    if first_cwe == cwe_tree:
+        return f"CWE {first_cwe} is equal to CWE {second_cwe}"
+
+    if is_cwe_ancestor(first_cwe, second_cwe, cwe_tree):
+        return f"CWE {first_cwe} is an anchestor of CWE {second_cwe}"
+    
+    if is_cwe_ancestor(second_cwe, first_cwe, cwe_tree):
+        return f"CWE {second_cwe} is an anchestor of CWE {first_cwe}"
+    
+    return f"No relationship between {first_cwe} and {second_cwe}"
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python3 test_cwe_tree.py path/to/cwe_tree_full.json")
+    if len(sys.argv) < 2 or len(sys.argv) > 4:
+        print("Usage: python3 test_cwe_tree.py path/to/cwe_tree_full.json or two CWEs")
+        print("If two CWE are given, their eventual relationship is provided")
         sys.exit(1)
 
     # the manifest file (XML file) given by the user
@@ -48,6 +60,10 @@ def main():
     cwe_tree = {}
     with open(cwe_json_file_path, "r") as f:
         cwe_tree = json.load(f)
+
+    if len(sys.argv) == 4:
+        print(cwe_relationship(sys.argv[2], sys.argv[3], cwe_tree))
+        return
 
     # test_traversal(cwe_tree)
     test_ancestor("118", "664", cwe_tree, True)
