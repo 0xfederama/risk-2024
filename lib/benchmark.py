@@ -24,7 +24,7 @@ def get_cmd(tool, codedir, outdir):
         case "snyk":
             command = f"snyk code test {codedir} --json-file-output={outfile}" + redir
         case "flawfinder":
-            command = f"flawfinder --sarif {codedir} > {outfile}"
+            command = f"flawfinder -F --sarif {codedir} > {outfile}"
         case "cppcheck":
             command = f"cppcheck --template='{{cwe}}:{{file}}:{{line}}:{{severity}}' -q {codedir} --output-file={outfile}"
 
