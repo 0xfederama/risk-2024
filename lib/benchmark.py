@@ -56,7 +56,9 @@ def run_horusec(outdir, tool, codedir):
     total_time = 0
     total_filtered_data = []
     total_aggr_data = {"total": 0, "vulns": {}}
-    print(f"{codedir}/src/testcases/")
+
+    if codedir[-1] == "/":
+        codedir = codedir[:-1]
 
     for folder in os.listdir(f"{codedir}/src/testcases/"):
         folder = f"{codedir}/src/testcases/{folder}"
@@ -64,7 +66,6 @@ def run_horusec(outdir, tool, codedir):
             continue
 
         # Run on the directory
-        print("RUNNING ON DIR:", folder)
         run_time, run_filtered_data, run_aggr_data = run_tool(
             outdir=outdir, tool=tool, codedir=folder
         )

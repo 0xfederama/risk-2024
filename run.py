@@ -43,16 +43,28 @@ def run_tests(config, tools, langs):
             )
             results.append({"tool": tool, "lang": lang, "time_sec": elapsed_time})
 
-    # Print results
-    print("\nRESULTS:\n")
+    times = []
+    if os.path.exists("out/times.json"):
+        with open("out/times.json", "r") as f:
+            times = json.load(f)
+
+    # Print and replace results
+    print("RESULTS\n")
     for res in results:
-        tool = res["tool"].capitalize()
+        tool = res["tool"]
         lang = res["lang"]
         sec = res["time_sec"]
-        print(f"{tool} on {lang} took {sec:.3f} seconds")
+        print(f"{tool.capitalize()} on {lang} took {sec:.3f} seconds")
+        found = False
+        for tm in times:
+            if tool == tm["tool"] and lang == tm["lang"]:
+                found = True
+                tm["time_sec"] = sec
+        if not found:
+            times.append(res)
 
     with open("out/times.json", "w") as f:
-        f.write(json.dumps(results, indent=4))
+        f.write(json.dumps(times, indent=4))
 
 
 def create_confusion_matrix(config, tools, langs):
