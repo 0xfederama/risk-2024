@@ -71,6 +71,8 @@ def run_horusec(outdir, tool, codedir):
         )
 
         # Aggregate results
+        # FIXME: total_filtered_data should not be a list,
+        # but a dictionary with vulns grouped by file
         total_time += run_time
         total_filtered_data += run_filtered_data
         total_aggr_data["total"] += run_aggr_data["total"]
