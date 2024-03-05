@@ -190,266 +190,6 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 28,
-                  "endLine": 28,
-                  "startColumn": 5,
-                  "endColumn": 11
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "0": "eadd06edc97012376ae7431772ba0b93af310e04461d2e8ae05beb7c430c6177",
-            "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.bf8d7c43.fbee80e3.8f47a30e.30ad82ea.348c8065"
-          },
-          "codeFlows": [
-            {
-              "threadFlows": [
-                {
-                  "locations": [
-                    {
-                      "location": {
-                        "id": 0,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 28,
-                            "endLine": 28,
-                            "startColumn": 26,
-                            "endColumn": 30
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 1,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 28,
-                            "endLine": 28,
-                            "startColumn": 26,
-                            "endColumn": 30
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 2,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 28,
-                            "endLine": 28,
-                            "startColumn": 25,
-                            "endColumn": 30
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 3,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 28,
-                            "endLine": 28,
-                            "startColumn": 5,
-                            "endColumn": 11
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "priorityScore": 650,
-            "priorityScoreFactors": [
-              {
-                "label": true,
-                "type": "multipleOccurrence"
-              },
-              {
-                "label": true,
-                "type": "hotFileSource"
-              },
-              {
-                "label": true,
-                "type": "fixExamples"
-              }
-            ],
-            "isAutofixable": false
-          }
-        },
-        {
-          "ruleId": "cpp/BufferOverflow",
-          "ruleIndex": 0,
-          "level": "warning",
-          "message": {
-            "text": "Unsanitized input from a file flows into fscanf, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
-            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
-            "arguments": [
-              "[a file](0)",
-              "[flows](1),(2)",
-              "[fscanf](3)"
-            ]
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 47,
-                  "endLine": 47,
-                  "startColumn": 5,
-                  "endColumn": 11
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "0": "810244a914aa192f3927f72315c08fc66519c552cfaca0ad9983be0169227789",
-            "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.bf8d7c43.fbee80e3.8f47a30e.30ad82ea.348c8065"
-          },
-          "codeFlows": [
-            {
-              "threadFlows": [
-                {
-                  "locations": [
-                    {
-                      "location": {
-                        "id": 0,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 47,
-                            "endLine": 47,
-                            "startColumn": 26,
-                            "endColumn": 30
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 1,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 47,
-                            "endLine": 47,
-                            "startColumn": 26,
-                            "endColumn": 30
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 2,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 47,
-                            "endLine": 47,
-                            "startColumn": 25,
-                            "endColumn": 30
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "location": {
-                        "id": 3,
-                        "physicalLocation": {
-                          "artifactLocation": {
-                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
-                            "uriBaseId": "%SRCROOT%"
-                          },
-                          "region": {
-                            "startLine": 47,
-                            "endLine": 47,
-                            "startColumn": 5,
-                            "endColumn": 11
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "priorityScore": 650,
-            "priorityScoreFactors": [
-              {
-                "label": true,
-                "type": "multipleOccurrence"
-              },
-              {
-                "label": true,
-                "type": "hotFileSource"
-              },
-              {
-                "label": true,
-                "type": "fixExamples"
-              }
-            ],
-            "isAutofixable": false
-          }
-        },
-        {
-          "ruleId": "cpp/BufferOverflow",
-          "ruleIndex": 0,
-          "level": "warning",
-          "message": {
-            "text": "Unsanitized input from a file flows into fscanf, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
-            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
-            "arguments": [
-              "[a file](0)",
-              "[flows](1),(2)",
-              "[fscanf](3)"
-            ]
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
                   "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_43.cpp",
                   "uriBaseId": "%SRCROOT%"
                 },
@@ -692,20 +432,280 @@
             ],
             "isAutofixable": false
           }
+        },
+        {
+          "ruleId": "cpp/BufferOverflow",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a file flows into fscanf, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
+            "arguments": [
+              "[a file](0)",
+              "[flows](1),(2)",
+              "[fscanf](3)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 28,
+                  "endLine": 28,
+                  "startColumn": 5,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "eadd06edc97012376ae7431772ba0b93af310e04461d2e8ae05beb7c430c6177",
+            "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.bf8d7c43.fbee80e3.8f47a30e.30ad82ea.348c8065"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 25,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "endLine": 28,
+                            "startColumn": 5,
+                            "endColumn": 11
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
+        },
+        {
+          "ruleId": "cpp/BufferOverflow",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Unsanitized input from a file flows into fscanf, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
+            "markdown": "Unsanitized input from {0} {1} into {2}, where it is used to store formatted strings. This may result in a buffer overflow vulnerability.",
+            "arguments": [
+              "[a file](0)",
+              "[flows](1),(2)",
+              "[fscanf](3)"
+            ]
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 47,
+                  "endLine": 47,
+                  "startColumn": 5,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "0": "810244a914aa192f3927f72315c08fc66519c552cfaca0ad9983be0169227789",
+            "1": "ed27a822.277c621c.7be03776.64353d55.5ef953d3.8f47a30e.1e451703.348c8065.ed27a822.277c621c.7be03776.bf8d7c43.fbee80e3.8f47a30e.30ad82ea.348c8065"
+          },
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 0,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 1,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 26,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 2,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 25,
+                            "endColumn": 30
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "id": 3,
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "s01/CWE126_Buffer_Overread__CWE129_fscanf_62b.cpp",
+                            "uriBaseId": "%SRCROOT%"
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "endLine": 47,
+                            "startColumn": 5,
+                            "endColumn": 11
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "priorityScore": 650,
+            "priorityScoreFactors": [
+              {
+                "label": true,
+                "type": "multipleOccurrence"
+              },
+              {
+                "label": true,
+                "type": "hotFileSource"
+              },
+              {
+                "label": true,
+                "type": "fixExamples"
+              }
+            ],
+            "isAutofixable": false
+          }
         }
       ],
       "properties": {
         "coverage": [
           {
             "isSupported": true,
-            "lang": "C++",
-            "files": 1016,
+            "lang": "C",
+            "files": 1381,
             "type": "SUPPORTED"
           },
           {
             "isSupported": true,
-            "lang": "C",
-            "files": 1381,
+            "lang": "C++",
+            "files": 1016,
             "type": "SUPPORTED"
           }
         ]

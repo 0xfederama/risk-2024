@@ -10,6 +10,7 @@ class Config:
     lang = None
     skip_cm = False
     skip_tests = False
+    verbose = False
 
     def __init__(self):
         # initialize argument parser and add options
@@ -30,11 +31,13 @@ class Config:
             "--skip-cm", help="Skip confusion matrix creation", action="store_true"
         )
         parser.add_argument("--skip-tests", help="Skip tests run", action="store_true")
+        parser.add_argument("--verbose", help="Print SASTs output", action="store_true")
         args = parser.parse_args()
         self.tool = args.tool
         self.lang = args.lang
         self.skip_cm = args.skip_cm
         self.skip_tests = args.skip_tests
+        self.verbose = args.verbose
 
         with open(self.CONFIG_FILE, "r") as f:
             self.config = json.load(f)

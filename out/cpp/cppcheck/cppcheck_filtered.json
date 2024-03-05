@@ -1,64 +1,4 @@
 {
-    "CWE126_Buffer_Overread__CWE129_connect_socket_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__CWE129_fgets_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__CWE129_fscanf_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__CWE129_large_01.c": [
         {
             "cwe": "788",
@@ -179,66 +119,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__CWE129_large_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__CWE129_listen_socket_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__CWE129_rand_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__char_alloca_loop_05.c": [
         {
             "cwe": "457",
@@ -345,20 +225,6 @@
         {
             "cwe": "457",
             "line": 83,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__char_alloca_loop_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
             "confidence": "",
             "severity": "error"
         }
@@ -473,20 +339,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__char_alloca_memcpy_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__char_alloca_memmove_05.c": [
         {
             "cwe": "457",
@@ -593,20 +445,6 @@
         {
             "cwe": "457",
             "line": 78,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__char_alloca_memmove_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
             "confidence": "",
             "severity": "error"
         }
@@ -721,20 +559,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__char_declare_loop_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__char_declare_memcpy_05.c": [
         {
             "cwe": "457",
@@ -841,20 +665,6 @@
         {
             "cwe": "457",
             "line": 78,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__char_declare_memcpy_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
             "confidence": "",
             "severity": "error"
         }
@@ -969,34 +779,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__char_declare_memmove_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__malloc_char_loop_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__malloc_char_memcpy_05.c": [
         {
             "cwe": "476",
@@ -1091,20 +873,6 @@
         {
             "cwe": "401",
             "line": 81,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__malloc_char_memcpy_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
             "confidence": "",
             "severity": "error"
         }
@@ -1207,34 +975,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__malloc_char_memmove_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__malloc_wchar_t_loop_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__malloc_wchar_t_memcpy_05.c": [
         {
             "cwe": "476",
@@ -1329,20 +1069,6 @@
         {
             "cwe": "401",
             "line": 81,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__malloc_wchar_t_memcpy_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
             "confidence": "",
             "severity": "error"
         }
@@ -1445,34 +1171,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__malloc_wchar_t_memmove_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__new_char_loop_82.h": [
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__new_char_memcpy_05.cpp": [
         {
             "cwe": "476",
@@ -1567,20 +1265,6 @@
         {
             "cwe": "401",
             "line": 79,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__new_char_memcpy_82.h": [
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 24,
             "confidence": "",
             "severity": "error"
         }
@@ -1683,34 +1367,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__new_char_memmove_82.h": [
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__new_wchar_t_loop_82.h": [
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__new_wchar_t_memcpy_05.cpp": [
         {
             "cwe": "476",
@@ -1809,20 +1465,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__new_wchar_t_memcpy_82.h": [
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__new_wchar_t_memmove_05.cpp": [
         {
             "cwe": "476",
@@ -1917,20 +1559,6 @@
         {
             "cwe": "401",
             "line": 79,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__new_wchar_t_memmove_82.h": [
-        {
-            "cwe": "404",
-            "line": 24,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 24,
             "confidence": "",
             "severity": "error"
         }
@@ -2045,20 +1673,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__wchar_t_alloca_loop_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__wchar_t_alloca_memcpy_05.c": [
         {
             "cwe": "457",
@@ -2165,20 +1779,6 @@
         {
             "cwe": "457",
             "line": 78,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__wchar_t_alloca_memcpy_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
             "confidence": "",
             "severity": "error"
         }
@@ -2293,20 +1893,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__wchar_t_alloca_memmove_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__wchar_t_declare_loop_05.c": [
         {
             "cwe": "457",
@@ -2413,20 +1999,6 @@
         {
             "cwe": "457",
             "line": 83,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__wchar_t_declare_loop_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
             "confidence": "",
             "severity": "error"
         }
@@ -2541,20 +2113,6 @@
             "severity": "error"
         }
     ],
-    "CWE126_Buffer_Overread__wchar_t_declare_memcpy_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
     "CWE126_Buffer_Overread__wchar_t_declare_memmove_05.c": [
         {
             "cwe": "457",
@@ -2661,20 +2219,6 @@
         {
             "cwe": "457",
             "line": 78,
-            "confidence": "",
-            "severity": "error"
-        }
-    ],
-    "CWE126_Buffer_Overread__wchar_t_declare_memmove_82.h": [
-        {
-            "cwe": "404",
-            "line": 23,
-            "confidence": "",
-            "severity": "error"
-        },
-        {
-            "cwe": "404",
-            "line": 23,
             "confidence": "",
             "severity": "error"
         }

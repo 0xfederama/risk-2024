@@ -18,8 +18,10 @@ all_langs = ["java", "csharp", "cpp"]
 
 def run_tests(config, tools, langs):
     # If running on everything, backup old directory
-    if config.tool is None and config.lang is None and os.path.exists("out"):
-        os.rename("out", f"out_{int(time.time())}")
+    if os.path.exists("out"):
+        dirs = os.listdir("out")
+        if "java" in dirs and "csharp" in dirs and "cpp" in dirs:
+            os.rename("out", f"out_{int(time.time())}")
 
     # Print results
     results = []
@@ -39,12 +41,18 @@ def run_tests(config, tools, langs):
             elapsed_time, _, _ = benchmark.run(
                 outdir=outdir, tool=tool, codedir=codedir, set_debug=debug
             )
-            results.append((tool, lang, elapsed_time))
+            results.append({"tool": tool, "lang": lang, "time_sec": elapsed_time})
 
     # Print results
     print("\nRESULTS:\n")
-    for tool, lang, t in results:
-        print(f"{tool.capitalize()} on {lang} took {t:.3f} seconds")
+    for res in results:
+        tool = res["tool"].capitalize()
+        lang = res["lang"]
+        sec = res["time_sec"]
+        print(f"{tool} on {lang} took {sec:.3f} seconds")
+
+    with open("out/times.json", "w") as f:
+        f.write(json.dumps(results, indent=4))
 
 
 def create_confusion_matrix(config, tools, langs):
@@ -61,12 +69,6 @@ def create_confusion_matrix(config, tools, langs):
         pot_flaws = {}
         with open(f"util/pot_flaws_{lang_dir}.json", "r") as f:
             pot_flaws = json.load(f)
-
-        # Open Juliet manifest flaws file for current language
-        # FIXME: this does not work for csharp
-        flaws = {}
-        with open(f"util/manifest_{lang_dir}.json", "r") as f:
-            flaws = json.load(f)
 
         # Get if we specified the CWE in the config.json file
         juliet_path = config.get_juliet_path(lang_dir)
@@ -105,6 +107,9 @@ def create_confusion_matrix(config, tools, langs):
 def main():
     # Define/parse arguments and get tools and languages
     config = configs.Config()
+    if config.verbose:
+        global debug
+        debug = True
 
     # Check if the tool supports the specified language
     if config.tool is not None and config.lang is not None:

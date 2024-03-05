@@ -7,6 +7,9 @@ class FilteredData:
         self.data = {}
 
     def add(self, path, cwe, line, confidence, severity):
+        if self.find(path=path, cwe=cwe, line=line):
+            return
+
         filename = os.path.basename(path)
         self.data[filename] = self.data.get(filename, [])
         self.data[filename].append(
@@ -18,6 +21,13 @@ class FilteredData:
             }
         )
 
+    def find(self, path, cwe, line):
+        filename = os.path.basename(path)
+        for elem in self.data.get(filename, []):
+            if elem["line"] == line and elem["cwe"] == cwe:
+                return True
+        return False
+
 
 def filter_semgrep_data(filename):
     with open(filename, "r") as f:
@@ -26,6 +36,8 @@ def filter_semgrep_data(filename):
         filtered_results = FilteredData()
         for res in results:
             path = res["path"]
+            if "CWE" not in path.split("/")[-1]:
+                continue
             line = res["start"]["line"]
             confidence = res["extra"]["metadata"]["confidence"]
             severity = res["extra"]["metadata"]["impact"]
@@ -35,7 +47,6 @@ def filter_semgrep_data(filename):
                 cwe_list = cwe_titles
             else:
                 cwe_list = [cwe_titles]
-
             for cwe in cwe_list:
                 cwe_code = (cwe.split(":")[0]).split("-")[1]
                 filtered_results.add(
@@ -75,25 +86,32 @@ def filter_flawfinder_data(filename):
                 cwe = relation["target"]["id"]
                 rules_cwes[r["id"]].append(cwe)
         results = run["results"]
-        return filter_sarif_data(results, rules_cwes)
+        filtered = filter_sarif_data(results, rules_cwes)
+        # filter out the occurrences of 327 in main triggered by all the srand
+        for filename, flaw_list in filtered.items():
+            for flaw in reversed(flaw_list):
+                if flaw["cwe"] == "327":
+                    # flaw_list.pop(len(flaw_list) - 1 - index)
+                    flaw_list.remove(flaw)
+                    break
+        return filtered
 
 
 def filter_sarif_data(results, rules_cwes):
     filtered_results = FilteredData()
-    path_and_lines = {}
     for res in results:
         rule_id = res["ruleId"]
-        cwe = rules_cwes[rule_id][0]
+        cwe_list = rules_cwes[rule_id]
         severity = res["level"]
         confidence = ""
         locations = res["locations"]
         for loc in locations:
             physicalLoc = loc["physicalLocation"]
             path = physicalLoc["artifactLocation"]["uri"]
+            if "CWE" not in path.split("/")[-1]:
+                continue
             line = physicalLoc["region"]["startLine"]
-            path_and_lines[path] = path_and_lines.get(path, [])
-            if line not in path_and_lines[path]:
-                path_and_lines[path].append(line)
+            for cwe in cwe_list:
                 cwe_num = cwe.split("-")[1]
                 filtered_results.add(
                     path=path,
@@ -121,6 +139,8 @@ def filter_horusec_data(filename):
             vuln = vuln["vulnerabilities"]
             line = vuln["line"]
             path = vuln["file"]
+            if "CWE" not in path.split("/")[-1]:
+                continue
             confidence = vuln["confidence"]
             severity = vuln["severity"]
             cwe_list = rules.get(vuln["rule_id"], [])
@@ -142,10 +162,14 @@ def filter_cppcheck_data(filename):
     with open(filename, "r") as f:
         filtered_results = FilteredData()
         for line in f.readlines():
-            [cwe, file, line, severity] = line.split(":")
+            [cwe, path, line, severity] = line.split(":")
+            if path[-2:] == ".h":
+                continue
+            if "CWE" not in path.split("/")[-1]:
+                continue
             confidence = ""
             filtered_results.add(
-                path=file,
+                path=path,
                 cwe=cwe,
                 line=int(line),
                 confidence=confidence,

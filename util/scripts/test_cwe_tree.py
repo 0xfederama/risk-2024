@@ -36,17 +36,19 @@ def test_ancestor(cwe1, cwe2, cwe_tree, value):
     else:
         print(f"[FAIL]: {ret} should have been {value}")
 
+
 def cwe_relationship(first_cwe, second_cwe, cwe_tree):
     if first_cwe == cwe_tree:
         return f"CWE {first_cwe} is equal to CWE {second_cwe}"
 
     if is_cwe_ancestor(first_cwe, second_cwe, cwe_tree):
         return f"CWE {first_cwe} is an anchestor of CWE {second_cwe}"
-    
+
     if is_cwe_ancestor(second_cwe, first_cwe, cwe_tree):
         return f"CWE {second_cwe} is an anchestor of CWE {first_cwe}"
-    
+
     return f"No relationship between {first_cwe} and {second_cwe}"
+
 
 def main():
     if len(sys.argv) < 2 or len(sys.argv) > 4:

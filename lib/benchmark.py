@@ -122,132 +122,8 @@ def find_vuln_in_manifest_list(vuln, list, cwe_tree):
             if is_cwe_ancestor(vuln_cwe, el_cwe, cwe_tree) or is_cwe_ancestor(
                 el_cwe, vuln_cwe, cwe_tree
             ):
-                # FIXME: funziona? togliere print
-                if vuln_cwe != el_cwe:
-                    print(f"CWE {vuln_cwe} and {el_cwe} related")
                 return True
     return False
-
-
-# def confusion_matrix(pot_flaws, manifest_flaws, sast_flaws, cwe, cwe_tree):
-#     """
-#     For each vuln found by the SAST:
-#         If found in manifest:
-#             True positive
-#         Else:
-#             If found in pot flaws file:
-#                 If in method bad:
-#                     Ignore it
-#                 Else:
-#                     False positive
-#             Else:
-#                 False positive
-
-#     For each vuln found in manifest:
-#         If found in SAST:
-#             Ignore it (true positive, but we have already count it)
-#         Else:
-#             False negative
-
-#     For each potential flaw:
-#         cwe different -> skip
-#         method good, sast found -> FP
-#         method good, sast not found -> TN
-#         method bad, sast found -> ignored + TP
-#         method bad, sast not found -> FN
-#     """
-#     tp = 0
-#     fp = 0
-#     tn = 0
-#     fn = 0
-#     total = 0
-#     ignored = 0
-
-#     # for each flaw found from SAST
-#     for filename, found_list in sast_flaws.items():
-#         # for each flaw found from SAST in the specified filename
-#         for found_from_tool in found_list:
-#             total += 1
-#             # check if the manifest flaw is related to SAST's flaw
-#             manifest_flaws_in_file = manifest_flaws.get(filename, [])
-#             if find_vuln_in_manifest_list(
-#                 found_from_tool, manifest_flaws_in_file, cwe_tree
-#             ):
-#                 # line and CWE are correct
-#                 tp += 1
-#             else:
-#                 # not found in manifest, but it may be a potential one
-#                 pot_flaws_in_file = pot_flaws.get(filename, [])
-#                 found = None
-#                 for pot_flaw in pot_flaws_in_file:
-#                     tool_line = found_from_tool["line"]
-#                     pot_flaw_line = pot_flaw["line"]
-#                     if pot_flaw_line <= tool_line <= pot_flaw_line + 4:
-#                         found = pot_flaw
-#                 if found is None:
-#                     # SAST found it, but it is not a potential one
-#                     fp += 1
-#                 else:
-#                     # check if it is a potential one
-#                     match found["category"]:
-#                         case "negative":
-#                             fp += 1
-#                         case "positive":
-#                             ignored += 1
-
-#     # for each file and flaw in the manifest
-#     for filename, manifest_flaws_list in manifest_flaws.items():
-#         # filter by required CWE, if any
-#         if cwe is not None:
-#             curr_cwe = filename.split("_")[0][3:]
-#             if curr_cwe != cwe:
-#                 continue
-
-#         # for each vulnerability found by SAST
-#         sast_vulns_in_file = sast_flaws.get(filename, [])
-#         for flaw in manifest_flaws_list:
-#             # if found it we already considered it
-#             if not find_vuln_in_manifest_list(flaw, sast_vulns_in_file, cwe_tree):
-#                 fn += 1
-#                 total += 1
-
-#     for filename, pot_flaws_list in pot_flaws.items():
-#         # filter by required CWE, if any
-#         if cwe is not None:
-#             curr_cwe = filename.split("_")[0][3:]
-#             if curr_cwe != cwe:
-#                 continue
-
-#         # search flaw in sast flaws
-#         for pot_flaw in pot_flaws_list:
-#             if pot_flaw["category"] == "negative":
-#                 sast_found_in_file = sast_flaws.get(filename, [])
-#                 found = False  # check if the SAST found this flaw
-#                 for el in sast_found_in_file:
-#                     # do not check by CWE since that flaw must NOT be found
-#                     el_line = el["line"]
-#                     pot_flaw_line = pot_flaw["line"]
-#                     if pot_flaw_line <= el_line <= pot_flaw_line + 4:
-#                         found = True
-#                 # the SAST didn't find this flaw
-#                 if not found:
-#                     tn += 1
-#                     total += 1
-
-#     p = tp + fp
-#     n = tn + fn
-
-#     retdict = {
-#         "false positive": fp,
-#         "true positive": tp,
-#         "false negative": fn,
-#         "true negative": tn,
-#         "accuracy": (tp + tn) / (p + n) if p + n > 0 else 0,
-#         "precision": tp / p if p > 0 else 0,
-#         "recall": tp / (fp + fn) if fp + fn > 0 else 0,
-#     }
-
-#     return retdict
 
 
 def get_method_line(filename, line, pot_flaws):
@@ -259,7 +135,7 @@ def get_method_line(filename, line, pot_flaws):
             break
         greatest = flaw["line"]
 
-    return greatest
+    return greatest if greatest != -1 else line
 
 
 def are_cwe_related(first_cwe, second_cwe, cwe_tree):
@@ -269,13 +145,18 @@ def are_cwe_related(first_cwe, second_cwe, cwe_tree):
     )
 
 
-def find_flaw(flaw_line, flaw_cwe, flaws_list, cwe_tree):
+def find_flaw(flaw_line, flaw_cwe, flaws_list, cwe_tree, by_cwe=True):
     """Given a flaw and a list of flaws, return if the flaw is in the list
     by comparing by line and CWE relationship"""
-    for el in flaws_list:
-        if flaw_line == el["line"] and are_cwe_related(flaw_cwe, el["cwe"], cwe_tree):
-            return el
-    return None
+    for index, el in enumerate(flaws_list):
+        el_line = el.get("method_line", el["line"])
+        if flaw_line == el_line:
+            if by_cwe:
+                if are_cwe_related(flaw_cwe, el["cwe"], cwe_tree):
+                    return el, index
+            else:
+                return el, index
+    return None, -1
 
 
 def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
@@ -295,7 +176,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
     for filename, found_list in sast_flaws_dict.items():
         # for each flaw found from SAST in the specified filename
         for sast_flaw in found_list:
-            found = find_flaw(
+            found, index = find_flaw(
                 sast_flaw["method_line"],
                 sast_flaw["cwe"],
                 pot_flaws_dict.get(filename, []),
@@ -305,6 +186,9 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
                 fp += 1  # false positive if it is in a good method
             else:
                 tp += 1  # true positive if it is in a bad method
+
+            if found:
+                pot_flaws_dict.get(filename).pop(index)
 
     # compute negatives, and check if the SAST found or didn't find a negative
     # for each potential flaw
@@ -317,18 +201,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
 
         # for each potential flaw of the file, search if it was found by SAST
         for pot_flaw in pot_flaws_list:
-            # if the potential flaw was found by SAST we have already seen it
-            if (
-                find_flaw(
-                    pot_flaw["line"],
-                    pot_flaw["cwe"],
-                    sast_flaws_dict.get(filename, []),
-                    cwe_tree,
-                )
-                is not None
-            ):
-                continue
-
+            # if the potential flaw is here is beacuse it was not found by SAST
             # not found by SAST
             if pot_flaw["method"] == "good":
                 tn += 1  # true negative if it is in a good method
