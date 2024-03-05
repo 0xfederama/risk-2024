@@ -7,6 +7,7 @@ This repo contains the code we used to test various SASTs on different test suit
 - [horusec](https://github.com/ZupIT/horusec), using `-D` (`--disable-docker`) to use the proprietary SAST on java and c#
 - [snyk](https://snyk.io/product/snyk-code/)
 - [flawfinder](https://github.com/david-a-wheeler/flawfinder)
+- [cppcheck](https://cppcheck.sourceforge.io/)
 
 ## Test suites:
 - [nist juliet](https://samate.nist.gov/SARD/test-suites/111) for java
