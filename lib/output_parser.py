@@ -91,7 +91,6 @@ def filter_flawfinder_data(filename):
         for filename, flaw_list in filtered.items():
             for flaw in reversed(flaw_list):
                 if flaw["cwe"] == "327":
-                    # flaw_list.pop(len(flaw_list) - 1 - index)
                     flaw_list.remove(flaw)
                     break
         return filtered
