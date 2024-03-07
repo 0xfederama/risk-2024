@@ -54,7 +54,7 @@ def run_tool(outdir, tool, codedir):
 
 def run_horusec(outdir, tool, codedir):
     total_time = 0
-    total_filtered_data = []
+    total_filtered_data = {}
     total_aggr_data = {"total": 0, "vulns": {}}
 
     if codedir[-1] == "/":
@@ -71,10 +71,8 @@ def run_horusec(outdir, tool, codedir):
         )
 
         # Aggregate results
-        # FIXME: total_filtered_data should not be a list,
-        # but a dictionary with vulns grouped by file
         total_time += run_time
-        total_filtered_data += run_filtered_data
+        total_filtered_data.update(run_filtered_data)
         total_aggr_data["total"] += run_aggr_data["total"]
         for cwe, cwe_count in run_aggr_data["vulns"].items():
             total_aggr_data["vulns"][cwe] = (
