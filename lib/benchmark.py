@@ -56,15 +56,17 @@ def run_horusec(outdir, tool, codedir):
     total_time = 0
     total_filtered_data = {}
     total_aggr_data = {"total": 0, "vulns": {}}
-
-    if codedir[-1] == "/":
-        codedir = codedir[:-1]
-
-    for folder in os.listdir(f"{codedir}/src/testcases/"):
-        folder = f"{codedir}/src/testcases/{folder}"
-        if "CWE" not in folder:
-            continue
-
+    
+    folders = []
+    for root, dirs, files in os.walk(codedir):
+        if ("s0" in root or "s1" in root) and "antbuild" not in root:
+            folders.append(root)
+    # if no subfolder was found, then we can run horusec on the whole codedir
+    if folders == []:
+        folders [codedir]
+    
+    for folder in folders:
+        print(f"Running horusec on {folder}")
         # Run on the directory
         run_time, run_filtered_data, run_aggr_data = run_tool(
             outdir=outdir, tool=tool, codedir=folder
@@ -93,7 +95,7 @@ def run(outdir, tool, codedir, set_debug=False):
     global debug
     debug = set_debug
 
-    if tool == "horusec" and "CWE" not in codedir:
+    if tool == "horusec":
         return run_horusec(
             outdir=outdir,
             tool=tool,
