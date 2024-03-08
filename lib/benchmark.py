@@ -2,6 +2,7 @@ import json
 import time
 import os
 import lib.output_parser as output_parser
+import subprocess
 
 debug = False
 
@@ -20,7 +21,7 @@ def get_cmd(tool, codedir, outdir):
         case "semgrep":
             command = f"semgrep scan {codedir} --json -o {outfile}" + redir
         case "horusec":
-            command = f"horusec start -p {codedir} -D -O {outfile} -o json" + redir
+            command = f"ulimit -n 2048 && horusec start -p {codedir} -D -O {outfile} -o json" + redir
         case "snyk":
             command = f"snyk code test {codedir} --json-file-output={outfile}" + redir
         case "flawfinder":
@@ -35,7 +36,7 @@ def run_tool(outdir, tool, codedir):
     command, outfile = get_cmd(tool, codedir, outdir)
     # Execute tool
     time_start = time.perf_counter()
-    os.system(command)
+    subprocess.check_output(command, shell=True)
     time_end = time.perf_counter()
     elapsed_time = time_end - time_start
 
@@ -63,7 +64,7 @@ def run_horusec(outdir, tool, codedir):
             folders.append(root)
     # if no subfolder was found, then we can run horusec on the whole codedir
     if folders == []:
-        folders [codedir]
+        folders = [codedir]
     
     for folder in folders:
         print(f"Running horusec on {folder}")
