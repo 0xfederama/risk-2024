@@ -17,11 +17,22 @@ all_langs = ["java", "csharp", "cpp"]
 
 
 def run_tests(config, tools, langs):
-    # If running on everything, backup old directory
+    # If running on everything, ask to backup old directory
     if os.path.exists("out"):
-        dirs = os.listdir("out")
-        if "java" in dirs and "csharp" in dirs and "cpp" in dirs:
-            os.rename("out", f"out_{int(time.time())}")
+        print(
+            "An 'out' directory already exists here. "
+            + "Do you want to do a backup? [y/N] ",
+            end="",
+        )
+        answer = input()
+        if answer == "Y" or answer == "y":
+            t = int(time.time())
+            print(f"Doing backup of old output directory to out_{t}\n")
+            os.rename("out", f"out_{t}")
+        elif answer == "N" or answer == "n" or answer == "":
+            print("Skipping backup of output directory\n")
+        else:
+            print("Answer not expected")
 
     # Print results
     results = []
@@ -49,7 +60,7 @@ def run_tests(config, tools, langs):
             times = json.load(f)
 
     # Print and replace results
-    print("RESULTS\n")
+    print("RESULTS:")
     for res in results:
         tool = res["tool"]
         lang = res["lang"]
@@ -131,19 +142,19 @@ def main():
     tools = all_tools if config.tool is None else [config.tool]
     langs = all_langs if config.lang is None else [config.lang]
 
-    print(f"Specified tools {str(tools)} on languages {str(langs)}")
+    print(f"Specified tools {str(tools)} and languages {str(langs)}\n")
 
     if not config.skip_tests:
         run_tests(config, tools, langs)
         print()
     else:
-        print("\nSkipping tests")
+        print("Skipping tests")
 
     if not config.skip_cm:
         create_confusion_matrix(config, tools, langs)
         print()
     else:
-        print("\nSkipping confusion matrix creation")
+        print("Skipping confusion matrix creation")
 
 
 if __name__ == "__main__":
