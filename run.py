@@ -33,6 +33,7 @@ def run_tests(config, tools, langs):
             print("Skipping backup of output directory\n")
         else:
             print("Answer not expected")
+            exit(1)
 
     # Print results
     results = []
