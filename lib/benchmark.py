@@ -1,7 +1,6 @@
 import json
 import time
 import os
-import shlex
 import subprocess
 import lib.output_parser as output_parser
 
@@ -52,6 +51,15 @@ def run_tool(outdir, tool, codedir):
     with open(f"{outdir}/{tool}_vulns.json", "w") as f:
         f.write(json.dumps(aggr_data, indent=4, sort_keys=True))
 
+    cwes = {}
+    for file in filtered_data.values():
+        for d in file:
+            cwe = d["cwe"]
+            if cwe != "89" and cwe != "489":
+                cwes[cwe] = cwes.get(cwe, 0) + 1
+    print(json.dumps(cwes, indent=4, sort_keys=True))
+    print(json.dumps(aggr_data, indent=4, sort_keys=True))
+
     return elapsed_time, filtered_data, aggr_data
 
 
@@ -69,6 +77,7 @@ def run_horusec(outdir, tool, codedir):
         folders = [codedir]
 
     for folder in folders:
+        print(f"Running horusec on {folder}")
         # Run on the directory
         run_time, run_filtered_data, run_aggr_data = run_tool(
             outdir=outdir, tool=tool, codedir=folder
@@ -79,6 +88,7 @@ def run_horusec(outdir, tool, codedir):
         total_filtered_data.update(run_filtered_data)
         total_aggr_data["total"] += run_aggr_data["total"]
         for cwe, cwe_count in run_aggr_data["vulns"].items():
+            print(f"{cwe}: {cwe_count}")
             total_aggr_data["vulns"][cwe] = (
                 total_aggr_data["vulns"].get(cwe, 0) + cwe_count
             )

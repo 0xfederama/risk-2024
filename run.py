@@ -60,7 +60,7 @@ def run_tests(config, tools, langs):
             times = json.load(f)
 
     # Print and replace results
-    print("RESULTS:")
+    print("\nRESULTS:")
     for res in results:
         tool = res["tool"]
         lang = res["lang"]
