@@ -1,0 +1,52 @@
+[
+    {
+        "tool": "semgrep",
+        "lang": "java",
+        "time_sec": 841.0738799169994
+    },
+    {
+        "tool": "snyk",
+        "lang": "java",
+        "time_sec": 42.889608083001804
+    },
+    {
+        "tool": "horusec",
+        "lang": "java",
+        "time_sec": 444.73611791698204
+    },
+    {
+        "tool": "semgrep",
+        "lang": "csharp",
+        "time_sec": 180.7688659580017
+    },
+    {
+        "tool": "snyk",
+        "lang": "csharp",
+        "time_sec": 254.73725216599996
+    },
+    {
+        "tool": "horusec",
+        "lang": "csharp",
+        "time_sec": 185.76470021998102
+    },
+    {
+        "tool": "semgrep",
+        "lang": "cpp",
+        "time_sec": 3708.555772959
+    },
+    {
+        "tool": "snyk",
+        "lang": "cpp",
+        "time_sec": 955.445787749999
+    },
+    {
+        "tool": "flawfinder",
+        "lang": "cpp",
+        "time_sec": 72.13655787499738
+    },
+    {
+        "tool": "cppcheck",
+        "lang": "cpp",
+        "time_sec": 841.9229365830033
+    }
+]
