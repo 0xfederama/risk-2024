@@ -1,6 +1,7 @@
 import json
 import time
 import os
+import subprocess
 import lib.output_parser as output_parser
 
 debug = False
@@ -12,17 +13,13 @@ def get_cmd(tool, codedir, outdir):
     else:
         outfile = f"{outdir}/{tool}.txt"
     # Get the command to run with the correct tool and test suite
-    redir = ""
-    if not debug or tool == "snyk":
-        redir = " &> /dev/null"
-    command = ""
     match tool:
         case "semgrep":
-            command = f"semgrep scan {codedir} --json -o {outfile}" + redir
+            command = f"semgrep scan {codedir} --json -o {outfile}"
         case "horusec":
-            command = f"horusec start -p {codedir} -D -O {outfile} -o json" + redir
+            command = f"ulimit -n 2048 && horusec start -p {codedir} -D -O {outfile} -o json"
         case "snyk":
-            command = f"snyk code test {codedir} --json-file-output={outfile}" + redir
+            command = f"snyk code test {codedir} --json-file-output={outfile}"
         case "flawfinder":
             command = f"flawfinder -F --sarif {codedir} > {outfile}"
         case "cppcheck":
@@ -35,7 +32,11 @@ def run_tool(outdir, tool, codedir):
     command, outfile = get_cmd(tool, codedir, outdir)
     # Execute tool
     time_start = time.perf_counter()
-    os.system(command)
+    # In snyk always capture output, otherwise it prints too much
+    capture = True if tool == "snyk" else (not debug)
+    proc = subprocess.run(command, capture_output=capture, shell=True)
+    if tool == "snyk" and debug:
+        print(f"Snyk returned code {proc.returncode}")
     time_end = time.perf_counter()
     elapsed_time = time_end - time_start
 
@@ -56,17 +57,21 @@ def run_horusec(outdir, tool, codedir):
     total_time = 0
     total_filtered_data = {}
     total_aggr_data = {"total": 0, "vulns": {}}
-    
+
     folders = []
     for root, dirs, files in os.walk(codedir):
-        if ("s0" in root or "s1" in root) and "antbuild" not in root:
+        # skip antbuild and skip subfolder (which are already included)
+        if "antbuild" in root or "s0" in root or "s1" in root:
+            continue
+        if "src" in dirs or "testcases" in dirs:
+            continue
+        if "s01" in dirs:
+            for subdir in dirs:
+                folders.append(f"{root}/{subdir}")
+        elif root != codedir:
             folders.append(root)
-    # if no subfolder was found, then we can run horusec on the whole codedir
-    if folders == []:
-        folders [codedir]
-    
+
     for folder in folders:
-        print(f"Running horusec on {folder}")
         # Run on the directory
         run_time, run_filtered_data, run_aggr_data = run_tool(
             outdir=outdir, tool=tool, codedir=folder

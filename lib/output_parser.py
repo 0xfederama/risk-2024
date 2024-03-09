@@ -144,11 +144,12 @@ def filter_horusec_data(filename):
             severity = vuln["severity"]
             cwe_list = rules.get(vuln["rule_id"], [])
             for cwe in cwe_list:
-                cwe_str = str(cwe)
+                if cwe == "CWE-489":
+                    continue
 
                 filtered_results.add(
                     path=path,
-                    cwe=cwe_str.split("-")[1],
+                    cwe=cwe.split("-")[1],
                     line=int(line),
                     confidence=confidence,
                     severity=severity,
