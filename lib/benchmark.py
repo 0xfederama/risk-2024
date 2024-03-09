@@ -17,9 +17,7 @@ def get_cmd(tool, codedir, outdir):
         case "semgrep":
             command = f"semgrep scan {codedir} --json -o {outfile}"
         case "horusec":
-            command = (
-                f"ulimit -n 2048 && horusec start -p {codedir} -D -O {outfile} -o json"
-            )
+            command = f"ulimit -n 2048 && horusec start -p {codedir} -D -O {outfile} -o json"
         case "snyk":
             command = f"snyk code test {codedir} --json-file-output={outfile}"
         case "flawfinder":
@@ -34,10 +32,11 @@ def run_tool(outdir, tool, codedir):
     command, outfile = get_cmd(tool, codedir, outdir)
     # Execute tool
     time_start = time.perf_counter()
-    capture = not debug if tool != "snyk" else debug
+    # In snyk always capture output, otherwise it prints too much
+    capture = True if tool == "snyk" else (not debug)
     proc = subprocess.run(command, capture_output=capture, shell=True)
-    if debug:
-        print(f"SAST returned {proc.returncode}")
+    if tool == "snyk" and debug:
+        print(f"Snyk returned code {proc.returncode}")
     time_end = time.perf_counter()
     elapsed_time = time_end - time_start
 
@@ -50,15 +49,6 @@ def run_tool(outdir, tool, codedir):
     aggr_data = output_parser.aggregate_cwe(filtered_data)
     with open(f"{outdir}/{tool}_vulns.json", "w") as f:
         f.write(json.dumps(aggr_data, indent=4, sort_keys=True))
-
-    cwes = {}
-    for file in filtered_data.values():
-        for d in file:
-            cwe = d["cwe"]
-            if cwe != "89" and cwe != "489":
-                cwes[cwe] = cwes.get(cwe, 0) + 1
-    print(json.dumps(cwes, indent=4, sort_keys=True))
-    print(json.dumps(aggr_data, indent=4, sort_keys=True))
 
     return elapsed_time, filtered_data, aggr_data
 
@@ -73,7 +63,8 @@ def run_horusec(outdir, tool, codedir):
         # skip antbuild and skip subfolder (which are already included)
         if "antbuild" in root or "s0" in root or "s1" in root:
             continue
-            
+        if "src" in dirs or "testcases" in dirs:
+            continue
         if "s01" in dirs:
             for subdir in dirs:
                 folders.append(f"{root}/{subdir}")
@@ -81,7 +72,6 @@ def run_horusec(outdir, tool, codedir):
             folders.append(root)
 
     for folder in folders:
-        print(f"Running horusec on {folder}")
         # Run on the directory
         run_time, run_filtered_data, run_aggr_data = run_tool(
             outdir=outdir, tool=tool, codedir=folder
@@ -92,7 +82,6 @@ def run_horusec(outdir, tool, codedir):
         total_filtered_data.update(run_filtered_data)
         total_aggr_data["total"] += run_aggr_data["total"]
         for cwe, cwe_count in run_aggr_data["vulns"].items():
-            print(f"{cwe}: {cwe_count}")
             total_aggr_data["vulns"][cwe] = (
                 total_aggr_data["vulns"].get(cwe, 0) + cwe_count
             )
