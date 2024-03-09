@@ -70,11 +70,15 @@ def run_horusec(outdir, tool, codedir):
 
     folders = []
     for root, dirs, files in os.walk(codedir):
-        if ("s0" in root or "s1" in root) and "antbuild" not in root:
+        # skip antbuild and skip subfolder (which are already included)
+        if "antbuild" in root or "s0" in root or "s1" in root:
+            continue
+            
+        if "s01" in dirs:
+            for subdir in dirs:
+                folders.append(f"{root}/{subdir}")
+        elif root != codedir:
             folders.append(root)
-    # If no subfolder was found, then we can run horusec on the whole codedir
-    if folders == []:
-        folders = [codedir]
 
     for folder in folders:
         print(f"Running horusec on {folder}")
