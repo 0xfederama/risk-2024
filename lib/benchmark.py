@@ -226,7 +226,8 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
         "true negative": tn,
         "accuracy": (tp + tn) / (p + n) if p + n > 0 else 0,
         "precision": tp / p if p > 0 else 0,
-        "recall": tp / (fp + fn) if fp + fn > 0 else 0,
+        "recall": tp / (tp + fn) if fp + fn > 0 else 0,
+        "specificity": tn / (tn + fp) if tn + fp > 0 else 0
     }
 
     return retdict
