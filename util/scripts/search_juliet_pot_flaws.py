@@ -22,33 +22,78 @@ def search_potential_flaws(juliet_directory):
             file_path = os.path.join(root, file)
             cwe_number = extract_cwe_number(file)
             if cwe_number is None:
-                sys.stderr.write(f"No CWE for file {file}\n")
                 continue
             with open(file_path, "r") as f:
                 # Read lines from the file
                 lines = f.readlines()
-                # Iterate through each line to find the string "POTENTIAL FLAW"
-                isInsideGoodMethod = None
-                methodline = 0
-                for line_num, line in enumerate(lines, start=1):
-                    if "FLAW" in line:
-                        # Store the result in a dictionary
-                        results[file] = results.get(file, [])
-                        results[file].append(
-                            {
-                                "line": methodline,
-                                "cwe": cwe_number,
-                                "method": ("good" if isInsideGoodMethod else "bad"),
-                            }
-                        )
-                    elif "good" in line and "G2B" not in line and ";" not in line:
-                        isInsideGoodMethod = True
-                        methodline = line_num
-                    elif ("bad" in line or "helperBad" in line or "G2BSink" in line) and ";" not in line:
-                        isInsideGoodMethod = False
-                        methodline = line_num
-            if len(results[file]) < 2:
-                del results[file]
+                sink_decl = False
+                sink_call = False
+                for line in lines:
+                    if "Sink(" in line:
+                        if ";" in line:
+                            sink_call = True
+                        else:
+                            sink_decl = True
+                # case, sink declaration, may have sink call
+                if sink_decl:
+                    method_line = 0
+                    # search and consider only sinks
+                    is_in_bad_sink_method = False # badSink, G2BSink
+                    is_in_good_sink_method = False # B2GSink
+                    for line_num, line in enumerate(lines, start=1):
+                        if "FLAW" in line or "FIX" in line:
+                            if not is_in_bad_sink_method and not is_in_good_sink_method:
+                                continue
+                            if is_in_good_sink_method:
+                                method = "good"
+                            elif is_in_bad_sink_method:
+                                method = "bad"
+                            results[file] = results.get(file, [])
+                            for a in results[file]:
+                                    if a["line"] == method_line:
+                                        continue
+                            results[file].append(
+                                {
+                                    "line": method_line,
+                                    "cwe": cwe_number,
+                                    "method": method,
+                                }
+                            )
+                        elif ("badSink" in line or "G2BSink" in line ) and ";" not in line:
+                            is_in_bad_sink_method = True
+                            method_line = line_num
+                        elif ("B2GSink" in line) and ";" not in line:
+                            is_in_good_sink_method = True
+                            method_line = line_num
+                        elif ("G2B(" in line or "B2G(" in line or "good(" in line or "bad(" in line or "") and ";" not in line:
+                            is_in_good_sink_method = False
+                            is_in_bad_sink_method = False
+                else: # case no sink declaration, no sink call
+                    if not sink_call:
+                        # base case
+                        # Iterate through each line to find the string "POTENTIAL FLAW"
+                        is_in_good_method = None
+                        method_line = 0
+                        for line_num, line in enumerate(lines, start=1):
+                            if "FLAW" in line or "FIX" in line:
+                                # Store the result in a dictionary
+                                results[file] = results.get(file, [])
+                                for a in results[file]:
+                                    if a["line"] == method_line:
+                                        continue
+                                results[file].append(
+                                    {
+                                        "line": method_line,
+                                        "cwe": cwe_number,
+                                        "method": ("good" if is_in_good_method else "bad"),
+                                    }
+                                )
+                            elif ("good" in line or "B2G" in line or "G2B" in line) and ";" not in line:
+                                is_in_good_method = True
+                                method_line = line_num
+                            elif ("bad" in line) and ";" not in line:
+                                is_in_good_method = False
+                                method_line = line_num
 
     return results
 
