@@ -200,6 +200,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
         juliet_cwe = None
         last_cwes = []
         tp_found_num = 0
+
         juliet_flaws_num_per_line = {}
         for juliet_flaw in pot_flaws_dict.get(filename, []):
             juliet_flaws_num_per_line = (
@@ -220,7 +221,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
                 if is_one_related(sast_flaw["cwe"], last_cwes):
                     if not found:
                         if tp_found_num >= juliet_flaws_num_per_line.get(
-                            sast_flaw["method_line"], 1000
+                            sast_flaw["method_line"], 0
                         ):
                             continue
             else:
@@ -232,8 +233,9 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
             # - line 20
             - line 20
 
-            cwe d, line 10
-            cwe f, line 10
+            sast:
+            - cwe d, line 10
+            - cwe e, line 10
 
             sast: (una solo line in juliet)
             # - cwe c, line 20, tp
@@ -265,11 +267,13 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
                 cwe d -> fp, manca 1 tp OPPURE {skip perche' d gia' visto}
             c3:
                 cwe e -> fp
+
+            i good si comportano come quelli in metodi bad ma con cwe sbagliati,
+                quindi dovrebbe funzionare gia' cosi'
             """
 
             if found:  # found but CWE may not be related
                 are_related = are_cwe_related(sast_flaw["cwe"], found["cwe"])
-                # TODO: modificare last_line da qualche parte
                 if found["method"] == "bad" and are_related:
                     tp += 1
                     tp_found_num += 1
@@ -286,7 +290,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
                 else:
                     # cavolata del sast
                     if not is_one_related(sast_flaw["cwe"], last_cwes):
-                        # TODO: controllare, permette il fix di linea 256 per skippare
+                        # TODO: controllare, permette il fix di ultimo sast example, c2
                         fp += 1
                 last_cwes.append(sast_flaw["cwe"])
 
