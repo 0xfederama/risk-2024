@@ -191,7 +191,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
                 filename, sast_flaw["line"], pot_flaws_dict
             )
         # TODO: controllare questo
-        found_list = sorted(found_list, key=lambda d: d["method_line"])
+        found_list.sort(key=lambda d: d["method_line"])
 
     # compute positives. Check if true or false by looking at potential flaws
     # for each flaw found from SAST
