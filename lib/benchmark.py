@@ -5,6 +5,7 @@ import subprocess
 import lib.output_parser as output_parser
 
 debug = False
+cwetree = {}
 
 
 def get_cmd(tool, codedir, outdir):
@@ -17,7 +18,9 @@ def get_cmd(tool, codedir, outdir):
         case "semgrep":
             command = f"semgrep scan {codedir} --json -o {outfile}"
         case "horusec":
-            command = f"ulimit -n 2048 && horusec start -p {codedir} -D -O {outfile} -o json"
+            command = (
+                f"ulimit -n 2048 && horusec start -p {codedir} -D -O {outfile} -o json"
+            )
         case "snyk":
             command = f"snyk code test {codedir} --json-file-output={outfile}"
         case "flawfinder":
@@ -110,25 +113,25 @@ def run(outdir, tool, codedir, set_debug=False):
         return run_tool(outdir=outdir, tool=tool, codedir=codedir)
 
 
-def is_cwe_ancestor(cwe, ancestor, cwe_tree):
+def is_cwe_ancestor(cwe, ancestor):
     """Returns true if the given ancestor is an ancestor of the given cwe
     or the cwe and the ancestor are equal"""
     if cwe == ancestor:
         return True
 
-    for parent in cwe_tree.get(cwe, []):
-        if is_cwe_ancestor(parent, ancestor, cwe_tree):
+    for parent in cwetree.get(cwe, []):
+        if is_cwe_ancestor(parent, ancestor, cwetree):
             return True
     return False
 
 
-def find_vuln_in_manifest_list(vuln, list, cwe_tree):
+def find_vuln_in_manifest_list(vuln, list):
     for el in list:
         if vuln["line"] == el["line"]:
             vuln_cwe = vuln["cwe"]
             el_cwe = el["cwe"]
-            if is_cwe_ancestor(vuln_cwe, el_cwe, cwe_tree) or is_cwe_ancestor(
-                el_cwe, vuln_cwe, cwe_tree
+            if is_cwe_ancestor(vuln_cwe, el_cwe, cwetree) or is_cwe_ancestor(
+                el_cwe, vuln_cwe, cwetree
             ):
                 return True
     return False
@@ -146,28 +149,37 @@ def get_method_line(filename, line, pot_flaws):
     return greatest if greatest != -1 else line
 
 
-def are_cwe_related(first_cwe, second_cwe, cwe_tree):
+def are_cwe_related(first_cwe, second_cwe):
     """Given two CWEs, return if one is an anchestor of the other one"""
-    return is_cwe_ancestor(first_cwe, second_cwe, cwe_tree) or is_cwe_ancestor(
-        second_cwe, first_cwe, cwe_tree
+    return is_cwe_ancestor(first_cwe, second_cwe, cwetree) or is_cwe_ancestor(
+        second_cwe, first_cwe, cwetree
     )
 
 
-def find_flaw(flaw_line, flaw_cwe, flaws_list, cwe_tree, by_cwe=True):
+def find_flaw(flaw_line, flaw_cwe, flaws_list, by_cwe=True):
     """Given a flaw and a list of flaws, return if the flaw is in the list
     by comparing by line and CWE relationship"""
     for index, el in enumerate(flaws_list):
         el_line = el.get("method_line", el["line"])
         if flaw_line == el_line:
             if by_cwe:
-                if are_cwe_related(flaw_cwe, el["cwe"], cwe_tree):
+                if are_cwe_related(flaw_cwe, el["cwe"], cwetree):
                     return el, index
             else:
                 return el, index
     return None, -1
 
 
+def is_one_related(cwe, cwes):
+    for c in cwes:
+        if are_cwe_related(c, cwe):
+            return True
+    return False
+
+
 def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
+    global cwetree
+    cwetree = cwe_tree
     tp = 0
     fp = 0
     tn = 0
@@ -178,25 +190,105 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
             sast_flaw["method_line"] = get_method_line(
                 filename, sast_flaw["line"], pot_flaws_dict
             )
+        # TODO: controllare questo
+        found_list = sorted(found_list, key=lambda d: d["method_line"])
 
     # compute positives. Check if true or false by looking at potential flaws
     # for each flaw found from SAST
     for filename, found_list in sast_flaws_dict.items():
+        last_line = None
+        juliet_cwe = None
+        last_cwes = []
+        tp_found_num = 0
+        juliet_flaws_num_per_line = {}
+        for juliet_flaw in pot_flaws_dict.get(filename, []):
+            juliet_flaws_num_per_line = (
+                juliet_flaws_num_per_line.get(juliet_flaw["line"], 0) + 1
+            )
+
         # for each flaw found from SAST in the specified filename
         for sast_flaw in found_list:
+
             found, index = find_flaw(
                 sast_flaw["method_line"],
                 sast_flaw["cwe"],
                 pot_flaws_dict.get(filename, []),
-                cwe_tree,
+                by_cwe=False,
             )
-            if found is None or found["method"] == "good":
-                fp += 1  # false positive if it is in a good method
-            else:
-                tp += 1  # true positive if it is in a bad method
 
-            if found:
+            if sast_flaw["method_line"] == last_line:
+                if is_one_related(sast_flaw["cwe"], last_cwes):
+                    if not found:
+                        if tp_found_num >= juliet_flaws_num_per_line.get(
+                            sast_flaw["method_line"], 1000
+                        ):
+                            continue
+            else:
+                last_cwes = []
+                last_line = sast_flaw["method_line"]
+
+            """
+            juliet, cwe c:
+            # - line 20
+            - line 20
+
+            cwe d, line 10
+            cwe f, line 10
+
+            sast: (una solo line in juliet)
+            # - cwe c, line 20, tp
+            # - cwe c, line 20, skip gia visto e ne ho gia 1 di tp
+            c1:
+                cwe d, line 20 -> fp
+            c2:
+                cwe d, line 20 -> skip gia visto e ne ho gia 1 di tp
+            c3:
+                cwe c, line 20 -> skip gia visto e ne ho gia 1 di tp
+
+            sast:
+            # - cwe c, line 20, tp
+            # - cwe c, line 20, tp
+            # - cwe d, line 20, fp
+            c1:
+                cwe c -> skip gia visto e ne ho gia 2 di tp
+            c2:
+                cwe d -> skip gia visto e ne ho gia 2 di tp
+            c3:
+                cwe e -> fp
+
+            sast:
+            # - cwe d, line 20, fp
+            # - cwe c, line 20, tp
+            c1:
+                cwe c -> tp, mancava 1 tp
+            c2:
+                cwe d -> fp, manca 1 tp OPPURE {skip perche' d gia' visto}
+            c3:
+                cwe e -> fp
+            """
+
+            if found:  # found but CWE may not be related
+                are_related = are_cwe_related(sast_flaw["cwe"], found["cwe"])
+                # TODO: modificare last_line da qualche parte
+                if found["method"] == "bad" and are_related:
+                    tp += 1
+                    tp_found_num += 1
+                else:
+                    fp += 1
+                juliet_cwe = found["cwe"]
+                last_cwes.append(sast_flaw["cwe"])
                 pot_flaws_dict.get(filename).pop(index)
+            else:
+                if are_cwe_related(sast_flaw["cwe"], juliet_cwe):
+                    # l'ho trovato ma un record precedente me l'aveva tolto
+                    tp += 1
+                    tp_found_num += 1
+                else:
+                    # cavolata del sast
+                    if not is_one_related(sast_flaw["cwe"], last_cwes):
+                        # TODO: controllare, permette il fix di linea 256 per skippare
+                        fp += 1
+                last_cwes.append(sast_flaw["cwe"])
 
     # compute negatives, and check if the SAST found or didn't find a negative
     # for each potential flaw
@@ -209,7 +301,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
 
         # for each potential flaw of the file, search if it was found by SAST
         for pot_flaw in pot_flaws_list:
-            # if the potential flaw is here is beacuse it was not found by SAST
+            # if the potential flaw is here is because it was not found by SAST
             # not found by SAST
             if pot_flaw["method"] == "good":
                 tn += 1  # true negative if it is in a good method
@@ -227,7 +319,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
         "accuracy": (tp + tn) / (p + n) if p + n > 0 else 0,
         "precision": tp / p if p > 0 else 0,
         "recall": tp / (tp + fn) if fp + fn > 0 else 0,
-        "specificity": tn / (tn + fp) if tn + fp > 0 else 0
+        "specificity": tn / (tn + fp) if tn + fp > 0 else 0,
     }
 
     return retdict
