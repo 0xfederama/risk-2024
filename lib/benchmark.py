@@ -120,7 +120,7 @@ def is_cwe_ancestor(cwe, ancestor):
         return True
 
     for parent in cwetree.get(cwe, []):
-        if is_cwe_ancestor(parent, ancestor, cwetree):
+        if is_cwe_ancestor(parent, ancestor):
             return True
     return False
 
@@ -130,7 +130,7 @@ def find_vuln_in_manifest_list(vuln, list):
         if vuln["line"] == el["line"]:
             vuln_cwe = vuln["cwe"]
             el_cwe = el["cwe"]
-            if is_cwe_ancestor(vuln_cwe, el_cwe, cwetree) or is_cwe_ancestor(
+            if is_cwe_ancestor(vuln_cwe, el_cwe) or is_cwe_ancestor(
                 el_cwe, vuln_cwe, cwetree
             ):
                 return True
@@ -151,8 +151,8 @@ def get_method_line(filename, line, pot_flaws):
 
 def are_cwe_related(first_cwe, second_cwe):
     """Given two CWEs, return if one is an anchestor of the other one"""
-    return is_cwe_ancestor(first_cwe, second_cwe, cwetree) or is_cwe_ancestor(
-        second_cwe, first_cwe, cwetree
+    return is_cwe_ancestor(first_cwe, second_cwe) or is_cwe_ancestor(
+        second_cwe, first_cwe
     )
 
 
@@ -203,7 +203,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
 
         juliet_flaws_num_per_line = {}
         for juliet_flaw in pot_flaws_dict.get(filename, []):
-            juliet_flaws_num_per_line = (
+            juliet_flaws_num_per_line[juliet_flaw["line"]] = (
                 juliet_flaws_num_per_line.get(juliet_flaw["line"], 0) + 1
             )
 
