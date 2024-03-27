@@ -190,7 +190,6 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
             sast_flaw["method_line"] = get_method_line(
                 filename, sast_flaw["line"], pot_flaws_dict
             )
-        # TODO: controllare questo
         found_list.sort(key=lambda d: d["method_line"])
 
     # compute positives. Check if true or false by looking at potential flaws
@@ -226,51 +225,8 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
                             continue
             else:
                 last_cwes = []
+                juliet_cwe = None
                 last_line = sast_flaw["method_line"]
-
-            """
-            juliet, cwe c:
-            # - line 20
-            - line 20
-
-            sast:
-            - cwe d, line 10
-            - cwe e, line 10
-
-            sast: (una solo line in juliet)
-            # - cwe c, line 20, tp
-            # - cwe c, line 20, skip gia visto e ne ho gia 1 di tp
-            c1:
-                cwe d, line 20 -> fp
-            c2:
-                cwe d, line 20 -> skip gia visto e ne ho gia 1 di tp
-            c3:
-                cwe c, line 20 -> skip gia visto e ne ho gia 1 di tp
-
-            sast:
-            # - cwe c, line 20, tp
-            # - cwe c, line 20, tp
-            # - cwe d, line 20, fp
-            c1:
-                cwe c -> skip gia visto e ne ho gia 2 di tp
-            c2:
-                cwe d -> skip gia visto e ne ho gia 2 di tp
-            c3:
-                cwe e -> fp
-
-            sast:
-            # - cwe d, line 20, fp
-            # - cwe c, line 20, tp
-            c1:
-                cwe c -> tp, mancava 1 tp
-            c2:
-                cwe d -> fp, manca 1 tp OPPURE {skip perche' d gia' visto}
-            c3:
-                cwe e -> fp
-
-            i good si comportano come quelli in metodi bad ma con cwe sbagliati,
-                quindi dovrebbe funzionare gia' cosi'
-            """
 
             if found:  # found but CWE may not be related
                 are_related = are_cwe_related(sast_flaw["cwe"], found["cwe"])
@@ -288,9 +244,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
                     tp += 1
                     tp_found_num += 1
                 else:
-                    # cavolata del sast
                     if not is_one_related(sast_flaw["cwe"], last_cwes):
-                        # TODO: controllare, permette il fix di ultimo sast example, c2
                         fp += 1
                 last_cwes.append(sast_flaw["cwe"])
 
