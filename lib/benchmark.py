@@ -150,7 +150,7 @@ def get_method_line(filename, line, pot_flaws):
 
 
 def are_cwe_related(first_cwe, second_cwe):
-    """Given two CWEs, return if one is an anchestor of the other one"""
+    """Given two CWEs, return if one is an ancestor of the other one"""
     return is_cwe_ancestor(first_cwe, second_cwe) or is_cwe_ancestor(
         second_cwe, first_cwe
     )

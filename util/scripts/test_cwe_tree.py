@@ -42,10 +42,10 @@ def cwe_relationship(first_cwe, second_cwe, cwe_tree):
         return f"CWE {first_cwe} is equal to CWE {second_cwe}"
 
     if is_cwe_ancestor(first_cwe, second_cwe, cwe_tree):
-        return f"CWE {first_cwe} is an anchestor of CWE {second_cwe}"
+        return f"CWE {first_cwe} is an ancestor of CWE {second_cwe}"
 
     if is_cwe_ancestor(second_cwe, first_cwe, cwe_tree):
-        return f"CWE {second_cwe} is an anchestor of CWE {first_cwe}"
+        return f"CWE {second_cwe} is an ancestor of CWE {first_cwe}"
 
     return f"No relationship between {first_cwe} and {second_cwe}"
 
@@ -56,7 +56,7 @@ def main():
         print("If two CWE are given, their eventual relationship is provided")
         sys.exit(1)
 
-    # the manifest file (XML file) given by the user
+    # the cwe tree file given by the user
     cwe_json_file_path = sys.argv[1]
     # Read the cwe tree from file
     cwe_tree = {}
