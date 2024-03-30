@@ -240,7 +240,7 @@ def confusion_matrix(pot_flaws_dict, sast_flaws_dict, cwe, cwe_tree):
                 pot_flaws_dict.get(filename).pop(index)
             else:
                 if are_cwe_related(sast_flaw["cwe"], juliet_cwe):
-                    # l'ho trovato ma un record precedente me l'aveva tolto
+                    # i found it but a previous record removed it
                     tp += 1
                     tp_found_num += 1
                 else:
